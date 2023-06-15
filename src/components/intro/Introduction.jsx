@@ -16,9 +16,9 @@ const Introduction = () => {
 				<h1 data-scroll data-scroll-speed="5">
 					Elisa e Giovanni
 				</h1>
-				<h3>
+				<p data-scroll data-scroll-speed="5">
 					Ciao, ci sposiamo!
-				</h3>
+				</p>
 			</div>
 		</section>
 	);
