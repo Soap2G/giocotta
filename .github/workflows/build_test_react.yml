@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [lts-alpine]
+        node-version: [18.xx]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
