@@ -16,7 +16,7 @@ As soon as you have docker installed, you can just do
 ```
 docker-compose up -d --build
 ```
-To have the website pointing to [``](http://localhost:3000/)http://localhost:3000/.
+To have the website pointing to [http://localhost:3000](http://localhost:3000/).
 
 ### Compile it locally without Docker
 You need to install `npm`, you can get started from [this page](https://nodejs.org/en/download).
