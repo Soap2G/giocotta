@@ -22,7 +22,7 @@ class Map extends Component {
     if (!window.google) {
       var s = document.createElement('script');
       s.type = 'text/javascript';
-      s.src = 'https://maps.google.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}';
+      s.src = 'https://maps.google.com/maps/api/js?key=AIzaSyDHt_t8JpH6nqKsAgc3l7SNLfIkRQAEZHc';
       var x = document.getElementsByTagName('script')[0];
       x.parentNode.insertBefore(s, x);
 
