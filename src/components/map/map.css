@@ -1,6 +1,6 @@
 .circle-map, #myMap{
-  width: 50rem;
-  height: 50rem;
+  width: 50rem !important;
+  height: 50rem !important;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
