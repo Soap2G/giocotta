@@ -7,10 +7,10 @@ const Introduction = () => {
 			data-scroll-section
 		>
 			<div className="intro-title">
-				<h1 data-scroll data-scroll-speed="1">
+				<h1 data-scroll data-scroll-speed="2">
 					Elisa e Giovanni
 				</h1>
-				<p data-scroll data-scroll-speed="1.5">
+				<p data-scroll data-scroll-speed="2">
 					Ciao, ci sposiamo!
 				</p>
 			</div>
