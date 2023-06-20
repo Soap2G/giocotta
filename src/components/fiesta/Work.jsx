@@ -9,6 +9,7 @@ const Work = () => {
         data-scroll
         data-scroll-sticky
         data-scroll-target="#case-stick"
+        data-scroll-speed="2"
       >
         CASE STUDIES <br />
         Latest Works
