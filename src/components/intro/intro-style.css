@@ -15,8 +15,8 @@ h1, body, html {
         padding: 1-.5rem;
         overflow: hidden; /* Hide the overflow */
         background-image: url('../../assets/poppies.png');
-        background-size: 50%;
-        background-repeat: no-repeat;
+        background-size: 30%;
+        background-repeat: repeat-x;
         background-position: bottom;
 }
 
