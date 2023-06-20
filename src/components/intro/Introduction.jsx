@@ -1,4 +1,3 @@
-import image from '../../assets/profile.webp';
 import './intro-style.css';
 
 const Introduction = () => {
@@ -6,17 +5,12 @@ const Introduction = () => {
 		<section
 			className="intro-section"
 			data-scroll-section
-			data-scroll
-			data-scroll-speed="2"
 		>
-			{/* <div className="intro-image" data-scroll-speed="5">
-				<img src={image} height={700} alt="profile" />
-			</div> */}
 			<div className="intro-title">
-				<h1 data-scroll data-scroll-speed="5">
+				<h1 data-scroll data-scroll-speed="1">
 					Elisa e Giovanni
 				</h1>
-				<p data-scroll data-scroll-speed="5">
+				<p data-scroll data-scroll-speed="1.5">
 					Ciao, ci sposiamo!
 				</p>
 			</div>
@@ -25,3 +19,5 @@ const Introduction = () => {
 };
 
 export default Introduction;
+
+

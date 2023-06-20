@@ -1,10 +1,10 @@
 
 .message-section{
-    background-color: black;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     flex-direction: column;
     height: 100vh;
     
@@ -19,7 +19,7 @@ input {
     height: 3.5rem;
     width: 30rem;
     border-radius: 5px;
-    border: 0;
+    border: 1;
     display: block;
     margin: 1rem;
     color: #000;
@@ -28,7 +28,7 @@ input {
 textarea {
     height: 9rem;
     width: 30rem;
-    border: 0;
+    border: 1;
     border-radius: 2px;
     display: block;
     margin: 1rem;

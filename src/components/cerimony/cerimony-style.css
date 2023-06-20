@@ -1,0 +1,30 @@
+
+.cerimony-section{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    padding: 1.5rem;
+    flex-direction: column;
+    overflow: hidden; /* Hide the overflow */
+    
+}   
+
+.cerimony {
+    font-size: 3rem;
+    /* padding: 2.5rem; */
+    margin-top: 11rem;
+}
+
+  /* Added This */
+.op-class-cerimony{  
+    opacity: 1;
+    width: 50%;
+    height: 100%;
+}
+
+.fadeIn {
+    opacity: 1;
+    transition: opacity 4s ;
+}
