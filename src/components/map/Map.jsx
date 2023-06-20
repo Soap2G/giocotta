@@ -5,82 +5,6 @@ import React, { Component } from 'react';
 
 import './map.css'
 
-// const LocationPin = ({ text }) => (
-//   <div className="pin">
-//     <Icon icon={locationIcon} className="pin-icon" />
-//     <p className="pin-text">{text}</p>
-//   </div>
-// )
-
-// const Map = ({ location, zoomLevel }) => {
-//     return (
-//         <section
-// 			className="cerimony-section"
-// 		>
-//             <div className="map">
-//                 <h2 className="map-h2">Ore XX:XX, presso la parrocchia dei SS Faustino e Giovita a Modena</h2>
-
-//                 <div className="google-map">
-//                 <GoogleMapReact
-//                     bootstrapURLKeys={{ key: 'AIzaSyCDgK7pUTvN0LTxrIEaV_DbyzszruFQtH8' }}
-//                     defaultCenter={location}
-//                     defaultZoom={zoomLevel}
-//                 >
-//                     <LocationPin
-//                     lat={location.lat}
-//                     lng={location.lng}
-//                     text={location.address}
-//                     />
-//                 </GoogleMapReact>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// class Map extends React.Component {
-//   mapRef = React.createRef();
-
-//   componentDidMount() {
-//     const { location, zoomLevel } = this.props;
-//     const script = window.document.getElementsByTagName('script')[0];
-//     script.addEventListener('load', () => {
-//       this.initMap(location, zoomLevel);
-//     });
-//   }
-
-//   initMap = (location, zoomLevel) => {
-//     new window.google.maps.Map(this.mapRef.current, {
-//       center: location,
-//       zoom: zoomLevel,
-      // mapTypeId: 'satellite', // Set map type to 'satellite'
-      // tilt: 45, // Set tilt
-//     });
-//   };
-
-//   render() {
-//     const { location } = this.props;
-
-    // return (
-    //   <section className="cerimony-section">
-    //     <div className="map">
-    //       <h2 className="map-h2">Ore XX:XX, presso la parrocchia dei SS Faustino e Giovita a Modena</h2>
-    //       <div className="google-map" ref={this.mapRef} style={{ height: '100vh', width: '100%' }}>
-    //         <LocationPin
-    //           lat={location.lat}
-    //           lng={location.lng}
-    //           text={location.address}
-    //         />
-    //       </div>
-    //     </div>
-    //   </section>
-    // );
-//   }
-// }
-
-// export default Map;
-
-
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -98,11 +22,10 @@ class Map extends Component {
     if (!window.google) {
       var s = document.createElement('script');
       s.type = 'text/javascript';
-      s.src = `https://maps.google.com/maps/api/js?key=AIzaSyDnZHCNVuYH8lZSMZtuHzJ4677eUi6AE8w`;
+      s.src = 'https://maps.google.com/maps/api/js?key=${process.env.GOOGLE_API_KEY}';
       var x = document.getElementsByTagName('script')[0];
       x.parentNode.insertBefore(s, x);
-      // Below is important. 
-      //We cannot access google.maps until it's finished loading
+
       s.addEventListener('load', e => {
         this.onScriptLoad()
       })
@@ -121,11 +44,7 @@ class Map extends Component {
         </div>
       </section>
     );
-    
-    
-    // return (
-    //   <div style={{ width: 500, height: 500 }} id={this.props.id} />
-    // );
+
   }
 }
 
