@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/giocotta/static/css/main.147801e5.css",
+    "main.css": "/giocotta/static/css/main.1d8c5951.css",
     "main.js": "/giocotta/static/js/main.7ed4c02f.js",
     "static/js/787.ced5ec0d.chunk.js": "/giocotta/static/js/787.ced5ec0d.chunk.js",
     "static/media/poppies.png": "/giocotta/static/media/poppies.bafe6de6a4a5e0e1e70e.png",
     "index.html": "/giocotta/index.html",
-    "main.147801e5.css.map": "/giocotta/static/css/main.147801e5.css.map",
+    "main.1d8c5951.css.map": "/giocotta/static/css/main.1d8c5951.css.map",
     "main.7ed4c02f.js.map": "/giocotta/static/js/main.7ed4c02f.js.map",
     "787.ced5ec0d.chunk.js.map": "/giocotta/static/js/787.ced5ec0d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.147801e5.css",
+    "static/css/main.1d8c5951.css",
     "static/js/main.7ed4c02f.js"
   ]
 }
