@@ -1,21 +1,28 @@
 import Introduction from './components/intro/Introduction';
-// import Work from './components/work/Work';
 import Cerimony from './components/cerimony/Cerimony';
 import Message from './components/rsvp/Message';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+// import MoonIcon from './assets/moon.svg';
+// import SunIcon from './assets/sun.svg';
+import ThemeIcon from './assets/logo-icon.png';
 
 // dark theme stuff: https://betterprogramming.pub/a-complete-guide-to-implementing-dark-mode-in-react-47af893b22eb
-
-import { ThemeContext } from './contexts/theme-context';
 // import Layout from './layout';
 
 import './App.css';
 
-
 function App() {
 	const ref = useRef(null);
 	const [theme, setTheme] = useState('light');
+
+	const toggleTheme = () => {
+		setTheme(theme === "light" ? "dark" : "light");
+	  };
+
+	useEffect(() => {
+	document.body.dataset.theme = theme;
+	}, [theme]);
 
 	// const isBrowserDefaultDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -29,30 +36,29 @@ function App() {
 		},
 	};
 
-	// useEffect(() => {
-	// 	if (scroll) {
-	// 	  scroll.on('scroll', (func) => {
-	// 		const progress = func.scroll.y / (func.limit.y - func.size.window.height);
-	// 		const size = Math.max(50, progress * 500); // Modify these numbers to adjust the size change rate
-	// 		document.querySelector('#hey').style.width = `${size}px`;
-	// 		document.querySelector('#hey').style.height = `${size}px`;
-	// 		console.log(progress);
-	// 	  });
-	// 	}
-	//   }, [scroll]);
-
 	return (
 	<LocomotiveScrollProvider options={options} watchScroll containerRef={ref}>
 		<main data-scroll-container ref={ref}>
-			<ThemeContext.Provider value={{ theme, setTheme }}>
-				<div className={`theme-${theme}`}>
-					{/* <Layout>  */}
-						<Introduction /> 
-						<Cerimony />
-						<Message />
-					{/* </Layout> */}
-				</div>
-			</ThemeContext.Provider>
+			<div className={`theme-${theme}`}>
+			<button 
+				onClick={toggleTheme}
+				style={{
+					background: 'transparent',
+					border: 'none',
+					cursor: 'pointer',
+					position: 'fixed', // This will fix the position of the button.
+					top: '15px', // This will set the distance from the top.
+					left: '15px', // This will set the distance from the left side.
+					zIndex: 1000
+				}}
+				>
+				{/* {theme === 'light' ? <img src={MoonIcon} alt="Moon for dark theme" style={{ width: '48px', height: '48px' }} /> : <img src={SunIcon} alt="Sun for light theme" style={{ width: '48px', height: '48px' }}/>} */}
+				{theme === 'light' ? <img src={ThemeIcon} alt="Moon for dark theme" style={{ width: '48px', height: '48px' }} /> : <img src={ThemeIcon} alt="Sun for light theme" style={{ width: '48px', height: '48px' }}/>}
+			</button>
+					<Introduction /> 
+					<Cerimony />
+					<Message />
+			</div>
 		</main>
 	</LocomotiveScrollProvider>
 	);

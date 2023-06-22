@@ -57,6 +57,25 @@ section {
   transition: opacity 4s ;
 } */
 
+:root {
+  /* Light theme colors */
+  --color-background: #ffffff;
+  --color-text: #000000;
+}
+
+body[data-theme='dark'] {
+  /* Dark theme colors */
+  --color-background: #030207;
+  --color-text: #ffffff;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: background-color 1s ease, color 1s ease;
+}
+
+
 p {
 text-align: center;
 }
