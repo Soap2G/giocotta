@@ -47,10 +47,10 @@ class Map extends Component {
           data-scroll 
           >
             No, non è un hangar, è una chiesa :D</p>
-            
-          <div className="circle__wrapper" 
+          
+          <div className="circle-map" 
           data-scroll
-          data-scroll-class="circle"
+          data-scroll-class="inflate"
           id={this.props.id}>
           </div>
         </div>
