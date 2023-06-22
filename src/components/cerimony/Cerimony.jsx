@@ -16,20 +16,18 @@ const Cerimony = () => {
         className="cerimony-section"
     >
       <div className="cerimony">
-        <h1 data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
+        <h1 data-scroll data-scroll-speed="1">
           La Celebrazione
         </h1>
-        {/* <p data-scroll data-scroll-speed="1">
-          La celebrazione
-        </p> */}
       </div>
       <div className='op-class-cerimony'>
         {/* <MapSection location={location} zoomLevel={17} />  */}
         <MapSection
+        data-scroll
         id="myMap"
         options={{
           center: { lat: location.lat, lng: location.lng },
-          zoom: 18,
+          zoom: 20,
           heading: 140,
           mapTypeId: 'satellite', // Set map type to 'satellite'
           tilt: 45, // Set tilt

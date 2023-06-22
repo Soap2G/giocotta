@@ -1,3 +1,17 @@
+.message-title {
+    font-size: 3rem;
+    align-items: center;
+    margin: 0px;
+}
+
+
+.message-h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: -1.5rem;
+    padding-left: 1rem;
+    text-align: center;
+  }
 
 .message-section{
     background-color: white;
@@ -51,14 +65,14 @@ textarea {
 
 .fadeIn {
     opacity: 1;
-    transition: opacity 2s ;
+    transition: opacity 3s ;
 }
 
 
   @media screen and (max-width: 500px) {
 
     .message {
-        margin: 0;
+        /* margin: 0; */
         font-size: 2rem;
 
     }
@@ -69,6 +83,10 @@ textarea {
 
     textarea {
         width: 90vw;
+    }
+
+    .message-title {
+        font-size: 2rem;
     }
 
   }

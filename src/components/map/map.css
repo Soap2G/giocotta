@@ -1,20 +1,27 @@
-.circle-map, #myMap{
-  width: 50rem ;
-  height: 50rem ;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
+/* circle__wrapper will help you to position the div in the center of the page */
+div.circle {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  top: 50%;
+  left: 50%;
+  -webkit-transition-duration: 0.7s;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  text-align: center;
+  background: #0000;
+  color: white;
   border-radius: 50%;
+  overflow: hidden;
+  
+  font-family: sans-serif;  /* Just 'cos */
 }
 
-.map-section {
-  background-color: rgba(241, 241, 241, 0);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /*padding: 4rem 0;*/
-  width: 100%;
-  height: auto;
-  padding: 1.5rem;
+div.open {
+  top: 0%;
+  left: 0%;
+  width: 50rem;
+  height: 50rem;
 }
 
 .map-h2 {
@@ -23,6 +30,7 @@
     padding: 1.2rem;
     padding-left: 10px;
     text-align: center;
+    margin-top: -5rem;
   }
   
   .google-map {
@@ -47,7 +55,7 @@
   
   @media screen and (max-width: 850px) {
     
-    .circle-map, #myMap{
+    div.circle{
       width: 80vw ;
       height: 80vw ;
       -moz-border-radius: 50;
@@ -66,7 +74,7 @@
 
   @media screen and (max-width: 500px) {
     
-    .circle-map, #myMap{
+    div.circle{
       height: 25rem ;
       width: 100%;
       -moz-border-radius: 0%;
@@ -83,6 +91,7 @@
     .map-h2 {
       margin-left: 2rem;
       margin-right: 2rem;
+      margin-top: 0rem;
     }
 
   }

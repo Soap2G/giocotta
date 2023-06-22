@@ -36,10 +36,28 @@ class Map extends Component {
 
   render() {
     return (
-      <section className="cerimony-section">
+      <section className="cerimony-section"
+      data-scroll
+      >
         <div className="map">
-          <h2 className="map-h2">Ore XX:XX, presso la parrocchia dei SS Faustino e Giovita a Modena</h2>
-          <div className="circle-map" id={this.props.id} style={{ background: '#0000' }}>
+          <h2 
+          className="map-h2" 
+          data-scroll 
+          // data-scroll-speed="3" 
+          >
+            Ore XX:XX, presso la parrocchia dei SS Faustino e Giovita a Modena
+          </h2>
+          <p
+          data-scroll 
+          // data-scroll-speed="3" 
+          >
+            No, non è un hangar, è una chiesa :D</p>
+            
+          <div class="circle" 
+          data-scroll
+          data-scroll-class="open"
+          // data-scroll-repeat="true"
+          id={this.props.id}>
           </div>
         </div>
       </section>

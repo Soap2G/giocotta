@@ -15,7 +15,6 @@ import './App.css';
 
 function App() {
 	const ref = useRef(null);
-
 	const [theme, setTheme] = useState('light');
 
 	// const isBrowserDefaultDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -30,19 +29,31 @@ function App() {
 		},
 	};
 
+	// useEffect(() => {
+	// 	if (scroll) {
+	// 	  scroll.on('scroll', (func) => {
+	// 		const progress = func.scroll.y / (func.limit.y - func.size.window.height);
+	// 		const size = Math.max(50, progress * 500); // Modify these numbers to adjust the size change rate
+	// 		document.querySelector('#hey').style.width = `${size}px`;
+	// 		document.querySelector('#hey').style.height = `${size}px`;
+	// 		console.log(progress);
+	// 	  });
+	// 	}
+	//   }, [scroll]);
+
 	return (
-	<LocomotiveScrollProvider options={options} containerRef={ref}>
-			<main data-scroll-container ref={ref}>
-				<ThemeContext.Provider value={{ theme, setTheme }}>
-					<div className={`theme-${theme}`}>
-						{/* <Layout>  */}
-							<Introduction /> 
-							<Cerimony />
-							<Message />
-						{/* </Layout> */}
-					</div>
-				</ThemeContext.Provider>
-			</main>
+	<LocomotiveScrollProvider options={options} watchScroll containerRef={ref}>
+		<main data-scroll-container ref={ref}>
+			<ThemeContext.Provider value={{ theme, setTheme }}>
+				<div className={`theme-${theme}`}>
+					{/* <Layout>  */}
+						<Introduction /> 
+						<Cerimony />
+						<Message />
+					{/* </Layout> */}
+				</div>
+			</ThemeContext.Provider>
+		</main>
 	</LocomotiveScrollProvider>
 	);
 }
