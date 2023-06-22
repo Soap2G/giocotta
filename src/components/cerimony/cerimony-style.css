@@ -4,8 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150vh;
-    padding: 1.5rem;
+    height: 100vh;
+    /* padding: 1.5rem; */
     flex-direction: column;
     overflow: hidden; /* Hide the overflow */
     
@@ -13,8 +13,10 @@
 
 .cerimony {
     font-size: 3rem;
+    align-items: center;
     /* padding: 2.5rem; */
-    margin-top: 11rem;
+    margin-top: 10rem;
+    margin-bottom: -10rem;
 }
 
   /* Added This */
@@ -28,3 +30,23 @@
     opacity: 1;
     transition: opacity 4s ;
 }
+
+@media screen and (max-width: 850px) {
+
+    .op-class-cerimony{  
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+    }
+
+  }
+
+
+  @media screen and (max-width: 500px) {
+
+    .cerimony-section{
+        padding: 0.5rem;
+        
+    }   
+
+  }

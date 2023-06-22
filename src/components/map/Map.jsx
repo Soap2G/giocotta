@@ -39,7 +39,7 @@ class Map extends Component {
       <section className="cerimony-section">
         <div className="map">
           <h2 className="map-h2">Ore XX:XX, presso la parrocchia dei SS Faustino e Giovita a Modena</h2>
-          <div className="circle-map" id={this.props.id} style={{ height: '50vh', width: '50vh' }}>
+          <div className="circle-map" id={this.props.id} style={{ background: '#0000' }}>
           </div>
         </div>
       </section>

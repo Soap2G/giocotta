@@ -9,8 +9,7 @@ const Message = () => {
         data-scroll-speed="2"
         className="message"
       >
-        Drop a Message
-      </p>
+        Ti va di fare 1 ora di macchina?      </p>
       <div
         className=" op-class"
         data-scroll
@@ -18,9 +17,10 @@ const Message = () => {
         data-scroll-class="fadeIn"
         data-scroll-speed="1"
       >
-        <input type="text" name="fullName" placeholder="Full Name" id="" />
-        <input type="text" name="email" placeholder="Enter Email" id="" />
-        <textarea name="" placeholder="Message" id="" />
+        <input type="text" name="fullName" placeholder="Nome e cognome" id="" />
+        <input type="text" name="email" placeholder="Quanti ospiti aggiuntivi?" id="" />
+        <textarea name="" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili)" id="" />
+        <input type="text" name="email" placeholder="Quanti ospiti aggiuntivi?" id="" />
       </div>
     </section>
   );
