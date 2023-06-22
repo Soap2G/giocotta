@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import GoogleMapReact from 'google-map-react'
-// import { Icon } from '@iconify/react'
-// import locationIcon from '@iconify/icons-mdi/map-marker'
 
 import './map.css'
 
@@ -43,20 +40,17 @@ class Map extends Component {
           <h2 
           className="map-h2" 
           data-scroll 
-          // data-scroll-speed="3" 
           >
             Ore XX:XX, presso la parrocchia dei SS Faustino e Giovita a Modena
           </h2>
           <p
           data-scroll 
-          // data-scroll-speed="3" 
           >
             No, non è un hangar, è una chiesa :D</p>
             
-          <div class="circle" 
+          <div className="circle__wrapper" 
           data-scroll
-          data-scroll-class="open"
-          // data-scroll-repeat="true"
+          data-scroll-class="circle"
           id={this.props.id}>
           </div>
         </div>

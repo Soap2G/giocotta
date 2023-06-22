@@ -1,27 +1,46 @@
-/* circle__wrapper will help you to position the div in the center of the page */
-div.circle {
-  position: relative;
-  width: 0px;
-  height: 0px;
-  top: 50%;
-  left: 50%;
-  -webkit-transition-duration: 0.7s;
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-in-out;
-  text-align: center;
-  background: #0000;
-  color: white;
-  border-radius: 50%;
-  overflow: hidden;
-  
-  font-family: sans-serif;  /* Just 'cos */
+.circle__wrapper { 
+  position: fixed; 
 }
 
-div.open {
-  top: 0%;
-  left: 0%;
-  width: 50rem;
-  height: 50rem;
+.circle { 
+  display:block; 
+  height: 50rem; 
+  width: 50rem; 
+  background-color: #0000; 
+  -webkit-border-radius: 50%; 
+  -moz-border-radius: 50%; 
+  border-radius: 50%; 
+  -webkit-animation: growUp 2s; /* You can remove 1.5s if you don't want delay */
+  -moz-animation: growUp 2s; 
+  -ms-animation: growUp 2s; 
+  -o-animation: growUp 2s; 
+  animation: growUp 2s; 
+}
+
+
+@-webkit-keyframes growUp {   
+  0%  { -webkit-transform: scale(0); }
+  100% { -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes growUp {
+  0%  { -moz-transform: scale(0); }
+  100% { -moz-transform: scale(1); }
+}
+
+@-o-keyframes growUp {
+  0%  { -o-transform: scale(0); }
+  100% { -o-transform: scale(1); }
+}
+
+@-ms-keyframes growUp {
+  0%  { -ms-transform: scale(0); }
+  100% { -ms-transform: scale(1); }
+}
+
+@keyframes growUp {
+  0%  { transform: scale(0); }
+  100% { transform: scale(1); }
 }
 
 .map-h2 {

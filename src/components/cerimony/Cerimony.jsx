@@ -16,18 +16,17 @@ const Cerimony = () => {
         className="cerimony-section"
     >
       <div className="cerimony">
-        <h1 data-scroll data-scroll-speed="1">
+        <h1 data-scroll>
           La Celebrazione
         </h1>
       </div>
       <div className='op-class-cerimony'>
-        {/* <MapSection location={location} zoomLevel={17} />  */}
         <MapSection
         data-scroll
         id="myMap"
         options={{
           center: { lat: location.lat, lng: location.lng },
-          zoom: 20,
+          zoom: 19,
           heading: 140,
           mapTypeId: 'satellite', // Set map type to 'satellite'
           tilt: 45, // Set tilt
@@ -37,7 +36,7 @@ const Cerimony = () => {
           var marker = new window.google.maps.Marker({
             position: { lat: location.lat, lng: location.lng },
             map: map,
-            title: 'Hello Istanbul!'
+            title: location.address
           });
         }}
       />
