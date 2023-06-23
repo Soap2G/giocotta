@@ -1,6 +1,7 @@
 import Introduction from './components/intro/Introduction';
 import Cerimony from './components/cerimony/Cerimony';
 import Message from './components/rsvp/Message';
+import Fiesta from './components/fiesta/Fiesta';
 import { useRef, useState, useEffect } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 // import MoonIcon from './assets/moon.svg';
@@ -75,6 +76,7 @@ function App() {
 			</button>
 					<Introduction /> 
 					<Cerimony />
+					<Fiesta />
 					<Message />
 			</div>
 		</main>
