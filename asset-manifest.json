@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/giocotta/static/css/main.37b22056.css",
-    "main.js": "/giocotta/static/js/main.fa81189c.js",
+    "main.css": "/giocotta/static/css/main.fe988d2d.css",
+    "main.js": "/giocotta/static/js/main.aa3b00fb.js",
     "static/js/787.ced5ec0d.chunk.js": "/giocotta/static/js/787.ced5ec0d.chunk.js",
+    "static/media/masserotti.png": "/giocotta/static/media/masserotti.7319779914ce7ca0e55c.png",
     "static/media/poppies.png": "/giocotta/static/media/poppies.ca8e34ac58f10975fb3e.png",
     "static/media/sunset.jpg": "/giocotta/static/media/sunset.ddc440b0cbda8a435835.jpg",
     "static/media/logo-icon.png": "/giocotta/static/media/logo-icon.aa432460aa2179ca967a.png",
     "index.html": "/giocotta/index.html",
-    "main.37b22056.css.map": "/giocotta/static/css/main.37b22056.css.map",
-    "main.fa81189c.js.map": "/giocotta/static/js/main.fa81189c.js.map",
+    "main.fe988d2d.css.map": "/giocotta/static/css/main.fe988d2d.css.map",
+    "main.aa3b00fb.js.map": "/giocotta/static/js/main.aa3b00fb.js.map",
     "787.ced5ec0d.chunk.js.map": "/giocotta/static/js/787.ced5ec0d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37b22056.css",
-    "static/js/main.fa81189c.js"
+    "static/css/main.fe988d2d.css",
+    "static/js/main.aa3b00fb.js"
   ]
 }
