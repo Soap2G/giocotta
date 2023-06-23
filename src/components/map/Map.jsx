@@ -51,6 +51,7 @@ class Map extends Component {
           <div className="circle-map" 
           data-scroll
           data-scroll-class="inflate"
+          data-scroll-repeat="true"
           id={this.props.id}>
           </div>
         </div>

@@ -8,17 +8,17 @@
 .message-h2 {
     font-size: 1.3rem;
     font-weight: 400;
-    margin-top: -1.5rem;
+    margin-top: -1rem;
     padding-left: 1rem;
     text-align: center;
   }
 
 .message-section{
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    /* color: black; */
     flex-direction: column;
     height: 100vh;
     
@@ -31,17 +31,23 @@
 }
 
 input {
+    text-align: center;
+    font-weight: 500;
     height: 3.5rem;
+    font-size: 1.2rem;
     width: 30rem;
     border-radius: 5px;
     border: 1;
     display: block;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #000;
+    color: #3b3838;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 
 textarea {
+    font-size: 1.2rem;
     height: 9rem;
     width: 30rem;
     border: 1;
@@ -49,7 +55,9 @@ textarea {
     display: block;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    color: #000;
+    color: #3b3838;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 
 ::placeholder {

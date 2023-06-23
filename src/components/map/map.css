@@ -48,9 +48,6 @@
     .circle-map{
       width: 80vw ;
       height: 80vw ;
-      -moz-border-radius: 50;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
 
     }
 
@@ -59,8 +56,13 @@
       height: 50vh;
     }
 
-  }
+    .map-h2 {
+      margin-top: 2rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
 
+  }
 
   @media screen and (max-width: 500px) {
     
@@ -69,8 +71,9 @@
       width: 100%;
       -moz-border-radius: 0%;
       -webkit-border-radius: 0%;
-      border-radius: 0%;
+      border-radius: 5%;
       transition: none;
+      margin-top: -2rem;
 
     }
 
@@ -84,5 +87,4 @@
       margin-right: 2rem;
       margin-top: 0rem;
     }
-
   }
