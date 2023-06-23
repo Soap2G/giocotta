@@ -2,7 +2,7 @@
   "name": "giocotta",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://soap2g.github.io/giocotta",
+  "homepage": ".",
   "dependencies": {
     "@iconify/icons-mdi": "^1.0.105",
     "@iconify/react": "^1.1.3",
