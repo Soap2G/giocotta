@@ -1,0 +1,32 @@
+.burger-button {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger-menu {
+  position: fixed;
+  top: 60px;
+  right: 15px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.burger-menu p {
+  margin: 0 0 10px 0;
+  cursor: pointer;
+}
+
+.burger-menu a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  margin: 0 0 10px 0;
+}
