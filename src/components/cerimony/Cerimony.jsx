@@ -16,7 +16,10 @@ const Cerimony = () => {
         className="cerimony-section"
     >
       <div className="cerimony">
-        <h1 data-scroll>
+        <h1 data-scroll
+        data-scroll-speed="2"
+        data-scroll-offset="0%, 30%"
+        >
           La Celebrazione
         </h1>
       </div>

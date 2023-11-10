@@ -3,17 +3,19 @@ import masserotti from '../../assets/masserotti.png';
 
 const Fiesta = () => {
 
-  window.onload = function() {
-    document.getElementById("left-curtain").style.transform = "translateX(-100%)";
-    document.getElementById("right-curtain").style.transform = "translateX(100%)";
-  }
+  // window.onload = function() {
+  //   document.getElementById("left-curtain").style.transform = "translateX(-100%)";
+  //   document.getElementById("right-curtain").style.transform = "translateX(100%)";
+  // }
   return (
 <section 
         data-scroll-section 
         className="fiesta-section"
     >
       <div className="fiesta-title">
-        <h1 data-scroll>
+        <h1 
+        data-scroll
+        id="fiesta-head">
           Fiesta
         </h1>
       </div>

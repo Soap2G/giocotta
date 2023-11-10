@@ -2,17 +2,19 @@ import Introduction from './components/intro/Introduction';
 import Cerimony from './components/cerimony/Cerimony';
 import Message from './components/rsvp/Message';
 import Fiesta from './components/fiesta/Fiesta';
+import Lista from './components/lista/lista';
 import { useRef, useState, useEffect } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
-// import MoonIcon from './assets/moon.svg';
-// import SunIcon from './assets/sun.svg';
-import ThemeIcon from './assets/logo-icon.png';
+import ThemeButton from './contexts/ThemeButton';
+// import BurgerMenu from './contexts/BurgerMenu';
+// import StupidScroll from './contexts/StupidScroll';
 
 // dark theme stuff: https://betterprogramming.pub/a-complete-guide-to-implementing-dark-mode-in-react-47af893b22eb
 
 import './App.css';
 
 function App() {
+	//THEME STUFF
 	const ref = useRef(null);
 	const [theme, setTheme] = useState('light');
 
@@ -21,6 +23,7 @@ function App() {
 		setTheme(theme === "light" ? "dark" : "light");
 	  };
 
+	// MAP STUFF
 	useEffect(() => {
 	document.body.dataset.theme = theme;
 	}, [theme]);
@@ -32,6 +35,15 @@ function App() {
 			smooth: true,
 		},
 	};
+
+	//MENU STUFF
+	// const { scroll } = useLocomotiveScroll();
+  
+	// const scrollTo = (elementId) => {
+	// 	const element = document.querySelector(elementId);
+	// 	scroll && scroll.scrollTo(element);
+	// };
+
 
 	//===========================================================================
 	//===========================================================================
@@ -55,28 +67,18 @@ function App() {
 	  }, []);
 	//===========================================================================
 	//===========================================================================
-
+	  // <BurgerMenu /*scrollTo={scrollTo}*/ className='burger-menu'/> 
 	return (
 	<LocomotiveScrollProvider options={options} watchScroll containerRef={ref}>
 		<main data-scroll-container ref={ref}>
 			<div className={`theme-${theme}`}>
-			<button 
-				onClick={toggleTheme}
-				style={{
-					background: 'transparent',
-					border: 'none',
-					cursor: 'pointer',
-					position: 'fixed', // This will fix the position of the button.
-					top: '15px', // This will set the distance from the top.
-					left: '15px', // This will set the distance from the left side.
-					zIndex: 1000
-				}}
-				>
-				{theme === 'light' ? <img src={ThemeIcon} alt="Moon for dark theme" style={{ width: '48px', height: '48px' }} /> : <img src={ThemeIcon} alt="Sun for light theme" style={{ width: '48px', height: '48px' }}/>}
-			</button>
+					<ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
+					
+					{/* <StupidScroll/> */}
 					<Introduction /> 
 					<Cerimony />
 					<Fiesta />
+					<Lista />
 					<Message />
 			</div>
 		</main>
