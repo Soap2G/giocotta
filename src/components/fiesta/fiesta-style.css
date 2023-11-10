@@ -64,6 +64,11 @@
 
 @media screen and (max-width: 820px) {
 
+    .case {
+        margin-left: 0.3em;
+        margin-right: 0.3em;
+    }
+
     .container {
         width: 100vw;
         border-radius: 5px;
@@ -94,6 +99,12 @@
   }
 
 @media screen and (max-width: 500px) {
+
+    .case {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
     .container {
         width: 100vw;
         border-radius: 5px;

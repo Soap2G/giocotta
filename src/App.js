@@ -2,11 +2,12 @@ import Introduction from './components/intro/Introduction';
 import Cerimony from './components/cerimony/Cerimony';
 import Message from './components/rsvp/Message';
 import Fiesta from './components/fiesta/Fiesta';
+import Lista from './components/lista/lista';
 import { useRef, useState, useEffect } from 'react';
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 import ThemeButton from './contexts/ThemeButton';
-import BurgerMenu from './contexts/BurgerMenu';
-import StupidScroll from './contexts/StupidScroll';
+// import BurgerMenu from './contexts/BurgerMenu';
+// import StupidScroll from './contexts/StupidScroll';
 
 // dark theme stuff: https://betterprogramming.pub/a-complete-guide-to-implementing-dark-mode-in-react-47af893b22eb
 
@@ -66,17 +67,18 @@ function App() {
 	  }, []);
 	//===========================================================================
 	//===========================================================================
-
+	  // <BurgerMenu /*scrollTo={scrollTo}*/ className='burger-menu'/> 
 	return (
 	<LocomotiveScrollProvider options={options} watchScroll containerRef={ref}>
 		<main data-scroll-container ref={ref}>
 			<div className={`theme-${theme}`}>
 					<ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
-					<BurgerMenu /*scrollTo={scrollTo}*/ className='burger-menu'/>
-					<StupidScroll/>
+					
+					{/* <StupidScroll/> */}
 					<Introduction /> 
 					<Cerimony />
-					<Fiesta id='fiesta-block'/>
+					<Fiesta />
+					<Lista />
 					<Message />
 			</div>
 		</main>
