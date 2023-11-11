@@ -41,11 +41,12 @@ class Map extends Component {
           className="map-h2" 
           data-scroll 
           >
-            Ore XX:XX, presso la parrocchia dei SS Faustino e Giovita a Modena
+            Ore 15:30, presso la parrocchia dei SS Faustino e Giovita a Modena
           </h2>
           <p
           data-scroll 
           >
+            Via Giardini 231, 41124, Modena (MO) <br/>
             No, non è un hangar, è una chiesa :D</p>
           
           <div className="circle-map" 
