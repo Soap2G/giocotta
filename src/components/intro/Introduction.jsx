@@ -1,7 +1,10 @@
 import './intro-style.css';
+// import React, { useEffect } from 'react';
 
 const Introduction = () => {
+	
 	return (
+		
 		<section
 			className="intro-section"
 			data-scroll-section
