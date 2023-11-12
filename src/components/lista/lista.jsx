@@ -1,13 +1,39 @@
 import './lista-style.css';
 import React, { Component } from "react";
-// import AliceCarousel from 'react-alice-carousel';
-// import "react-alice-carousel/lib/alice-carousel.css";
+import imageArray from './grabber';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import ES from '../../assets/carbocrema.jpg';
-import cotta from '../../assets/cotta.jpg';
+
+function SampleNextArrow(props) {
+  const { style, onClick } = props;
+  return (
+    <div
+      className='arrow'
+      style={{ 
+        ...style, 
+        transform: 'translateY(-20em) translateX(50em)',
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { style, onClick } = props;
+  return (
+    <div
+      className='arrow'
+      style={{ 
+        ...style, 
+        transform: 'scaleX(-1) translateY(17.5em) translateX(7em)'
+      }}
+      onClick={onClick}
+    />
+  );
+}
 
 class SimpleSlider extends Component {
   render() {
@@ -17,8 +43,10 @@ class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       lazyload: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
 
     };
     return (
@@ -33,113 +61,15 @@ class SimpleSlider extends Component {
 
 const Lista = () => {
 
-const items = [
-  <div className='sliderdiv'>
-  <img src={cotta} className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_11_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_12_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_13_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_14_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_17_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_18_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_19_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_1_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_20_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_21_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_22_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_23_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_24_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_25_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_26_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-  <img src="photos/photo_31_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-</div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_27_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_28_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_29_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_2_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_30_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_32_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_33_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_35_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_36_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_37_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_38_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_39_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_40_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_41_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_42_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_6_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_8_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>,
-  <div className='sliderdiv'>
-      <img src="photos/photo_9_2023-11-11_20-39-00.jpg" className="item" loading='lazy' alt=""/>
-  </div>
-];
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+}
+
+const shuffleditems = shuffleArray(imageArray());
 
 	return (
 		<section 
@@ -157,11 +87,11 @@ const items = [
       </div>
       <div className="case">
         <p>Da anni ormai siamo impegnati nella lotta contro la violenza sulla buona cucina. <br/>
-		   Se vuoi supportarci in questa iniziativa, abbiamo un amico che vende padelle: 
+		   Se volete supportarci in questa iniziativa, abbiamo un amico che vende padelle: 
         </p>
       </div>
       <div className="address">
-	  <a href="https://elettrodomesticaservice.it">ELETTRODOMESTICA 1998 Snc</a> <br/>
+	  <b><a href="https://elettrodomesticaservice.it" target="_blank" rel="noopener noreferrer">ELETTRODOMESTICA 1998 Snc</a></b> <br/>
 	  Viale Raimondo Montecuccoli, 12/14, 41124 Modena MO, Italy
       </div>
 	  <div className="container-lista"
@@ -183,18 +113,19 @@ const items = [
         </h2>
 		<p>Prendici a calci fino in Perù.</p>
 		<h3 >Questa sezione è ancora in costruzione, ci siamo quasi :D		   
-        </h3>
+    </h3>
+    <p className='text-for-gallery'>
+      Scorri con il dito per vedere le immagini
+    </p>
       </div>
 	  <div
     className='sliderimg'
     data-scroll
     >
       <SimpleSlider>
-        {items}
+        {shuffleditems}
       </SimpleSlider>
     </div>
-
-
     </section>
 	);
 };

@@ -9,14 +9,14 @@ const Message = () => {
         data-scroll-speed="1">
           Facci un fischio
         </h1>
-        <p
+        {/* <p
           data-scroll
           data-scroll-direction="horizontal"
           data-scroll-speed="2"
           className="message-h2"
         >
           Ti va di fare 1 ora di macchina?      
-        </p>
+        </p> */}
       </div>
 
       <div

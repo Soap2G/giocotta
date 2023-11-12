@@ -1,5 +1,5 @@
 import "./fiesta-style.css";
-import masserotti from '../../assets/masserotti.png';
+import masserotti from '../../assets/masserotti.jpg';
 
 const Fiesta = () => {
 
@@ -13,17 +13,21 @@ const Fiesta = () => {
         className="fiesta-section"
     >
       <div className="fiesta-title">
+      <center>
         <h1 
         data-scroll
         id="fiesta-head">
-          Fiesta
+          Vi va di farvi 1 ora di macchina?
         </h1>
+      </center>
+        
       </div>
       <div className="case">
-        <p>La festa si svolgerà a Villa Borgo Masserotti
+        <p>Vi aspettiamo qui:
         </p>
       </div>
       <div className="address">
+      <b><a href="https://villaborgomasserotti.com" target="_blank"rel="noopener noreferrer" >BORGO MASSEROTTI</a></b> <br/>
         Via Gaiato n. 142 <br/>
         41026 - Gaiato Chiesa - Pavullo nel Frignano (MO)
       </div>

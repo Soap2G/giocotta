@@ -83,7 +83,7 @@ h1, body, html, ::placeholder, input, textarea {
 
 
 @media screen and (max-width: 820px) {
-        .intro-section::before {
+        .intro-section::before, .intro-section::after {
           background-image: url('../../assets/poppies_med_res.png');
           background-size: 50%;
         }
@@ -94,7 +94,7 @@ h1, body, html, ::placeholder, input, textarea {
 
 
 @media screen and (max-width: 500px) {
-        .intro-section::before {
+        .intro-section::before, .intro-section::after {
           background-image: url('../../assets/poppies_low_res.png');
           background-size: 100%;
         }
