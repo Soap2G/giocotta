@@ -41,7 +41,7 @@ class Map extends Component {
           className="map-h2" 
           data-scroll 
           >
-            Ore 15:30, presso la parrocchia dei SS Faustino e Giovita a Modena
+            Alle 15:30, nella parrocchia dei SS Faustino e Giovita a Modena
           </h2>
           <p
           data-scroll 

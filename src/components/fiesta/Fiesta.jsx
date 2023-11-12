@@ -17,7 +17,7 @@ const Fiesta = () => {
         <h1 
         data-scroll
         id="fiesta-head">
-          Vi va di farvi 1 ora di macchina?
+          Dopo vi va di farvi 1 ora di macchina?
         </h1>
       </center>
         

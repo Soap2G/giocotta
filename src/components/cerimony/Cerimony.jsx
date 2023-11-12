@@ -20,7 +20,7 @@ const Cerimony = () => {
         data-scroll-speed="2"
         data-scroll-offset="0%, 30%"
         >
-          La Celebrazione
+          Dimmi dove e quando
         </h1>
       </div>
       <div className='op-class-cerimony'>
