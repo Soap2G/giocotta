@@ -1,3 +1,10 @@
+.success-message {
+    color: var(--ref-color);
+  }
+  .error-message {
+    color: rgb(255, 78, 78);
+  }  
+
 .message-title {
     font-size: 3rem;
     align-items: center;

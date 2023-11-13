@@ -1,6 +1,6 @@
 import Introduction from './components/intro/Introduction';
 import Cerimony from './components/cerimony/Cerimony';
-import Message from './components/rsvp/Message';
+import { Message } from './components/rsvp/Message';
 import Fiesta from './components/fiesta/Fiesta';
 import Lista from './components/lista/lista';
 import { useRef, useState, useEffect } from 'react';
