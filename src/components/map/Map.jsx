@@ -4,7 +4,7 @@ import { Loader } from "@googlemaps/js-api-loader";
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 
-const Map = (props) => {
+const Map = ({ options, onMapLoad }) => {
   const [scroll, setScroll] = useState(0);
   const mapRef = useRef(null); // useRef hook to reference the map container
 
@@ -23,14 +23,14 @@ const Map = (props) => {
 
     loader.load().then(() => {
       const google = window.google; // Access the global google object
-      const map = new google.maps.Map(mapRef.current, props.options);
-      if (props.onMapLoad) props.onMapLoad(map);
+      const map = new google.maps.Map(mapRef.current, options);
+      if (onMapLoad) onMapLoad(map);
     });
 
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
-  }, [props.options, props.onMapLoad]);
+  }, [options, onMapLoad]);
 
   const holeSize = Math.min(1, scroll / 700); // Adjust 500 to control the speed of the hole expansion
 
