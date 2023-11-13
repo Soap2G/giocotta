@@ -33,6 +33,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    
   }
 
 .container img {
@@ -111,10 +112,12 @@
 
     .fiesta-title {
         font-size: 2rem;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
     }
 
     .container img {
-        max-width: 70%;
+        max-width: 80%;
     }
 
     .curtain {

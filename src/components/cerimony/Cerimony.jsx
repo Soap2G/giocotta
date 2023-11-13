@@ -12,20 +12,26 @@ const Cerimony = () => {
 
   return (
     <section 
-        data-scroll-section 
         className="cerimony-section"
     >
-      <div className="cerimony">
-        <h1 data-scroll
-        data-scroll-speed="2"
-        data-scroll-offset="0%, 30%"
-        >
-          Dimmi dove e quando
-        </h1>
+      <center>
+        <div className="cerimony-title">
+            <h1>
+            Dimmi dove e quando
+          </h1>
+        </div>
+      </center>
+      <div className="case">
+        <p >
+          Alle 15:30, nella parrocchia dei <b><a href="https://www.parrocchiasanfaustino.it/" target="_blank" rel="noopener noreferrer">SS Faustino e Giovita</a></b> a Modena
+        </p>
+      </div>
+      <div className="address">
+          Via Giardini 231, 41124, Modena (MO) <br/>
+          No, non è un hangar, è una chiesa :D
       </div>
       <div className='op-class-cerimony'>
         <MapSection
-        data-scroll
         id="myMap"
         options={{
           center: { lat: location.lat, lng: location.lng },

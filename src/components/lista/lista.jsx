@@ -4,6 +4,8 @@ import imageArray from './grabber';
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 import ES from '../../assets/carbocrema.jpg';
 
@@ -73,13 +75,11 @@ const shuffleditems = shuffleArray(imageArray());
 
 	return (
 		<section 
-        data-scroll-section 
         className="lista-section"
     >
       <div className="lista-title">
 	  <center>
 		<h1 
-        data-scroll
 		>
           Carbonara con la panna
         </h1>
@@ -94,20 +94,11 @@ const shuffleditems = shuffleArray(imageArray());
 	  <b><a href="https://elettrodomesticaservice.it" target="_blank" rel="noopener noreferrer">ELETTRODOMESTICA 1998 Snc</a></b> <br/>
 	  Viale Raimondo Montecuccoli, 12/14, 41124 Modena MO, Italy
       </div>
-	  <div className="container-lista"
-      data-scroll>
+      <ScrollAnimation animateIn='fadeIn'>
+    <div className="container-lista">
           <img src={ES} alt=""/>
-          <div 
-          className="curtain-lista" 
-          data-scroll
-          data-scroll-repeat="true"
-          data-scroll-class="left-curtain-lista"></div>
-          <div 
-          className="curtain-lista" 
-          data-scroll
-          data-scroll-repeat="true"
-          data-scroll-class="right-curtain-lista"></div>   
       </div>
+      </ScrollAnimation>
 	  <div className="case">
         <h2 style={{ marginTop: "3em", marginLeft: "0.2em", marginRight: "0.2em" }}>Quando non cuciniamo, ci piace viaggiare.		   
         </h2>
@@ -120,7 +111,6 @@ const shuffleditems = shuffleArray(imageArray());
       </div>
 	  <div
     className='sliderimg'
-    data-scroll
     >
       <SimpleSlider>
         {shuffleditems}
