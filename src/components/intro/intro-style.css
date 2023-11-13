@@ -34,7 +34,7 @@ h1, body, html, ::placeholder, input, textarea {
   background-repeat: repeat-x;
   background-position: bottom;
   transition: opacity 1.5s ease;
-  z-index: -1;
+  z-index: 1;
 }
 
 .intro-section::before {
@@ -65,7 +65,7 @@ h1, body, html, ::placeholder, input, textarea {
         flex: 1;
         font-size: 2.5rem;
         text-align: center;
-        margin-top: -10em;
+        margin-top: -7em;
 }
 
 .intro-title img {
@@ -85,7 +85,7 @@ h1, body, html, ::placeholder, input, textarea {
 @media screen and (max-width: 820px) {
         .intro-section::before, .intro-section::after {
           background-image: url('../../assets/poppies_med_res.png');
-          background-size: 50%;
+          background-size: 70%;
         }
         .intro-title {
           margin-top: -5em;

@@ -4,7 +4,7 @@ import { Message } from './components/rsvp/Message';
 import Fiesta from './components/fiesta/Fiesta';
 import Lista from './components/lista/lista';
 import { useRef, useState, useEffect } from 'react';
-import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import ThemeButton from './contexts/ThemeButton';
 // import BurgerMenu from './contexts/BurgerMenu';
 // import StupidScroll from './contexts/StupidScroll';
@@ -28,13 +28,13 @@ function App() {
 	document.body.dataset.theme = theme;
 	}, [theme]);
 
-	const options = {
-		smooth: true,
-		multiplier: 1,
-		smartphone: {
-			smooth: true,
-		},
-	};
+	// const options = {
+	// 	smooth: true,
+	// 	multiplier: 1,
+	// 	smartphone: {
+	// 		smooth: true,
+	// 	},
+	// };
 
 	//MENU STUFF
 	// const { scroll } = useLocomotiveScroll();
@@ -69,20 +69,20 @@ function App() {
 	//===========================================================================
 	  // <BurgerMenu /*scrollTo={scrollTo}*/ className='burger-menu'/> 
 	return (
-	<LocomotiveScrollProvider options={options} watchScroll containerRef={ref}>
-		<main data-scroll-container ref={ref}>
-			<div className={`theme-${theme}`}>
-					<ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
-					
-					{/* <StupidScroll/> */}
-					<Introduction /> 
-					<Cerimony />
-					<Fiesta />
-					<Lista />
-					<Message />
-			</div>
-		</main>
-	</LocomotiveScrollProvider>
+		<ParallaxProvider>
+			<main data-scroll-container ref={ref}>
+				<div className={`theme-${theme}`}>
+						<ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
+						
+						{/* <StupidScroll/> */}
+						<Introduction /> 
+						<Cerimony />
+						<Fiesta />
+						<Lista />
+						<Message />
+				</div>
+			</main>
+		</ParallaxProvider>
 	);
 }
 

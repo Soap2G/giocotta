@@ -1,27 +1,26 @@
 import "./fiesta-style.css";
+// import React, { useRef, useState, useEffect } from 'react';
 import masserotti from '../../assets/masserotti.jpg';
+// import { Parallax } from "react-scroll-parallax";
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const Fiesta = () => {
 
-  // window.onload = function() {
-  //   document.getElementById("left-curtain").style.transform = "translateX(-100%)";
-  //   document.getElementById("right-curtain").style.transform = "translateX(100%)";
-  // }
-  return (
+return (
 <section 
-        data-scroll-section 
         className="fiesta-section"
     >
+      {/* <ScrollAnimation animateIn="fadeIn"> */}
       <div className="fiesta-title">
       <center>
         <h1 
-        data-scroll
         id="fiesta-head">
           Dopo vi va di farvi 1 ora di macchina?
         </h1>
       </center>
-        
       </div>
+      {/* </ScrollAnimation> */}
       <div className="case">
         <p>Vi aspettiamo qui:
         </p>
@@ -31,21 +30,11 @@ const Fiesta = () => {
         Via Gaiato n. 142 <br/>
         41026 - Gaiato Chiesa - Pavullo nel Frignano (MO)
       </div>
-      <div className="container"
-      data-scroll>
-          <img src={masserotti} alt=""/>
-          <div 
-          className="curtain" 
-          data-scroll
-          data-scroll-repeat="true"
-          data-scroll-class="left-curtain"></div>
-          <div 
-          className="curtain" 
-          data-scroll
-          data-scroll-repeat="true"
-          data-scroll-class="right-curtain"></div>   
+      <ScrollAnimation animateIn='fadeIn'>
+      <div className="container">
+      <img src={masserotti} alt=""/>
       </div>
-
+    </ScrollAnimation>
     </section>
   );
 };

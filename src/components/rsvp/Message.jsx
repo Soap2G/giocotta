@@ -1,7 +1,7 @@
 import "./message-style.css";
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha';
+import Captcha from './Captcha';
 
 export const Message = () => {
 
@@ -11,6 +11,9 @@ export const Message = () => {
   const [submissionMessage, setSubmissionMessage] = useState('');
   const form = useRef();
 
+  //----------------------------------
+  // Update state of the recaptcha
+  //----------------------------------
   const handleCaptchaChange = (value) => {
     setIsCaptchaValid(!!value);
   };
@@ -18,7 +21,7 @@ export const Message = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     if (!isCaptchaValid) {
-      setSubmissionMessage("Please complete the reCAPTCHA.");
+      setSubmissionMessage("Per favore, completa il reCAPTCHA.");
       return;
     }
 
@@ -26,7 +29,7 @@ export const Message = () => {
                           "Non ha scritto nulla, quindi ecco una barzelletta: Perché il pomodoro non riesce mai a dormire? Perché l’insalata… russa!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è il colmo per due divorziati americani? Essere… stati uniti.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Come si chiamano i boy-scout che vanno in macchina? Le giovani marmitte!",
-                          "Non ha scritto nulla, quindi ecco una barzelletta: Che cosa fa un gallo in chiesa? Il chcchirichetto!",
+                          "Non ha scritto nulla, quindi ecco una barzelletta: Che cosa fa un gallo in chiesa? Il chicchirichetto!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è il colmo per una giraffa? Essere nei guai fino al collo!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Basta, ho finito le battute in serbo. Ma se volete comincio con quelle in croato!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Per alcuni l'amore è cieco.. Per altri slovacco.. In ogni caso, ha sempre qualche sorpresa in serbo.",
@@ -46,7 +49,6 @@ export const Message = () => {
                           "Non ha scritto nulla, quindi ecco una barzelletta: Chiude una lavanderia. Faceva affari sporchi.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è la città preferita dai ragni? Mosca!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: La tuta di Batman? La Bat-tuta! :-)",
-                          "Non ha scritto nulla, quindi ecco una barzelletta: Qual è l'ape più difficile da digerire? La pe-peronata!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Se io mi metto la camicia di lino, poi Lino che si mette?",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è il formaggio servito nei vagoni ristorante? La mozzarella in carrozza.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Ma se un passerotto entra dentro un computer diventa un MicroCIP?",
@@ -86,31 +88,22 @@ export const Message = () => {
   };
 
   return (
-    <section data-scroll-section className="message-section">
+    <section className="message-section">
       <div className="message-title">
-        <h1 
-        data-scroll 
-        data-scroll-speed="1">
+        <h1 >
           Facci un fischio
         </h1>
       </div>
 
       <div
-        className=" op-class"
-        data-scroll
-        data-scroll-repeat="true"
-        data-scroll-class="fadeIn"
-        data-scroll-speed="1"
+        // className=" op-class"
       >
         <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="fullName" placeholder="Nome e cognome" id="" required/>
-        <input type="text" name="email" placeholder="La tua email" id="" required/>
-        <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="" />
-        <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="" />
-        <ReCAPTCHA
-        sitekey="6Lf1Hg0pAAAAAODPOSjuedVCp7L13STk0kX878qk"
-        onChange={handleCaptchaChange}
-        />
+        <input type="text" name="fullName" placeholder="Nome e cognome" id="textrsvp" required/>
+        <input type="text" name="email" placeholder="La tua email" id="textrsvp" required/>
+        <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="textrsvp" />
+        <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
+        <Captcha handleCaptchaChange={handleCaptchaChange}/>
         <input 
         type="submit" 
         value="INVIA" 
