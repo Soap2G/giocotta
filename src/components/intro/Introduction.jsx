@@ -1,5 +1,4 @@
 import './intro-style.css';
-// import React, { useEffect } from 'react';
 import { Parallax } from "react-scroll-parallax";
 
 const Introduction = () => {
