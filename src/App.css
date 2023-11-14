@@ -10,6 +10,7 @@ a {
 :root {
   /* Light theme colors */
   --color-background: #ffffff;
+  --color-footer: #e4e4e4;
   --ref-color: #32ad51;
   --color-text: #3b3b3b;
 }
@@ -17,6 +18,7 @@ a {
 body[data-theme='dark'] {
   /* Dark theme colors */
   --color-background: #030207;
+  --color-footer: #242938;
   --ref-color: #32ad51;
   --color-text: #ffffff;
 }

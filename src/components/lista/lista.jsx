@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
+// import { Icon } from '@iconify/react';
+
 
 import ES from '../../assets/carbocrema.jpg';
 
@@ -16,7 +18,7 @@ function SampleNextArrow(props) {
       className='arrow'
       style={{ 
         ...style, 
-        transform: 'translateY(-20em) translateX(50em)',
+        transform: 'translateY(-20em) translateX(41.5vw)',
       }}
       onClick={onClick}
     />
@@ -47,6 +49,10 @@ class SimpleSlider extends Component {
       slidesToScroll: 1,
       adaptiveHeight: false,
       lazyload: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      pauseOnHover: true,
+      pauseOnFocus: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />
 
@@ -102,8 +108,11 @@ const shuffleditems = shuffleArray(imageArray());
 	  <div className="case">
         <h2 style={{ marginTop: "3em", marginLeft: "0.2em", marginRight: "0.2em" }}>Quando non cuciniamo, ci piace viaggiare.		   
         </h2>
-		<p>Prendici a calci fino in Perù.</p>
-		<h3 >Questa sezione è ancora in costruzione, ci siamo quasi :D		   
+		{/* <p>Prendeteci a calci fino in Perù. <br/><br/> */}
+		<p>Prendeteci a calci in giro per il mondo. <br/><br/>
+      Se quelli fisici non fossero abbastanza soddisfacenti, <br/> accettiamo volentieri anche calci virtuali:
+    </p>
+		<h3 >Giovanni Guerrieri <br/> IBAN: IT60P36772223000EM001101723	   
     </h3>
     <p className='text-for-gallery'>
       Scorri con il dito per vedere le immagini
@@ -116,10 +125,20 @@ const shuffleditems = shuffleArray(imageArray());
         {shuffleditems}
       </SimpleSlider>
     </div>
+    <div className="case" style= {{ marginTop: "5em" }} >
+        <p>Siamo profondamente grati a tutti. <br/>
+        Per quello che ci insegnate, ma soprattutto perchè ci siete. <br/>
+        E non solo quando si festeggia :)
+        </p>
+        <div className="case" style= {{ marginTop: "4em" }} >
+        <i>To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span style= {{ color: "#e63f34" }} >feel</span>. <br/>That is the purpose of life.</i>
+      </div>
+      </div>
     </section>
 	);
 };
 
 export default Lista;
+
 
 

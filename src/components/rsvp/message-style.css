@@ -34,7 +34,8 @@ button {
     align-items: center;
     /* color: black; */
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
+    margin-bottom: 5em;
     
 }   
 
@@ -111,5 +112,10 @@ textarea {
     .message-title {
         font-size: 2rem;
     }
+
+    .message-section{
+        margin-bottom: 2em;
+        
+    }   
 
   }

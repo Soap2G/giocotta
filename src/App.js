@@ -6,6 +6,7 @@ import Lista from './components/lista/lista';
 import { useRef, useState, useEffect } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import ThemeButton from './contexts/ThemeButton';
+import Footer from "./components/Footer.js";
 // import BurgerMenu from './contexts/BurgerMenu';
 // import StupidScroll from './contexts/StupidScroll';
 
@@ -70,7 +71,7 @@ function App() {
 	  // <BurgerMenu /*scrollTo={scrollTo}*/ className='burger-menu'/> 
 	return (
 		<ParallaxProvider>
-			<main data-scroll-container ref={ref}>
+			<main ref={ref}>
 				<div className={`theme-${theme}`}>
 						<ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
 						
@@ -81,6 +82,7 @@ function App() {
 						<Lista />
 						<Message />
 				</div>
+				<Footer />
 			</main>
 		</ParallaxProvider>
 	);
