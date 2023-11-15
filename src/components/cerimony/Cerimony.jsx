@@ -23,7 +23,7 @@ const Cerimony = () => {
       </center>
       <div className="case">
         <p >
-          Alle 15:30, nella parrocchia dei <b><a href="https://www.parrocchiasanfaustino.it/" target="_blank" rel="noopener noreferrer">SS Faustino e Giovita</a></b> a Modena
+          Alle 15:30, nella parrocchia dei <a href="https://www.parrocchiasanfaustino.it/" target="_blank" rel="noopener noreferrer">SS Faustino e Giovita</a> a Modena
         </p>
       </div>
       <div className="address">

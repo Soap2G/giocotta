@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bellefair:wght@400&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;1,300&family=Bellefair&display=swap');
 
 h1, body, html, ::placeholder, input, textarea {
-    font-family: 'Bellefair', serif; /* Updated font-family */
+    /* font-family: 'Averia Serif Libre', serif; */
+    font-family: 'Bellefair', serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     margin: 0;
     padding: 0;
+    font-weight: 400;
 }
 
 :root {
@@ -63,9 +66,9 @@ h1, body, html, ::placeholder, input, textarea {
 
 .intro-title {
         flex: 1;
-        font-size: 2.5rem;
+        font-size: 3.5rem;
         text-align: center;
-        margin-top: -7em;
+        margin-top: -30vh;
 }
 
 .intro-title img {
@@ -88,6 +91,7 @@ h1, body, html, ::placeholder, input, textarea {
           background-size: 70%;
         }
         .intro-title {
+          font-size: 3rem;
           margin-top: -5em;
   }
       }
@@ -98,4 +102,8 @@ h1, body, html, ::placeholder, input, textarea {
           background-image: url('../../assets/poppies_low_res.png');
           background-size: 100%;
         }
+
+        .intro-title {
+          font-size: 2.5rem;
+  }
       }

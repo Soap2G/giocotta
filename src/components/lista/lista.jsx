@@ -97,7 +97,7 @@ const shuffleditems = shuffleArray(imageArray());
         </p>
       </div>
       <div className="address">
-	  <b><a href="https://elettrodomesticaservice.it" target="_blank" rel="noopener noreferrer">ELETTRODOMESTICA 1998 Snc</a></b> <br/>
+	  <a href="https://elettrodomesticaservice.it" target="_blank" rel="noopener noreferrer">ELETTRODOMESTICA 1998 Snc</a> <br/>
 	  Viale Raimondo Montecuccoli, 12/14, 41124 Modena MO, Italy
       </div>
       <ScrollAnimation animateIn='fadeIn'>
@@ -105,15 +105,23 @@ const shuffleditems = shuffleArray(imageArray());
           <img src={ES} alt=""/>
       </div>
       </ScrollAnimation>
-	  <div className="case">
-        <h2 style={{ marginTop: "3em", marginLeft: "0.2em", marginRight: "0.2em" }}>Quando non cuciniamo, ci piace viaggiare.		   
+      <center>
+        <div className="lista-subtitle">
+      <h2 style={{ marginTop: "1.5em", marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>Quando non cuciniamo, ci piace viaggiare.		   
         </h2>
+      </div>
+      </center>
+      
+	  <div className="case">
+        
 		{/* <p>Prendeteci a calci fino in Perù. <br/><br/> */}
 		<p>Prendeteci a calci in giro per il mondo. <br/><br/>
       Se quelli fisici non fossero abbastanza soddisfacenti, <br/> accettiamo volentieri anche calci virtuali:
     </p>
-		<h3 >Giovanni Guerrieri <br/> IBAN: IT60P36772223000EM001101723	   
-    </h3>
+    <center>
+      <code>Giovanni Guerrieri <br/>IBAN:IT60P36772223000EM001101723</code>
+    </center>
+    
     <p className='text-for-gallery'>
       Scorri con il dito per vedere le immagini
     </p>

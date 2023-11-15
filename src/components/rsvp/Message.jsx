@@ -105,10 +105,11 @@ export const Message = () => {
         <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
         <Captcha handleCaptchaChange={handleCaptchaChange}/>
         <input 
+        id="submit"
         type="submit" 
         value="INVIA" 
         disabled={!isCaptchaValid || isSubmitting} 
-        style={{ cursor: 'pointer' }}
+        style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
         />
         {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
         </form>

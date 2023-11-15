@@ -26,7 +26,7 @@ return (
         </p>
       </div>
       <div className="address">
-      <b><a href="https://villaborgomasserotti.com" target="_blank"rel="noopener noreferrer" >BORGO MASSEROTTI</a></b> <br/>
+      <a href="https://villaborgomasserotti.com" target="_blank"rel="noopener noreferrer" >BORGO MASSEROTTI</a> <br/>
         Via Gaiato n. 142 <br/>
         41026 - Gaiato Chiesa - Pavullo nel Frignano (MO)
       </div>

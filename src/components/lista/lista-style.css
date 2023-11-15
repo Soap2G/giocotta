@@ -41,6 +41,7 @@
 }
 
 .sliderimg{
+    margin-top: 2em;
     max-width: 40%;
     /* height: auto; */
 }
@@ -67,6 +68,12 @@
 
 .lista-title {
     font-size: 3rem;
+    align-items: center;
+    margin: 0px;
+}
+
+.lista-subtitle {
+    font-size: 2rem;
     align-items: center;
     margin: 0px;
 }

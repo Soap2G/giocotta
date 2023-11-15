@@ -1,8 +1,15 @@
 input,
 textarea,
 button {
-    background-color: var(--color-background);
+    background-color: var(--color-footer);
     color: var(--color-text);
+}
+
+#submit {
+    &:hover{
+        background-color: var(--submit-color);
+        transition: 200ms ease-in;
+    }
 }
 
 .success-message {
@@ -10,6 +17,7 @@ button {
   }
   .error-message {
     color: rgb(255, 78, 78);
+    transition: color 200ms ease-in;
   }  
 
 .message-title {
@@ -66,7 +74,7 @@ textarea {
     height: 9rem;
     width: 30rem;
     border: 1;
-    border-radius: 2px;
+    border-radius: 5px;
     display: block;
     margin-top: 1rem;
     margin-bottom: 1rem;
