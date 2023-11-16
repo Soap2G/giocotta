@@ -3,8 +3,8 @@ import React from 'react';
 // import LightIcon from '../assets/sun.svg';
 // import DarkIcon from '../assets/darth-vader.png';
 // import LightIcon from '../assets/baby-yoda.png';
-import DarkIcon from '../assets/dark.png';
-import LightIcon from '../assets/light.png';
+import DarkIcon from '../assets/dark.webp';
+import LightIcon from '../assets/light.webp';
 
 const ThemeButton = ({ onClick, flipped }) => {
     return (

@@ -28,7 +28,7 @@ h1, body, html, ::placeholder, input, textarea {
 .intro-section::before, .intro-section::after {
   content: "";
   position: absolute;
-  background-image: url('../../assets/poppies.png');
+  background-image: url('../../assets/poppies.webp');
   top: 0;
   left: 0;
   height: var(--vh);
@@ -87,7 +87,7 @@ h1, body, html, ::placeholder, input, textarea {
 
 @media screen and (max-width: 820px) {
         .intro-section::before, .intro-section::after {
-          background-image: url('../../assets/poppies_med_res.png');
+          background-image: url('../../assets/poppies_med_res.webp');
           background-size: 70%;
         }
         .intro-title {
@@ -99,7 +99,7 @@ h1, body, html, ::placeholder, input, textarea {
 
 @media screen and (max-width: 500px) {
         .intro-section::before, .intro-section::after {
-          background-image: url('../../assets/poppies_low_res.png');
+          background-image: url('../../assets/poppies_low_res.webp');
           background-size: 100%;
         }
 
