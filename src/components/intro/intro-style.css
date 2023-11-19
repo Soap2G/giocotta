@@ -9,6 +9,7 @@ h1, body, html, ::placeholder, input, textarea {
     margin: 0;
     padding: 0;
     font-weight: 400;
+    font-display: swap;
 }
 
 :root {

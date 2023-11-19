@@ -39,7 +39,7 @@ const Map = ({ options, onMapLoad, locations }) => {
       setScroll(window.scrollY);
     };
 
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, {passive: true});
 
     const loader = new Loader({
       apiKey: "YOUR_API_KEY",

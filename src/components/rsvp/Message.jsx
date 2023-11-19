@@ -99,9 +99,9 @@ export const Message = () => {
         // className=" op-class"
       >
         <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="fullName" placeholder="Nome e cognome" id="textrsvp" required/>
-        <input type="text" name="email" placeholder="La tua email" id="textrsvp" required/>
-        <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="textrsvp" />
+        <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
+        <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
+        <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
         <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
         <Captcha handleCaptchaChange={handleCaptchaChange}/>
         <input 

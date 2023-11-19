@@ -1,6 +1,6 @@
 import "./fiesta-style.css";
 // import React, { useRef, useState, useEffect } from 'react';
-import masserotti from '../../assets/masserotti.jpg';
+import masserotti from '../../assets/masserotti.webp';
 // import { Parallax } from "react-scroll-parallax";
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
