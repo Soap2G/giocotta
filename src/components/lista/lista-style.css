@@ -34,7 +34,7 @@
 
 .item {
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 95%;
     height: auto; /* Set the height you want for your items */
     max-height: 600px;
     margin: 0 5px; /* Optional: if you want some space between items */
