@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.60afa985.css",
-    "main.js": "./static/js/main.c5b48e0f.js",
+    "main.css": "./static/css/main.fee7c241.css",
+    "main.js": "./static/js/main.6005affe.js",
     "static/js/787.ced5ec0d.chunk.js": "./static/js/787.ced5ec0d.chunk.js",
     "static/media/YDXJ0642.jpg": "./static/media/YDXJ0642.e3c9c663fc3bacd2ef7d.jpg",
     "static/media/IMG_20170913_142635821.jpg": "./static/media/IMG_20170913_142635821.6ab0d268b5ad5af09504.jpg",
-    "static/media/masserotti.jpg": "./static/media/masserotti.0335568d290887d84d72.jpg",
     "static/media/poppies.webp": "./static/media/poppies.e668f46ed5617ca3a037.webp",
     "static/media/poppies_med_res.webp": "./static/media/poppies_med_res.18bdcd9387a6e0c4ad7b.webp",
     "static/media/YDXJ0804.jpg": "./static/media/YDXJ0804.2d87c0001cfe6b1b6df9.jpg",
+    "static/media/masserotti.webp": "./static/media/masserotti.6bf526402e4f279d213e.webp",
     "static/media/photo_29_2023-11-11_20-39-00.jpg": "./static/media/photo_29_2023-11-11_20-39-00.92c0e8e93b14bf742d73.jpg",
     "static/media/photo_43_2023-11-12_09-49-49.jpg": "./static/media/photo_43_2023-11-12_09-49-49.c3e379278eb1e6541cc1.jpg",
     "static/media/photo_23_2023-11-11_20-39-00.jpg": "./static/media/photo_23_2023-11-11_20-39-00.1c1f5f3cc8244d9fc4dd.jpg",
@@ -56,12 +56,12 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
-    "main.60afa985.css.map": "./static/css/main.60afa985.css.map",
-    "main.c5b48e0f.js.map": "./static/js/main.c5b48e0f.js.map",
+    "main.fee7c241.css.map": "./static/css/main.fee7c241.css.map",
+    "main.6005affe.js.map": "./static/js/main.6005affe.js.map",
     "787.ced5ec0d.chunk.js.map": "./static/js/787.ced5ec0d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60afa985.css",
-    "static/js/main.c5b48e0f.js"
+    "static/css/main.fee7c241.css",
+    "static/js/main.6005affe.js"
   ]
 }
