@@ -198,7 +198,7 @@ curiosity = [
     ]
 fact = [
     "Giacomo Leopardi soffriva di aerofagia.",
-    "Giacomo Leopardi soffriva di aerofagia.",
+    "Napoleone non era affatto un nanerottolo, anzi, misurava ben 3cm in più di Elisa Cottafava.",
     "Giacomo Leopardi soffriva di aerofagia.",
     "Giacomo Leopardi soffriva di aerofagia.",
     "Giacomo Leopardi soffriva di aerofagia.",
