@@ -1,4 +1,8 @@
 /* Do not shot buttons on Google Maps! */
+.gm-style-iw-d{
+  color:black;
+}
+
 .gm-svpc, .gmnoprint {
   display: none;
 }
