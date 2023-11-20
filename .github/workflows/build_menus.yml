@@ -35,4 +35,4 @@ jobs:
       with:
         name: pdf-artifacts
         path: |
-          *.pdf
+          menu_creator/*.pdf
