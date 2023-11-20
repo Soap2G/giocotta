@@ -8,11 +8,13 @@ on:
     paths-ignore:
       - 'README.md'
       - 'menus_recursive/**'
+      - .github/workflows/build_menus.yml
   pull_request:
     branches: [ main ]
     paths-ignore:
       - 'README.md'
       - 'menus_recursive/**'
+      - .github/workflows/build_menus.yml
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
