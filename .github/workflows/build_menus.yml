@@ -26,7 +26,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install fpdf2 Pillow
     - name: Run script
-      run: python menu.py
+      run: |
+        cd menu_creator
+        python menu.py
     - name: Upload PDF artifacts
       uses: actions/upload-artifact@v2
       with:
