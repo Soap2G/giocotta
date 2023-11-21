@@ -1,3 +1,4 @@
+import random
 from random import randint
 from fpdf import FPDF
 
@@ -260,8 +261,8 @@ for i,text in enumerate(curiosity):
     font_path = 'fonts/Alegreya-Bold.ttf'  
     pdf.add_custom_font(font_name, font_path, font_style='B' )
 
-
     c_number = randint(1, 100)
+    random.seed(c_number)
     f_number = randint(1, 100)
     # Add the front page content
     pdf.add_page_content(c_number, text, f_number, fact[i])
