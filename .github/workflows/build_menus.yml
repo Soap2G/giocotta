@@ -29,7 +29,7 @@ jobs:
     - name: Run script
       run: |
         cd menu_creator
-        python menu.py
+        python menu-horizontal.py
     - name: Upload PDF artifacts
       uses: actions/upload-artifact@v2
       with:
