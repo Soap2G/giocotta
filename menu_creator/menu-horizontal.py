@@ -174,7 +174,7 @@ class PDF(FPDF):
 
         text = "Passatelli asciutti con crema di carciofi e guanciale croccante"
         y_position = self.get_y()  # Y position of the start of the text
-        column_width = 60  # Width of each column
+        column_width = 68  # Width of each column
         line_height = 10  # Height of each line
         x_position = x_right-2  # X position of the first column
      
@@ -197,7 +197,7 @@ class PDF(FPDF):
 
         text = "Filetto di manzo su riduzione al sangiovese"
         y_position = self.get_y()  # Y position of the start of the text
-        column_width = 60  # Width of each column
+        column_width = 68  # Width of each column
         line_height = 10  # Height of each line
         x_position = x_right-2 #+ (self.w*1/3 - column_width)/2  # X position of the first column
      
@@ -221,7 +221,7 @@ class PDF(FPDF):
 
         text = "Galleria di dolci monoporzione proprio come piace all'Elisa! \nAh, ovviamente c'è anche la torta"
         y_position = self.get_y()  # Y position of the start of the text
-        column_width = 60  # Width of each column
+        column_width = 68  # Width of each column
         line_height = 10  # Height of each line
         x_position = x_right-2  # X position of the first column
      
@@ -278,16 +278,18 @@ class PDF(FPDF):
         y_position = 130  # Y position of the start of the text
         column_width = 90  # Width of each column
         line_height = 12  # Height of each line
-        x_position = x_right  # X position of the first column
+        x_position = x_right-2  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.4)
 
-
+        # #Checks for symmetry
         # self.line(self.w*1/3, 0, self.w*1/3, 210)
         # self.line(self.w*2/3, 0, self.w*2/3, 210)
         # self.line(self.w*0.5, 10, self.w*0.5, 210)
         # self.line(self.w*1/6, 10, self.w*1/6, 210)
         # self.line(self.w*5/6, 10, self.w*5/6, 210)
+        # self.line(self.w*5/6-20, 20, self.w*5/6-20, 210)
+        # self.line(self.w*5/6+20, 20, self.w*5/6+20, 210)
         # self.line(116.53304166666663, 10, 116.53304166666663, 210)
         # self.line(116.53304166666663+63.934, 10, 116.53304166666663+63.934, 210)
 
