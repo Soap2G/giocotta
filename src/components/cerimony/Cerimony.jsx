@@ -30,6 +30,7 @@ const Cerimony = () => {
       </center>
       <div className="case">
         <p >
+          Il 15 Giugno 2024 <br/>
           Alle 15:30, nella parrocchia dei <a href="https://www.parrocchiasanfaustino.it/" target="_blank" rel="noopener noreferrer">SS Faustino e Giovita</a> a Modena
         </p>
       </div>
