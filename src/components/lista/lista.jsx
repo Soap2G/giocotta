@@ -84,22 +84,43 @@ const shuffleditems = shuffleArray(imageArray());
         className="lista-section"
     >
       <div className="lista-title">
-	  <center>
-		<h1 
-		>
-          Carbonara con la panna
+	  
+      <center>
+		    <h1>
+          Grazie.
         </h1>
 	   </center>
+     <div className="case" style= {{ marginTop: "1em" }} >
+        <p>Siamo profondamente grati a tutti. <br/>
+        Per quello che ci insegnate, ma soprattutto perchè ci siete. <br/>
+        E non solo quando si festeggia :) <br/>
+        Crediamo che questo sia l'unico regalo che conta.<br/> <br/>
+        Se la presenza non fosse abbastanza, aiutateci a spargere i sorrisi</p>
       </div>
-      <div className="case">
-        <p>Da anni ormai siamo impegnati nella lotta contro la violenza sulla buona cucina. <br/>
-		   Se volete supportarci in questa iniziativa, abbiamo un amico che vende padelle: 
+      <center>
+        <button className='donazione' style={{ marginTop: "2em", fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}><a href="https://dona.emergenzasorrisi.eu/" target="_blank" rel="noopener noreferrer" style= {{ color: 'var(--color-text)' }}>DONA ORA</a></button>
+	   </center>
+     <div className="case" style= {{ marginTop: "2em" }} >
+        <p>Oppure, attraverso <br/><br/>
+        <code>Giovanni Guerrieri <br/>IBAN:IT60P36772223000EM001101723</code><br/><br/>
+        sarà possibile supportare alcune nostre iniziative, come la
         </p>
       </div>
-      <div className="address">
+     <center>
+     <div className="lista-subtitle">
+      <h2 style={{ marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>Carbonara con la panna.   
+        </h2>
+      </div>
+	   </center>
+      </div>
+      <div className="case" style={{ marginBottom: "1.5em" }}>
+        <p>Da anni ormai siamo impegnati nella lotta contro la violenza sulla buona cucina.
+        </p>
+      </div>
+      {/* <div className="address">
 	  <a href="https://elettrodomesticaservice.it" target="_blank" rel="noopener noreferrer">ELETTRODOMESTICA 1998 Snc</a> <br/>
 	  Viale Raimondo Montecuccoli, 12/14, 41124 Modena MO, Italy
-      </div>
+      </div> */}
       <ScrollAnimation animateIn='fadeIn'>
     <div className="container-lista">
           <img src={ES} alt=""/>
@@ -116,11 +137,11 @@ const shuffleditems = shuffleArray(imageArray());
         
 		{/* <p>Prendeteci a calci fino in Perù. <br/><br/> */}
 		<p>Prendeteci a calci in giro per il mondo. <br/><br/>
-      Se quelli fisici non fossero abbastanza soddisfacenti, <br/> accettiamo volentieri anche calci virtuali:
+      {/* Se quelli fisici non fossero abbastanza soddisfacenti, <br/> accettiamo volentieri anche calci virtuali: */}
     </p>
-    <center>
+    {/* <center>
       <code>Giovanni Guerrieri <br/>IBAN:IT60P36772223000EM001101723</code>
-    </center>
+    </center> */}
     
     <p className='text-for-gallery'>
       Scorri con il dito per vedere le immagini
@@ -134,11 +155,11 @@ const shuffleditems = shuffleArray(imageArray());
       </SimpleSlider>
     </div>
     <div className="case" style= {{ marginTop: "5em" }} >
-        <p>Siamo profondamente grati a tutti. <br/>
+        {/* <p>Siamo profondamente grati a tutti. <br/>
         Per quello che ci insegnate, ma soprattutto perchè ci siete. <br/>
         E non solo quando si festeggia :)
-        </p>
-        <div className="case" style= {{ marginTop: "4em" }} >
+        </p> */}
+        <div className="case">
         <i>To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span style= {{ color: "#e63f34" }} >feel</span>. <br/>That is the purpose of life.</i>
       </div>
       </div>
