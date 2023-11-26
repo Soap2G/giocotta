@@ -41,11 +41,11 @@
   }
 
   body[data-theme="dark"] .arrow {
-    background-image: url('../../assets/dark_arrow.png'); /* Path to the dark theme arrow image */
+    background-image: url('../../assets/dark_arrow.png'); 
   }
   
   .arrow:hover {
-    background-size: 105%; /* Increase the background size to zoom in */
+    background-size: 105%; 
   }
 
 .lista-section{
@@ -59,15 +59,14 @@
 .item {
     border-radius: 10px;
     max-width: 95%;
-    height: auto; /* Set the height you want for your items */
+    height: auto; 
     max-height: 600px;
-    margin: 0 5px; /* Optional: if you want some space between items */
+    margin: 0 5px; 
 }
 
 .sliderimg{
     margin-top: 2em;
     max-width: 40%;
-    /* height: auto; */
 }
 
 .sliderdiv{
@@ -103,14 +102,24 @@
 }
 
 .container-lista {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    background-image: url('../../assets/giova.webp');
+    width: 30em; 
+    height: 40em; 
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+  }
+
+body[data-theme="dark"] .container-lista {
+    background-image: url('../../assets/cotta.webp'); 
+    width: 30em; 
+    height: 35em; 
+    background-size: cover;
+    background-position: center;
   }
 
 .container-lista img {
+    background-image: "../../assets/giova.webp";
     max-width: 50%;
     height: auto;
     border-radius: 10px;
@@ -157,12 +166,6 @@
         max-height: 1000px
     }
 
-    .container-lista {
-        width: 100vw;
-        border-radius: 5px;
-        
-    }
-
     .lista-title {
         font-size: 2rem;
     }
@@ -207,9 +210,13 @@
     }
 
     .container-lista {
-        width: 100vw;
-        border-radius: 5px;
-        
+        width: 20em;
+        height: 27em;
+    }
+
+    body[data-theme="dark"] .container-lista-dark {
+        width: 20em;
+        height: 25em;
     }
 
     .lista-title {

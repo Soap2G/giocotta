@@ -6,10 +6,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
-// import { Icon } from '@iconify/react';
-
-
-import ES from '../../assets/giova.webp';
 
 function SampleNextArrow(props) {
   const { style, onClick } = props;
@@ -113,17 +109,9 @@ const shuffleditems = shuffleArray(imageArray());
       </div>
 	   </center>
       </div>
-      <div className="case" style={{ marginBottom: "1.5em" }}>
-        {/* <p>Da anni ormai siamo impegnati nella lotta contro la violenza sulla buona cucina.
-        </p> */}
-      </div>
-      {/* <div className="address">
-	  <a href="https://elettrodomesticaservice.it" target="_blank" rel="noopener noreferrer">ELETTRODOMESTICA 1998 Snc</a> <br/>
-	  Viale Raimondo Montecuccoli, 12/14, 41124 Modena MO, Italy
-      </div> */}
       <ScrollAnimation animateIn='fadeIn'>
-    <div className="container-lista">
-          <img src={ES} alt="" />
+      <div className="container-lista">
+          {/* <img src={ES} alt="" /> */}
       </div>
       </ScrollAnimation>
       <center>
@@ -134,14 +122,6 @@ const shuffleditems = shuffleArray(imageArray());
       </center>
       
 	  <div className="case">
-        
-		{/* <p>Prendeteci a calci fino in Perù. <br/><br/> */}
-		{/* <p>Prendeteci a calci in giro per il mondo. <br/><br/>
-      Se quelli fisici non fossero abbastanza soddisfacenti, <br/> accettiamo volentieri anche calci virtuali:
-    </p> */}
-    {/* <center>
-      <code>Giovanni Guerrieri <br/>IBAN:IT60P36772223000EM001101723</code>
-    </center> */}
     
     <p className='text-for-gallery'>
       Scorri con il dito per vedere le immagini
@@ -155,10 +135,6 @@ const shuffleditems = shuffleArray(imageArray());
       </SimpleSlider>
     </div>
     <div className="case" style= {{ marginTop: "5em" }} >
-        {/* <p>Siamo profondamente grati a tutti. <br/>
-        Per quello che ci insegnate, ma soprattutto perchè ci siete. <br/>
-        E non solo quando si festeggia :)
-        </p> */}
         <div className="case">
         <i>To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span style= {{ color: "#e63f34" }} >feel</span>. <br/>That is the purpose of life.</i>
       </div>

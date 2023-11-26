@@ -42,17 +42,11 @@ h1, body, html, ::placeholder, input, textarea {
 }
 
 .intro-section::before {
-  /* background-image: url('../../assets/poppies.png'); */
   opacity: 1;
 }
 
 
 .intro-section::after {
-  /* background-image: url('../../assets/sunset.jpg'); */
-  /* background-image: url('../../assets/poppies.png'); */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
   opacity: 0;
 }
 

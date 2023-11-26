@@ -1,8 +1,4 @@
 import React from 'react';
-// import DarkIcon from '../assets/moon.svg';
-// import LightIcon from '../assets/sun.svg';
-// import DarkIcon from '../assets/darth-vader.png';
-// import LightIcon from '../assets/baby-yoda.png';
 import DarkIcon from '../assets/dark.webp';
 import LightIcon from '../assets/light.webp';
 
