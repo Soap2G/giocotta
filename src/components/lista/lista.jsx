@@ -102,8 +102,8 @@ const shuffleditems = shuffleArray(imageArray());
      <div className="case" style= {{ marginTop: "1em" }} >
         <p>{/* Oppure, attraverso <br/><br/> */}
         <code>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:XXX</code><br/><br/>
-        Ci piacerebbe donare metà di quello che ci verrà regalato a PINCOPALLINO, <br/>
-        Il resto lo vorremmo investire nelle cose che ci rendono felici, come 
+        Ci piacerebbe donare una parte di quello che ci verrà regalato alle comunità che visiteremo durante il nostro viaggio. <br/>
+        Il resto lo vorremmo investire in altre nostre passioni, come 
         </p>
       </div>
      <center>
