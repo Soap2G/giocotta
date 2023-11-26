@@ -214,7 +214,7 @@ body[data-theme="dark"] .container-lista {
         height: 27em;
     }
 
-    body[data-theme="dark"] .container-lista-dark {
+    body[data-theme="dark"] .container-lista {
         width: 20em;
         height: 25em;
     }
