@@ -10,6 +10,8 @@ a {
 :root {
   /* Light theme colors */
   --color-background: #ffffff;
+  --selection-b-color: #242938;
+  --selection-color: #ffffff;
   --color-footer: #e4e4e4;
   --ref-color: #3b3b3b;
   --a-color: #0ab836;
@@ -20,12 +22,15 @@ a {
 body[data-theme='dark'] {
   /* Dark theme colors */
   --color-background: #030207;
+  --selection-b-color: #ffffff;
+  --selection-color: #242938;
   --color-footer: #242938;
   --ref-color: #ffffff;
   --a-color: #4dee75;
   --color-text: #ffffff;
   --submit-color: #434d6d;
 }
+
 
 body {
   background-color: var(--color-background);
@@ -46,8 +51,19 @@ a {
     &:hover {
       color: var(--ref-color);
       transition: 200ms ease-in;
-}
   }
+}
+
+::-moz-selection {
+  color: var(--selection-color);
+  background: var(--selection-b-color);
+}
+
+::selection {
+  color: var(--selection-color);
+  background: var(--selection-b-color);
+}
+
 
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 html.has-scroll-smooth {

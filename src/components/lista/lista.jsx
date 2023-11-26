@@ -9,7 +9,7 @@ import "animate.css/animate.min.css";
 // import { Icon } from '@iconify/react';
 
 
-import ES from '../../assets/carbocrema.jpg';
+import ES from '../../assets/giova.webp';
 
 function SampleNextArrow(props) {
   const { style, onClick } = props;
@@ -93,29 +93,29 @@ const shuffleditems = shuffleArray(imageArray());
      <div className="case" style= {{ marginTop: "1em" }} >
         <p>Siamo profondamente grati a tutti. <br/>
         Per quello che ci insegnate, ma soprattutto perchè ci siete. <br/>
-        E non solo quando si festeggia :) <br/>
-        Crediamo che questo sia l'unico regalo che conta.<br/> <br/>
-        Se la presenza non fosse abbastanza, aiutateci a spargere i sorrisi</p>
+        E non solo quando si festeggia :) <br/><br/>
+
+        Molto di quello che ci serve lo abbiamo già, ma se avete piacere di contribuire, <br/>
+        potete utilizzare queste coordinate:<br/>
+        </p>
       </div>
-      <center>
-        <button className='donazione' style={{ marginTop: "2em", fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}><a href="https://dona.emergenzasorrisi.eu/" target="_blank" rel="noopener noreferrer" style= {{ color: 'var(--color-text)' }}>DONA ORA</a></button>
-	   </center>
-     <div className="case" style= {{ marginTop: "2em" }} >
-        <p>Oppure, attraverso <br/><br/>
-        <code>Giovanni Guerrieri <br/>IBAN:IT60P36772223000EM001101723</code><br/><br/>
-        sarà possibile supportare alcune nostre iniziative, come la
+     <div className="case" style= {{ marginTop: "1em" }} >
+        <p>{/* Oppure, attraverso <br/><br/> */}
+        <code>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:XXX</code><br/><br/>
+        Ci piacerebbe donare metà di quello che ci verrà regalato a PINCOPALLINO, <br/>
+        Il resto lo vorremmo investire nelle cose che ci rendono felici, come 
         </p>
       </div>
      <center>
      <div className="lista-subtitle">
-      <h2 style={{ marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>Carbonara con la panna.   
+      <h2 style={{ marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>La (buona?) cucina.   
         </h2>
       </div>
 	   </center>
       </div>
       <div className="case" style={{ marginBottom: "1.5em" }}>
-        <p>Da anni ormai siamo impegnati nella lotta contro la violenza sulla buona cucina.
-        </p>
+        {/* <p>Da anni ormai siamo impegnati nella lotta contro la violenza sulla buona cucina.
+        </p> */}
       </div>
       {/* <div className="address">
 	  <a href="https://elettrodomesticaservice.it" target="_blank" rel="noopener noreferrer">ELETTRODOMESTICA 1998 Snc</a> <br/>
@@ -123,7 +123,7 @@ const shuffleditems = shuffleArray(imageArray());
       </div> */}
       <ScrollAnimation animateIn='fadeIn'>
     <div className="container-lista">
-          <img src={ES} alt=""/>
+          <img src={ES} alt="" />
       </div>
       </ScrollAnimation>
       <center>
@@ -136,9 +136,9 @@ const shuffleditems = shuffleArray(imageArray());
 	  <div className="case">
         
 		{/* <p>Prendeteci a calci fino in Perù. <br/><br/> */}
-		<p>Prendeteci a calci in giro per il mondo. <br/><br/>
-      {/* Se quelli fisici non fossero abbastanza soddisfacenti, <br/> accettiamo volentieri anche calci virtuali: */}
-    </p>
+		{/* <p>Prendeteci a calci in giro per il mondo. <br/><br/>
+      Se quelli fisici non fossero abbastanza soddisfacenti, <br/> accettiamo volentieri anche calci virtuali:
+    </p> */}
     {/* <center>
       <code>Giovanni Guerrieri <br/>IBAN:IT60P36772223000EM001101723</code>
     </center> */}
