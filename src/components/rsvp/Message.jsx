@@ -6,7 +6,7 @@ import Captcha from './Captcha';
 export const Message = () => {
 
   const [isCaptchaValid, setIsCaptchaValid] = useState(false);
-  const hasSubmitted = useState('');
+  const [hasSubmitted, setHasSubmitted] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState('');
   const form = useRef();
@@ -21,7 +21,8 @@ export const Message = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     if (!isCaptchaValid) {
-      setSubmissionMessage("Per favore, completa il reCAPTCHA.");
+      setSubmissionMessage("Mh, sei un robot? Completa il reCAPTCHA.");
+      setHasSubmitted(false);
       return;
     }
 
@@ -76,11 +77,11 @@ export const Message = () => {
           console.log(result.text);
           setSubmissionMessage("Grazie, abbiamo informato Elisa e Giovanni. Statistiche per nerd: 200 OK");
           setIsCaptchaValid(false); // Reset reCAPTCHA
-          hasSubmitted(true)
+          setHasSubmitted(true);
       }, (error) => {
           console.log(error.text);
           setSubmissionMessage("Mh, qualcosa è andato storto. Riprova.");
-          hasSubmitted(false)
+          setHasSubmitted(false);
       })
       .finally(() => {
         setIsSubmitting(false);
@@ -108,7 +109,7 @@ export const Message = () => {
         id="submit"
         type="submit" 
         value="INVIA" 
-        disabled={!isCaptchaValid || isSubmitting} 
+        disabled={isSubmitting} 
         style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
         />
         {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
