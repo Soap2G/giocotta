@@ -139,7 +139,7 @@ class PDF(FPDF):
         image_y_position = 163  # Adjust the 60 to fit your image size
 
         # Add the image to span across both columns
-        self.image('images/flowers-menu-long-spoiler.png', x=0, y=image_y_position, w=self.w*2/3)  # 20 is for left and right margin
+        self.image('images/flowers-menu-long-spoiler-supercolored.png', x=0, y=image_y_position, w=self.w*2/3)  # 20 is for left and right margin
 
 ############################################################################################################################
 ############################################################################################################################
@@ -259,7 +259,7 @@ class PDF(FPDF):
         image_x_position = x_right + (self.w*1/3 - image_width)/2
 
         # Add the image to span across both columns
-        self.image('images/couple-poppies.png', x=image_x_position, y=image_y_position, w=image_width)  # 20 is for left and right margin
+        self.image('images/couple-poppies-supercolored.png', x=image_x_position, y=image_y_position, w=image_width)  # 20 is for left and right margin
 
 ############################################################################################################################
 ############################################################################################################################
