@@ -55,6 +55,9 @@ class PDF(FPDF):
 
         # Add the last line if there is any
         if current_line:
+            print(current_line)
+            print(current_width)
+
             line_widths.append((current_line, current_width, ""))
 
         # Render the lines
@@ -83,7 +86,7 @@ class PDF(FPDF):
         # Define text and its position
         x_position = 5  # X position of the first column
         y_position = self.y_start  # Y position of the start of the text
-        column_width = 90  # Width of each column
+        column_width = 85  # Width of each column
         line_height = 10  # Height of each line
        
         text = "Curiosità n. " + str(c_number)
@@ -139,21 +142,22 @@ class PDF(FPDF):
         image_y_position = 163  # Adjust the 60 to fit your image size
 
         # Add the image to span across both columns
-        self.image('images/flowers-menu-long-spoiler-supercolored.png', x=0, y=image_y_position, w=self.w*2/3)  # 20 is for left and right margin
+        self.image('images/flowers-menu-long-spoiler-supercolored-update.png', x=3, y=image_y_position, w=self.w*2/3-3)  # 20 is for left and right margin
 
 ############################################################################################################################
 ############################################################################################################################
 ############################################################################################################################
 ############################################################################################################################
+        offset = 1
         # Second column
-        x_right = self.w*1/3
+        x_right = self.w*1/3-0.5+offset
         self.set_xy(x_right, self.y_start)
 
         text = "menù".upper()
         y_position = self.y_start  # Y position of the start of the text
         column_width = 80  # Width of each column
         line_height = 36  # Height of each line
-        x_position = x_right  # X position of the first column
+        x_position = x_right+0.2-offset  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.5)
 
@@ -164,7 +168,7 @@ class PDF(FPDF):
         y_position = self.get_y()+15  # Y position of the start of the text
         column_width = 80  # Width of each column
         line_height = 14  # Height of each line
-        x_position = x_right #+ (self.w*1/3 - column_width)/2  # X position of the first column
+        x_position = x_right-offset-0.4 #+ (self.w*1/3 - column_width)/2  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3, font='Alegreya')
 
@@ -172,11 +176,11 @@ class PDF(FPDF):
 ############################################################################################################################
 
 
-        text = "Passatelli asciutti con crema di carciofi e guanciale croccante"
+        text = "Passatelli asciutti con crema di carciofi \ne guanciale croccante"
         y_position = self.get_y()  # Y position of the start of the text
         column_width = 68  # Width of each column
         line_height = 10  # Height of each line
-        x_position = x_right-2  # X position of the first column
+        x_position = x_right-1.3-offset  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3)
 
@@ -187,7 +191,7 @@ class PDF(FPDF):
         y_position = self.get_y()+15  # Y position of the start of the text
         column_width = 80  # Width of each column
         line_height = 14  # Height of each line
-        x_position = x_right  # X position of the first column
+        x_position = x_right-offset-0.7  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3, font='Alegreya')
 
@@ -199,7 +203,7 @@ class PDF(FPDF):
         y_position = self.get_y()  # Y position of the start of the text
         column_width = 68  # Width of each column
         line_height = 10  # Height of each line
-        x_position = x_right-2 #+ (self.w*1/3 - column_width)/2  # X position of the first column
+        x_position = x_right-1.8-offset #+ (self.w*1/3 - column_width)/2  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3)
 
@@ -211,7 +215,7 @@ class PDF(FPDF):
         y_position = self.get_y()+15  # Y position of the start of the text
         column_width = 80  # Width of each column
         line_height = 14  # Height of each line
-        x_position = x_right  # X position of the first column
+        x_position = x_right-1.4-offset  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3, font='Alegreya')
 
@@ -219,11 +223,11 @@ class PDF(FPDF):
 ############################################################################################################################
 
 
-        text = "Galleria di dolci monoporzione proprio come piace all'Elisa! \nAh, ovviamente c'è anche la torta"
+        text = "Galleria di dolci monoporzione \nLa torta"
         y_position = self.get_y()  # Y position of the start of the text
         column_width = 68  # Width of each column
         line_height = 10  # Height of each line
-        x_position = x_right-2  # X position of the first column
+        x_position = x_right-2-offset  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3)
 
@@ -268,7 +272,7 @@ class PDF(FPDF):
         y_position = y_center+50  # Y position of the start of the text
         column_width = 90  # Width of each column
         line_height = 18  # Height of each line
-        x_position = x_right
+        x_position = x_right-0.5
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.1)
 
@@ -278,7 +282,7 @@ class PDF(FPDF):
         y_position = 130  # Y position of the start of the text
         column_width = 90  # Width of each column
         line_height = 12  # Height of each line
-        x_position = x_right-2  # X position of the first column
+        x_position = x_right-3  # X position of the first column
      
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.4)
 
