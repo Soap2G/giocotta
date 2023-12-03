@@ -1,4 +1,4 @@
-from random import randint
+from random import choice
 from tkinter.ttk import Style
 from fpdf import FPDF
 
@@ -55,8 +55,8 @@ class PDF(FPDF):
 
         # Add the last line if there is any
         if current_line:
-            print(current_line)
-            print(current_width)
+            # print(current_line)
+            # print(current_width)
 
             line_widths.append((current_line, current_width, ""))
 
@@ -93,7 +93,7 @@ class PDF(FPDF):
         self.add_column_text(text, x_position, y_position, column_width, line_height, 'L', 0.1, font='Alegreya')
         text = curiosity
         self.add_column_text(text, x_position, self.get_y(), column_width, line_height, 'L', 0.1)
-        text = "\n\nTratto n. " + str(f_number)
+        text = "\n\nFatto n. " + str(f_number)
         self.add_column_text(text, x_position, self.get_y(), column_width, line_height, 'L', 0.1, font='Alegreya')
         text = fact
         self.add_column_text(text, x_position, self.get_y(), column_width, line_height, 'L', 0.1)
@@ -309,36 +309,59 @@ class PDF(FPDF):
 ############################################################################################################################
         
 curiosity = [
-    # "Più del 50% dell'acqua che beviamo ha la stessa età del sole.",
+    "Più del 50% dell'acqua che beviamo ha la stessa età del sole.",
     "Se i GPS non includessero la relatività generale nei calcoli, la stima della posizione sarebbe sbagliata di una cinquantina di metri.",
-    # "Il rivelatore ATLAS ad LHC pesa circa \n60 milioni di banane.",
-    # "Le leggi della fisica non sono le stesse \nse invertiamo la destra con la sinistra.",
-    # "Se la terra avesse le dimensioni di una \npalla da biliardo, sarebbe così liscia che il monte \neverest si vedrebbe a malapena al microscopio.",
-    # "Nessuno saprà mai se quello che io intendo \ncome rosso corrisponde a quello che tu intendi \ncome rosso.",
-    # "Siamo attraversati da decine di miliardi di \nneutrini ogni secondo.",
-    # "Al CERN, su duecento miliardi di protoni che \nvengono sparati gli uni contro gli altri, \nmeno di 100 si scontrano per davvero.",
-    # "Se mai incontrerete qualcuno fatto di antimateria, \nNON stringetevi la mano.",
-    # "C'è la (molto molto molto) remota possibilità che \nlanciando una palla contro un muro, \nquesta lo attraversi.",
+    "Il rivelatore ATLAS al CERN pesa circa 60 milioni di banane.",
+    "Le leggi della fisica non sono le stesse se invertiamo la destra con la sinistra.",
+    "Un fotone creato nel nucleo del sole, impiega 100 000 anni ad arrivare alla sua superficie, ma solo 8 minuti a raggiungere la terra.",
+    "Nessuno saprà mai se quello che io intendo come rosso corrisponde a quello che tu intendi come rosso. Pensaci.",
+    "Siamo attraversati da decine di miliardi di neutrini ogni secondo.",
+    "Al CERN, su duecento miliardi di protoni che vengono sparati gli uni contro gli altri, meno di 100 si scontrano per davvero.",
+    "Se mai incontrerete qualcuno fatto di antimateria, NON stringetevi la mano.",
+    "C'è la (molto molto molto) remota possibilità che lanciando una palla contro un muro, questa lo attraversi.",
+    "Il nome dei famosi diagrammi di Feynman \"pinguino\" si deve ad una scommessa persa da John Ellis al bar, il quale fu costretto ad inserire la parola \"pinguino\" in una sua presentazione.",
+    "In qualunque momento, il gamma ray burst proveniente da una supernova può raggiungere la terra e cancellare istantaneamente ogni forma di vita :)",
+    "Se si mette insieme tutta la musica mai prodotta (fino ad oggi), si ottengono circa 230 anni.",
+    "Una manciata di materia presa da una stella di neutroni pesa come il monte Everest.",
+    "Il 28 Giugno 2009, Stephen Hawking ha organizzato una festa a Cambridge per tutti i viaggiatori del tempo. Dopo la fine della festa, che ha passato in solitudine, ha spedito gli inviti.",
+    "Se il sole fosse un buco nero, sarebbe una sfera di 3 km di raggio. Il suo raggio attuale è di circa 700 000 km.",
+    "Al contrario di come molti credono, il significato dell'acronimo ATLAS (il rivelatore di particelle al CERN) non è \"ATomic LASagna\", bensì \"A Toroidal LHC ApparatuS\".",
+    "Nel Modello Standard della fisica delle particelle, con 19 parametri (o 26, a seconda della religione), è possibile spiegare la maggior parte della fisica osservabile.",
+    "Più andiamo veloci, più siamo pesanti. Se viaggiassimo al 99% della velocità della luce, la nostra massa sarebbe 10 volte maggiore. Al 99.99% della velocità della luce, la massa aumenta di 100 volte.",
+    "La densità di massa media dell'universo è di circa 6 protoni al metro cubo. Nel corpo umano ci sono circa 20 000 000 000 000 000 000 000 000 000 protoni.",
     ]
 fact = [
-    "Giacomo Leopardi soffriva di aerofagia.",
-    # "Napoleone non era affatto un nanerottolo, anzi, misurava \nben 3cm in più di Elisa Cottafava.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
-    # "Giacomo Leopardi soffriva di aerofagia.",
+    "Giacomo Leopardi andava matto per i dolci. Si dice che il proprietario di una pasticceria di Napoli abbia comprato un titolo nobiliare con il denaro guadagnato dal poeta",
+    "Napoleone non era affatto un nanerottolo, anzi, misurava ben 3cm in più dell'Elisa Cottafava.",
+    "Secondo alcune leggende, Boccaccio sarebbe stato un ladro di manoscritti, sottratti all'abbazia di Montecassino.",
+    "Durante il suo esilio londinese, Foscolo era seduto a leggere un libro nel suo studio, quando irruppe un suo rivale in amore e prese a sculacciarlo con un frustino.",
+    "In vacanza a Capri Moravia andava in giro con un gufo su una spalla, mentre la Morante con un siamese al guinzaglio.",
+    "Manzoni soffriva di agorafobia, era terrorizzato all'idea di camminare in strada da solo ed era ossessionato dal cinguettio degli uccelli.",
+    "Avallava è la più lunga parola palindroma in italiano.",
+    "Ci sono 4 milioni di persone in brasile che parlano correntemente dialetto veneto.",
+    "I comuni con il nome più corto in Italia sono Lu (AL), Ne (GE), Mù (BS).",
+    "Tasso era ossessionato dalla privacy, tanto che in un'occasione aggredì un servitore sospettato di averlo spiato.",
+    "Quando a Vittorio Alfieri non aveva voglia di scrivere, si faceva legare alla sedia da un servitore con la minaccia di non essere liberato fino ad opera ultimata.",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
     ]
 
+pdf = PDF()
+pdf.set_auto_page_break(auto=True, margin=15)
+pdf.set_left_margin(0)
+pdf.set_right_margin(0)
+
+
+excluded_number = []
 for i,text in enumerate(curiosity):
     # Create PDF object
-    pdf = PDF()
-    pdf.set_auto_page_break(auto=True, margin=15)
-    pdf.set_left_margin(0)
-    pdf.set_right_margin(0)
 
     # Load custom font
     font_name = 'Bellefair' 
@@ -347,17 +370,22 @@ for i,text in enumerate(curiosity):
     font_name = 'Alegreya'
     font_path = 'fonts/Alegreya-Bold.ttf'  
     pdf.add_custom_font(font_name, font_path, font_style='B' )
+    
+    c_number = choice([i for i in range(1,100) if i not in excluded_number])
+    excluded_number.append(c_number)
 
+    f_number = choice([i for i in range(1,100) if i not in excluded_number])
+    excluded_number.append(f_number)
 
-    c_number = randint(1, 100)
-    f_number = randint(1, 100)
     # Add the front page content
     pdf.add_page_content(c_number, text, f_number, fact[i])
     # pdf.add_page_content2()
+    print("HELPER: \t" + str(i) + " done!")
+
 
     # Save the PDF
-    menu_name = "Menu_" + str(i) + ".pdf"
-    pdf.output(menu_name)
-    print("HELPER: \t" + menu_name + " done!")
+menu_name = "Menu.pdf"
+pdf.output(menu_name)
+print("HELPER: \t" + menu_name + " done!")
 
 print("DONE!")
