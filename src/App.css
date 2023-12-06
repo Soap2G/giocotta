@@ -10,6 +10,7 @@ a {
 :root {
   /* Light theme colors */
   --color-background: #ffffff;
+  --feel-sel-color: rgb(255, 68, 68);
   --feel-color: #e63f34;
   --selection-b-color: #242938;
   --selection-color: #ffffff;
@@ -24,6 +25,7 @@ body[data-theme='dark'] {
   /* Dark theme colors */
   --color-background: #030207;
   --feel-color: rgb(255, 68, 68);
+  --feel-sel-color: #e63f34;
   --selection-b-color: #ffffff;
   --selection-color: #242938;
   --color-footer: #242938;

@@ -144,9 +144,10 @@ const shuffleditems = shuffleArray(imageArray());
           lineHeight: '1.5', 
           marginTop: "5em", 
           marginBottom: "5em", 
-          fontSize: '1.5rem'
+          fontSize: '1.5rem', 
+
           }}>
-        To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span style= {{ color: "var(--feel-color)" }} >feel</span>. <br/>That is the purpose of life.
+        To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span className='feel'>feel</span>. <br/>That is the purpose of life.
       </div>
     </section>
 	);

@@ -82,6 +82,23 @@
     text-align: center;
 }
 
+.case a{
+    font-size: 1.1rem;
+}
+
+.feel{
+    color: var(--feel-color);
+}
+.feel::selection {
+    color: var(--feel-sel-color);
+    background: var(--selection-b-color);
+}
+
+.feel::-moz-selection {
+    color: var(--feel-sel-color);
+    background: var(--selection-b-color);
+  }
+
 .address{
     text-align: center;
     padding-left: 1.5rem;
