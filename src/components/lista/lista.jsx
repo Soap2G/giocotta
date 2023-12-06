@@ -90,7 +90,8 @@ const shuffleditems = shuffleArray(imageArray());
         <p>Siamo profondamente grati a tutti. <br/>
         Per quello che ci insegnate, ma soprattutto perchè ci siete. <br/>
         E non solo quando si festeggia :) <br/><br/>
-
+        </p>
+        <p style= {{ marginTop: "10em" }}>
         Molto di quello che ci serve lo abbiamo già, ma se avete piacere di contribuire, <br/>
         potete utilizzare queste coordinate:<br/>
         </p>
@@ -98,7 +99,7 @@ const shuffleditems = shuffleArray(imageArray());
      <div className="case" style= {{ marginTop: "1em" }} >
         <p>{/* Oppure, attraverso <br/><br/> */}
         <code>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:XXX</code><br/><br/>
-        Ci piacerebbe donare una parte di quello che ci verrà regalato alle comunità che visiteremo durante il nostro viaggio. <br/>
+        Ci piacerebbe donare una parte di quello che ci verrà regalato alle comunità che visiteremo durante il nostro viaggio con <a href="https://www.viaggisolidali.it" target="_blank"rel="noopener noreferrer" >Viaggi Solidali</a> <br/>
         Il resto lo vorremmo investire in altre nostre passioni, come 
         </p>
       </div>
@@ -119,14 +120,17 @@ const shuffleditems = shuffleArray(imageArray());
       <h2 style={{ marginTop: "1.5em", marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>Quando non cuciniamo, ci piace viaggiare.		   
         </h2>
       </div>
+      <div className="case">
+      <p>Lo avevamo già menzionato?</p>
+      </div>
       </center>
       
-	  <div className="case">
+	  {/* <div className="case">
     
     <p className='text-for-gallery'>
       Scorri con il dito per vedere le immagini
     </p>
-      </div>
+      </div> */}
 	  <div
     className='sliderimg'
     >
@@ -134,10 +138,15 @@ const shuffleditems = shuffleArray(imageArray());
         {shuffleditems}
       </SimpleSlider>
     </div>
-    <div className="case" style= {{ marginTop: "5em" }} >
-        <div className="case">
-        <i>To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span style= {{ color: "#e63f34" }} >feel</span>. <br/>That is the purpose of life.</i>
-      </div>
+        <div className="case"
+        style={{ 
+          letterSpacing: '.15rem',
+          lineHeight: '1.5', 
+          marginTop: "5em", 
+          marginBottom: "5em", 
+          fontSize: '1.5rem'
+          }}>
+        To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span style= {{ color: "var(--feel-color)" }} >feel</span>. <br/>That is the purpose of life.
       </div>
     </section>
 	);

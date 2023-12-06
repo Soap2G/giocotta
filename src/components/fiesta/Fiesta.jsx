@@ -31,7 +31,8 @@ return (
         41026 - Gaiato Chiesa - Pavullo nel Frignano (MO)
       </div>
       <ScrollAnimation animateIn='fadeIn'>
-      <div className="container">
+      <div className="container"
+      style= {{ marginBottom: "10em" }}>
       <img src={masserotti} alt=""/>
       </div>
     </ScrollAnimation>
