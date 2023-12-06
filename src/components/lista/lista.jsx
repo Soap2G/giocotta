@@ -99,7 +99,7 @@ const shuffleditems = shuffleArray(imageArray());
      <div className="case" style= {{ marginTop: "1em" }} >
         <p>{/* Oppure, attraverso <br/><br/> */}
         <code>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:XXX</code><br/><br/>
-        Ci piacerebbe donare una parte di quello che ci verrà regalato alle comunità che visiteremo durante il nostro viaggio con <a href="https://www.viaggisolidali.it" target="_blank"rel="noopener noreferrer" >Viaggi Solidali</a> <br/>
+        Ci piacerebbe donare una parte di quello che ci verrà regalato alle comunità che visiteremo durante il nostro <a href="https://www.viaggisolidali.it" target="_blank"rel="noopener noreferrer" >viaggio solidale</a> <br/>
         Il resto lo vorremmo investire in altre nostre passioni, come 
         </p>
       </div>
