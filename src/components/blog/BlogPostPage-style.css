@@ -1,0 +1,22 @@
+
+.markdown-content{
+    min-height: 70vh;
+    margin: 5em;
+}
+
+.markdown-content h1 {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.markdown-content li {
+    font-size: 3rem;
+    line-height: 1.6;
+}
+
+.markdown-content a {
+    color: red;
+}
+
+/* Add more specific styles for other elements like lists, blockquotes, code, etc. */

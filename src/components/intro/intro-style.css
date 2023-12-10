@@ -17,13 +17,14 @@ h1, body, html, ::placeholder, input, textarea {
 }
 
 .intro-section {
-  position: relative;
+  position:static;
   display: flex;
   align-items: center;
   justify-content: center;
   height: var(--vh);
   /* padding: 1.5rem; */
   overflow: hidden;
+
 }
 
 .intro-section::before, .intro-section::after {
@@ -64,6 +65,8 @@ h1, body, html, ::placeholder, input, textarea {
         font-size: 3.5rem;
         text-align: center;
         margin-top: -30vh;
+        position: static;
+        z-index: 2;
 }
 
 .intro-title img {

@@ -1,0 +1,43 @@
+
+.svg-map {
+    display: flex;
+    max-width: 80%;
+    max-height: 50vh;
+    justify-content: center;
+}
+
+.svg-map path {
+    fill: var(--selection-b-color);
+    stroke: var(--selection-color);
+    stroke-width: 1;
+}
+
+.svg-map path:focus {
+    fill: var(--a-color);
+    transition: fill 1s ease, color 1s ease;
+}
+
+.svg-map path:hover {
+    fill: var(--a-color);
+    transition: fill 1s ease, color 1s ease;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    z-index: 1000;
+}
+
+/* Optional: basic animation to show/hide the tooltip */
+.tooltip.fade {
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.tooltip.fade.show {
+    opacity: 1;
+}
+
