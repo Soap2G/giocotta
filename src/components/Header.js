@@ -1,17 +1,32 @@
 import React from "react";
-import { Icon } from '@iconify/react';
 import './Header.css'; // Make sure to create a corresponding CSS file
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
         <div className="header-box">
             <div className="header-nav">
-                <a href="/" style={{ color: 'var(--color-text)' }}>Home</a>
+                <Link
+                    className="nav-link active"
+                    style={{ 
+                        fontFamily: "'Bellefair', serif",
+                        color: 'var(--text-color)'}}
+                    aria-current="page"
+                    to="/"
+                    >
+                        home
+                </Link>
                 |
-                <a href="/blog" style={{ color: 'var(--color-text)' }}>Blog</a>
-                <a href="https://github.com/Soap2G/giocotta" target="_blank" rel="noopener noreferrer">
-                    {/* <Icon icon="mdi:github" style={{ verticalAlign: 'middle' }} /> */}
-                </a>
+                <Link
+                    className="nav-link active"
+                    style={{ 
+                        fontFamily: "'Bellefair', serif",
+                        color: 'var(--text-color)'}}
+                    aria-current="page"
+                    to="/blog"
+                    >
+                        blog
+                </Link>
             </div>
         </div>
     );
