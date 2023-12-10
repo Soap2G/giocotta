@@ -4,9 +4,7 @@ import './Footer.css'
  
 const Footer = () => {
     return (
-        <div className="box"
-        // style={{ fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
-        >
+        <div className="box"        >
                 <div className="footer-div">
                     fatto da noi con il <Icon icon="solar:heart-bold" style={{ color: '#e63f34' }}/> e con <Icon style={{ borderRadius: "50%" }} icon="skill-icons:react-dark" />
                 </div>

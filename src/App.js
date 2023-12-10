@@ -7,10 +7,12 @@ import { useRef, useState, useEffect } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import ThemeButton from './contexts/ThemeButton';
 import Footer from "./components/Footer.js";
-// import BurgerMenu from './contexts/BurgerMenu';
-// import StupidScroll from './contexts/StupidScroll';
+import Header from "./components/Header.js";
+import { Routes, Route } from 'react-router-dom';
+import BlogList from './components/blog/BlogList';
+import BlogPostPage from './components/blog/BlogPostPage';
 
-// dark theme stuff: https://betterprogramming.pub/a-complete-guide-to-implementing-dark-mode-in-react-47af893b22eb
+
 
 import './App.css';
 
@@ -28,23 +30,6 @@ function App() {
 	useEffect(() => {
 	document.body.dataset.theme = theme;
 	}, [theme]);
-
-	// const options = {
-	// 	smooth: true,
-	// 	multiplier: 1,
-	// 	smartphone: {
-	// 		smooth: true,
-	// 	},
-	// };
-
-	//MENU STUFF
-	// const { scroll } = useLocomotiveScroll();
-  
-	// const scrollTo = (elementId) => {
-	// 	const element = document.querySelector(elementId);
-	// 	scroll && scroll.scrollTo(element);
-	// };
-
 
 	//===========================================================================
 	//===========================================================================
@@ -68,24 +53,41 @@ function App() {
 	  }, []);
 	//===========================================================================
 	//===========================================================================
-	  // <BurgerMenu /*scrollTo={scrollTo}*/ className='burger-menu'/> 
 	return (
 		<ParallaxProvider>
-			<main ref={ref}>
-				<div className={`theme-${theme}`}>
-						<ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
-						
-						{/* <StupidScroll/> */}
-						<Introduction /> 
-						<Cerimony />
-						<Fiesta />
-						<Lista />
-						<Message />
-				</div>
-				<Footer />
-			</main>
+		  <main ref={ref}>
+			<div className={`theme-${theme}`}>
+			  <ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
+			  
+			  <Routes>
+				<Route path="/" element={
+				  <>
+					<Introduction /> 
+					<Cerimony />
+					<Fiesta />
+					<Lista />
+					<Message />
+				  </>
+				}/>
+				<Route path="/blog" element={
+				<>
+				<Header />
+				<BlogList />
+				</>
+				} />
+				<Route path="/blog/:slug" element={
+				<>
+				<Header />
+				<BlogPostPage />
+				</>
+				} />
+			  </Routes>
+			  
+			</div>
+			<Footer />
+		  </main>
 		</ParallaxProvider>
-	);
-}
-
-export default App;
+	  );
+	}
+	
+	export default App;

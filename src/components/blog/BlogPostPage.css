@@ -1,0 +1,20 @@
+
+.markdown-content{
+    height: 100vh;
+}
+
+.markdown-content h1 {
+    font-size: 2em;
+    color: blue;
+}
+
+.markdown-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.markdown-content a {
+    color: red;
+}
+
+/* Add more specific styles for other elements like lists, blockquotes, code, etc. */
