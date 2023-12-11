@@ -20,7 +20,8 @@
     height: 100px;
     width: 100%;
     z-index: 1000;
-    /* background-color: var(--color-background); */
+    background-color: var(--color-background);
+    transition: background-color 1s ease, color 1s ease;
  
     @media (max-width: 1000px) {
         /* padding: 70px 30px; */
