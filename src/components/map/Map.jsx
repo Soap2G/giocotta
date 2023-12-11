@@ -42,7 +42,7 @@ const Map = ({ options, onMapLoad, locations }) => {
     window.addEventListener('scroll', onScroll, {passive: true});
 
     const loader = new Loader({
-      apiKey: "YOUR_API_KEY",
+      apiKey: "AIzaSyDHt_t8JpH6nqKsAgc3l7SNLfIkRQAEZHc",
       version: "weekly",
     });
 

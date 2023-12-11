@@ -13,5 +13,8 @@ const posts = filenames.filter(file => file.endsWith('.md')).map(file => {
   };
 });
 
+// Sort posts by number :D
+posts.sort((a, b) => parseInt(a.slug, 10) - parseInt(b.slug, 10));
+
 const content = `const posts = ${JSON.stringify(posts, null, 2)};\n\nexport default posts;`;
 fs.writeFileSync(path.join(__dirname, 'src/posts/posts.jsx'), content);
