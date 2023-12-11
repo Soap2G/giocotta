@@ -1,5 +1,16 @@
 import { motion } from "framer-motion";
 import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
+const ScrollToTop = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null; // this component does not render anything
+};
 
 const variants = {
     enter: ({ direction = 0, path }) => { // Expecting an object with direction and path
@@ -52,6 +63,7 @@ const Transitions = ({ children }) => {
       }}
     >
       {children}
+      <ScrollToTop />
     </motion.div>
   );
 };
