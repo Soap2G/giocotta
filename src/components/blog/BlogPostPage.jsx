@@ -4,6 +4,7 @@ import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import posts from '../../posts/posts';
 import './BlogPostPage-style.css'
+import CustomMap from './PeruMap'
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -22,10 +23,15 @@ const BlogPostPage = () => {
     }
   }, [slug]);
 
+  console.log([slug])
+
   return (
+    <div>
+    <CustomMap highlightedPathId={[slug]} />
     <div dangerouslySetInnerHTML={{ __html: postHtml }} 
     className="markdown-content"
     ></div>
+    </div>
   );
 };
 

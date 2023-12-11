@@ -10,6 +10,7 @@ const Header = () => {
                     className="nav-link active"
                     style={{ 
                         fontFamily: "'Bellefair', serif",
+                        fontWeight: "400",
                         color: 'var(--text-color)'}}
                     aria-current="page"
                     to="/"
@@ -21,6 +22,7 @@ const Header = () => {
                     className="nav-link active"
                     style={{ 
                         fontFamily: "'Bellefair', serif",
+                        fontWeight: "400",
                         color: 'var(--text-color)'}}
                     aria-current="page"
                     to="/blog"
