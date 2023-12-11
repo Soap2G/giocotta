@@ -27,7 +27,7 @@ const Header = () => {
                     aria-current="page"
                     to="/blog"
                     >
-                        blog
+                        diario
                 </Link>
             </div>
         </div>

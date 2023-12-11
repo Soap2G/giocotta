@@ -6,6 +6,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
+import { Link } from "react-router-dom";
+
 
 function SampleNextArrow(props) {
   const { style, onClick } = props;
@@ -100,6 +102,7 @@ const shuffleditems = shuffleArray(imageArray());
         <p>{/* Oppure, attraverso <br/><br/> */}
         <code>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:XXX</code><br/><br/>
         Ci piacerebbe donare una parte di quello che ci verrà regalato alle comunità che visiteremo durante il nostro <a href="https://www.viaggisolidali.it" target="_blank"rel="noopener noreferrer" >viaggio solidale</a>. <br/>
+        Cercheremo di condividere questa esperienza in un piccolo <Link aria-current="page" to="/blog">diario</Link>.<br/>
         Il resto lo vorremmo investire in altre nostre passioni, come 
         </p>
       </div>
