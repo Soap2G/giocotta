@@ -61,10 +61,11 @@ h1, body, html, ::placeholder, input, textarea {
   }
 
 .intro-title {
+        display: flex;
         flex: 1;
         font-size: 3.5rem;
         text-align: center;
-        margin-top: -30vh;
+        margin-top: -40vh;
         position: static;
         z-index: 2;
 }

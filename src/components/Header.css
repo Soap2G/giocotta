@@ -2,25 +2,25 @@
     display: flex;
     justify-content: right;
     align-items: center; 
-    gap: 8px; 
+    gap: 16px; 
     vertical-align: middle;
     font-size: 1.5rem;
     color: var(--color-text);
     margin-bottom: 0.4em;
+    padding-right: 2vw;
+    margin-right: 16px;
 }
 
 .header-box{
-    /* padding: 2.5% 2.5%; */
-    /* background: var(--color-footer); */
     display: flex;
     align-items: center;
     justify-content: right;
     position: sticky;
-    top: 2%;
-    margin-bottom: 5em;
-    height: 48px;
-    width: 95%;
+    top: 0%;
+    height: 100px;
+    width: 100%;
     z-index: 1000;
+    /* background-color: var(--color-background); */
  
     @media (max-width: 1000px) {
         /* padding: 70px 30px; */

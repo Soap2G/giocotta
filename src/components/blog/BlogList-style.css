@@ -1,8 +1,20 @@
+.countdown-img img{
+    width: 80%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-radius: 15px;
+}
 
+.countdown-title {
+    font-size: 1.6rem;
+    margin-left: 1em;
+    margin-right: 1em;
+    letter-spacing: 2px;
+}
 
 .blog-list {
     flex-grow: 1;
-    height:100vh;
+    min-height:100vh;
 }
 
 ul {
@@ -36,6 +48,7 @@ ul {
 
 .svg-map {
     display: flex;
+    margin-top: 3vh;
     max-width: 90%;
     max-height: 60vh;
     justify-content: center;

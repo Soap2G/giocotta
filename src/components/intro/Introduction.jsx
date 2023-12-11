@@ -13,10 +13,10 @@ const Introduction = () => {
 					<h1>
 						Elisa e Giovanni
 					</h1>
-					<p style={{ fontSize: "1.7rem" }}>
-						Ciao, ci sposiamo!
-					</p>
 				</div>
+				<p style={{ fontSize: "1.7rem" }}>
+						Ciao, ci sposiamo!
+				</p>
 			</Parallax>
 		</section>
 	);
