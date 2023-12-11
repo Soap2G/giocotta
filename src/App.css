@@ -19,6 +19,10 @@ a {
   --a-color: #0ab836;
   --color-text: #3b3b3b;
   --submit-color: #ffffff;
+  --map-baseline: #242938;
+  --path-color: #1e80e8;
+  --circle-color: #FF6969;
+
 }
 
 body[data-theme='dark'] {
@@ -33,6 +37,9 @@ body[data-theme='dark'] {
   --a-color: #4dee75;
   --color-text: #ffffff;
   --submit-color: #434d6d;
+  --map-baseline: #EEEEEE;
+  --path-color: #FFD369;
+  --circle-color: #FB2576;
 }
 
 

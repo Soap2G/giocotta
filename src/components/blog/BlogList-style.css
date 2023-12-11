@@ -1,18 +1,45 @@
+.blog-list {
+    flex-grow: 1;
+    height: 75vh;
+}
+
+ul {
+    padding-left: 0px !important;
+}
+
+.post-link {
+    font-family: 'Bellefair', serif;
+    margin: 0.5em;
+    display: inline-block;
+    font-weight: 400;
+    width: 4vh;
+    height: 4vh;
+    line-height: 4vh;
+    color: var(--text-color);
+    border-style: solid;
+    border-radius: 50%;
+}
+
 
 .svg-map {
     display: flex;
-    max-width: 80%;
-    max-height: 50vh;
+    max-width: 90%;
+    max-height: 60vh;
     justify-content: center;
 }
 
+.svg-map circle {
+    fill: var(--circle-color);
+}
+
 .svg-map path {
-    fill: var(--selection-b-color);
+    fill: var(--map-baseline);
     stroke: var(--selection-color);
     stroke-width: 1;
 }
 
 .svg-map path:focus {
+    outline: none;
     fill: var(--a-color);
     transition: fill 1s ease, color 1s ease;
 }
