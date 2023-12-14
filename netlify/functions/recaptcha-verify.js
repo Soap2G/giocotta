@@ -2,8 +2,7 @@ const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
   const { token } = JSON.parse(event.body);
-  // const secret = process.env.RECAPTCHA_SECRET_KEY; // reCAPTCHA secret key
-  const secret = "6LfmHDEpAAAAAA0Ftq9UCS-59P8airVO7tBFICvz"
+  const secret = process.env.RECAPTCHA_SECRET_KEY; // reCAPTCHA secret key
 
   const fetch = (await import('node-fetch')).default;
 
@@ -16,7 +15,6 @@ exports.handler = async (event) => {
   });
 
   const data = await response.json();
-  console.log(data.success)
 
   if (data.success) {
     return {

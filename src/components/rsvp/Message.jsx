@@ -1,12 +1,10 @@
 import "./message-style.css";
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-// import Captcha from './Captcha';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export const Message = () => {
 
-  // const [isCaptchaValid, setIsCaptchaValid] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState('');
@@ -24,9 +22,6 @@ export const Message = () => {
   //----------------------------------
   // Update state of the recaptcha
   //----------------------------------
-  // const handleCaptchaChange = (value) => {
-  //   setIsCaptchaValid(!!value);
-  // };
   const verifyRecaptcha = async (token) => {
     try {
       const response = await fetch('/.netlify/functions/recaptcha-verify', {
@@ -65,7 +60,6 @@ export const Message = () => {
     // Get the reCAPTCHA token
     const token = await executeRecaptcha('submit_form');
     const isVerified = await verifyRecaptcha(token);
-    console.log(isVerified)
 
     const defaultMessage = [ "Non ha scritto nulla, quindi ecco una barzelletta: Perché le bambine piccole non possono comprare gli occhiali da sole? Perché devono essere accompagnate dai genitori.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Perché il pomodoro non riesce mai a dormire? Perché l’insalata… russa!",
@@ -128,7 +122,6 @@ export const Message = () => {
       .then((result) => {
           console.log(result.text);
           setSubmissionMessage("Grazie, abbiamo informato Elisa e Giovanni. Statistiche per nerd: 200 OK");
-          // setIsCaptchaValid(false); // Reset reCAPTCHA
           setHasSubmitted(true);
       }, (error) => {
           console.log(error.text);
@@ -141,34 +134,31 @@ export const Message = () => {
   };
 
   return (
-    // <GoogleReCaptchaProvider reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V">
-      <section className="message-section">
-        <div className="message-title">
-          <h1 >
-            Facci un fischio
-          </h1>
-        </div>
+    <section className="message-section">
+      <div className="message-title">
+        <h1 >
+          Facci un fischio
+        </h1>
+      </div>
 
-        <div
-          // className=" op-class"
-        >
-          <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
-          <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
-          <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
-          <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
-          {/* <Captcha handleCaptchaChange={handleCaptchaChange}/> */}
-          <input 
-          id="submit"
-          type="submit" 
-          value="INVIA" 
-          disabled={!isRecaptchaReady || isSubmitting} 
-          style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
-          />
-          {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
-          </form>
-        </div>
-      </section>
-    // </GoogleReCaptchaProvider>
+      <div
+        // className=" op-class"
+      >
+        <form ref={form} onSubmit={sendEmail}>
+        <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
+        <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
+        <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
+        <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
+        <input 
+        id="submit"
+        type="submit" 
+        value="INVIA" 
+        disabled={!isRecaptchaReady || isSubmitting} 
+        style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
+        />
+        {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
+        </form>
+      </div>
+    </section>
   );
 };
