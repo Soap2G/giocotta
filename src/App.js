@@ -14,6 +14,7 @@ import BlogList from './components/blog/BlogList';
 import BlogPostPage from './components/blog/BlogPostPage';
 import { useLocation } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 
 import './App.css';
@@ -77,7 +78,9 @@ function App() {
                                             <Cerimony />
                                             <Fiesta />
                                             <Lista />
-                                            <Message />
+                                            <GoogleReCaptchaProvider reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V">
+                                                <Message />
+                                            </GoogleReCaptchaProvider>
                                             <Footer />
                                         </Transitions>
                                         
