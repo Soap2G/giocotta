@@ -1,8 +1,8 @@
 import "./message-style.css";
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 // import Captcha from './Captcha';
-import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export const Message = () => {
 
@@ -132,7 +132,7 @@ export const Message = () => {
   };
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V">
+    // <GoogleReCaptchaProvider reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V">
       <section className="message-section">
         <div className="message-title">
           <h1 >
@@ -160,6 +160,6 @@ export const Message = () => {
           </form>
         </div>
       </section>
-    </GoogleReCaptchaProvider>
+    // </GoogleReCaptchaProvider>
   );
 };
