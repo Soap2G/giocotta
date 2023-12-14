@@ -60,7 +60,7 @@ const Map = ({ options, onMapLoad, locations }) => {
     };
   }, [options, onMapLoad, locations]);
 
-  const holeSize = Math.min(1, scroll / 700);
+  const holeSize = Math.min(1, scroll / 1150);
 
   return (
     <ScrollAnimation animateIn="flipOutX" className='red-square'>
