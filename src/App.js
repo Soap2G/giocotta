@@ -78,7 +78,10 @@ function App() {
                                             <Cerimony />
                                             <Fiesta />
                                             <Lista />
-                                            <GoogleReCaptchaProvider reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V">
+                                            <GoogleReCaptchaProvider 
+                                                reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V"
+                                                onLoad={() => console.log('reCAPTCHA Loaded')}
+                                                >
                                                 <Message />
                                             </GoogleReCaptchaProvider>
                                             <Footer />

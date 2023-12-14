@@ -11,7 +11,15 @@ export const Message = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState('');
   const form = useRef();
+
+  const [isRecaptchaReady, setIsRecaptchaReady] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
+
+  useEffect(() => {
+    if (executeRecaptcha) {
+      setIsRecaptchaReady(true);
+    }
+  }, [executeRecaptcha]);
 
   //----------------------------------
   // Update state of the recaptcha
@@ -40,7 +48,7 @@ export const Message = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    if (!executeRecaptcha) {
+    if (!isRecaptchaReady) {
       console.error('Execute recaptcha not yet available');
       setSubmissionMessage("Mh, sei un robot? Riprova.");
       return;
@@ -145,7 +153,7 @@ export const Message = () => {
           id="submit"
           type="submit" 
           value="INVIA" 
-          disabled={isSubmitting} 
+          disabled={!isRecaptchaReady || isSubmitting} 
           style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
           />
           {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
