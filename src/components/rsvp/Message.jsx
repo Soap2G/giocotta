@@ -19,6 +19,23 @@ export const Message = () => {
   // const handleCaptchaChange = (value) => {
   //   setIsCaptchaValid(!!value);
   // };
+  const verifyRecaptcha = async (token) => {
+    try {
+      const response = await fetch('/.netlify/functions/recaptcha-verify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token }),
+      });
+      const data = await response.json();
+      return data.success; // Assuming the response contains a 'success' field
+    } catch (error) {
+      console.error('Error verifying reCAPTCHA:', error);
+      return false;
+    }
+  };
+  
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -31,6 +48,7 @@ export const Message = () => {
   
     // Get the reCAPTCHA token
     const token = await executeRecaptcha('submit_form');
+    const isVerified = await verifyRecaptcha(token);
 
     const defaultMessage = [ "Non ha scritto nulla, quindi ecco una barzelletta: Perché le bambine piccole non possono comprare gli occhiali da sole? Perché devono essere accompagnate dai genitori.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Perché il pomodoro non riesce mai a dormire? Perché l’insalata… russa!",
@@ -79,9 +97,15 @@ export const Message = () => {
 
     // Include the reCAPTCHA token in my form data
     const formData = new FormData(form.current);
-    formData.append('g-recaptcha-response', token);
+    // formData.append('g-recaptcha-response', token);
 
     setIsSubmitting(true);
+
+    if (!isVerified) {
+      setSubmissionMessage("Failed reCAPTCHA verification.");
+      setIsSubmitting(false);
+      return;
+    }
 
     emailjs.sendForm('service_t8sxek9', 'template_ta19zt5', formData, '9477ur8cVpY-mQuB7')
       .then((result) => {
