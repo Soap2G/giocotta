@@ -1,30 +1,36 @@
 import "./message-style.css";
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import Captcha from './Captcha';
+// import Captcha from './Captcha';
+import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export const Message = () => {
 
-  const [isCaptchaValid, setIsCaptchaValid] = useState(false);
+  // const [isCaptchaValid, setIsCaptchaValid] = useState(false);
   const [hasSubmitted, setHasSubmitted] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionMessage, setSubmissionMessage] = useState('');
   const form = useRef();
+  const { executeRecaptcha } = useGoogleReCaptcha();
 
   //----------------------------------
   // Update state of the recaptcha
   //----------------------------------
-  const handleCaptchaChange = (value) => {
-    setIsCaptchaValid(!!value);
-  };
+  // const handleCaptchaChange = (value) => {
+  //   setIsCaptchaValid(!!value);
+  // };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
-    if (!isCaptchaValid) {
-      setSubmissionMessage("Mh, sei un robot? Completa il reCAPTCHA.");
-      setHasSubmitted(false);
+
+    if (!executeRecaptcha) {
+      console.error('Execute recaptcha not yet available');
+      setSubmissionMessage("Mh, sei un robot? Riprova.");
       return;
     }
+  
+    // Get the reCAPTCHA token
+    const token = await executeRecaptcha('submit_form');
 
     const defaultMessage = [ "Non ha scritto nulla, quindi ecco una barzelletta: Perché le bambine piccole non possono comprare gli occhiali da sole? Perché devono essere accompagnate dai genitori.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Perché il pomodoro non riesce mai a dormire? Perché l’insalata… russa!",
@@ -71,12 +77,17 @@ export const Message = () => {
       formElements.message.value = formElements.message.value || getRandomMessage();
     }
 
+    // Include the reCAPTCHA token in my form data
+    const formData = new FormData(form.current);
+    formData.append('g-recaptcha-response', token);
+
     setIsSubmitting(true);
-    emailjs.sendForm('service_t8sxek9', 'template_ta19zt5', form.current, '9477ur8cVpY-mQuB7')
+
+    emailjs.sendForm('service_t8sxek9', 'template_ta19zt5', formData, '9477ur8cVpY-mQuB7')
       .then((result) => {
           console.log(result.text);
           setSubmissionMessage("Grazie, abbiamo informato Elisa e Giovanni. Statistiche per nerd: 200 OK");
-          setIsCaptchaValid(false); // Reset reCAPTCHA
+          // setIsCaptchaValid(false); // Reset reCAPTCHA
           setHasSubmitted(true);
       }, (error) => {
           console.log(error.text);
@@ -89,32 +100,34 @@ export const Message = () => {
   };
 
   return (
-    <section className="message-section">
-      <div className="message-title">
-        <h1 >
-          Facci un fischio
-        </h1>
-      </div>
+    <GoogleReCaptchaProvider reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V">
+      <section className="message-section">
+        <div className="message-title">
+          <h1 >
+            Facci un fischio
+          </h1>
+        </div>
 
-      <div
-        // className=" op-class"
-      >
-        <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
-        <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
-        <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
-        <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
-        <Captcha handleCaptchaChange={handleCaptchaChange}/>
-        <input 
-        id="submit"
-        type="submit" 
-        value="INVIA" 
-        disabled={isSubmitting} 
-        style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
-        />
-        {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
-        </form>
-      </div>
-    </section>
+        <div
+          // className=" op-class"
+        >
+          <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
+          <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
+          <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
+          <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
+          {/* <Captcha handleCaptchaChange={handleCaptchaChange}/> */}
+          <input 
+          id="submit"
+          type="submit" 
+          value="INVIA" 
+          disabled={isSubmitting} 
+          style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
+          />
+          {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
+          </form>
+        </div>
+      </section>
+    </GoogleReCaptchaProvider>
   );
 };
