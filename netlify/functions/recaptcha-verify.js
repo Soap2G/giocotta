@@ -4,6 +4,8 @@ exports.handler = async (event) => {
   const { token } = JSON.parse(event.body);
   const secret = process.env.RECAPTCHA_SECRET_KEY; // reCAPTCHA secret key
 
+  const fetch = (await import('node-fetch')).default;
+
   const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'POST',
     headers: {
