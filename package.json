@@ -4,6 +4,7 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
+    "node-fetch": "^2.6.1",
     "@emailjs/browser": "",
     "@googlemaps/js-api-loader": "",
     "@iconify/icons-mdi": "^1.0.105",
