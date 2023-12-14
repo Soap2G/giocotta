@@ -11,7 +11,7 @@ const Map = ({ options, onMapLoad, locations }) => {
 
   // Function to add a marker at a given location
   const addMarker = (map, location) => {
-    const icon = {
+    let icon = {
       url: location.icon,
       size: new google.maps.Size(location.size_x, location.size_y), // Set the desired width and height
       scaledSize: new google.maps.Size(location.size_x, location.size_y) // This scales the icon

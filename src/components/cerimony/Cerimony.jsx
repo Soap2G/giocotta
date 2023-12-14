@@ -11,8 +11,8 @@ const Cerimony = () => {
 		lng: 10.911685115083026,
 	  }
 
-  const locations = [
-    { lat: 44.640488033871996, lng: 10.911685115083026, info: "Parrocchia dei Santi Faustino e Giovita, Via Pietro Giardini, 231, 41124 Modena" }, // Location 
+  let locations = [
+    { lat: 44.640488033871996, lng: 10.911685115083026, icon:'', info: "Parrocchia dei Santi Faustino e Giovita, Via Pietro Giardini, 231, 41124 Modena" }, // Location 
     { lat: 44.64064358724783, lng: 10.919546561551698, icon: LightIcon, size_x: 36.4, size_y: 60, info: "Questa è la casa di Giovanni." }, // Location 
     { lat: 44.64191840162643, lng: 10.91285164518287, icon: DarkIcon, size_x: 48.6, size_y: 60, info: "Questa è la casa di Elisa." }, // Location 2
   ];
