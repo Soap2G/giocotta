@@ -62,7 +62,7 @@ export const Message = () => {
     const isVerified = await verifyRecaptcha(token);
 
     const defaultMessage = [ "Non ha scritto nulla, quindi ecco una barzelletta: Perché le bambine piccole non possono comprare gli occhiali da sole? Perché devono essere accompagnate dai genitori.",
-                          "Non ha scritto nulla, quindi ecco una barzelletta: Perché il pomodoro non riesce mai a dormire? Perché l’insalata… russa!",
+                          "Non ha scritto nulla, quindi ecco una barzelletta: Perché il pomodoro non riesce mai a dormire? Perché l'insalata… russa!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è il colmo per due divorziati americani? Essere… stati uniti.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Come si chiamano i boy-scout che vanno in macchina? Le giovani marmitte!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Che cosa fa un gallo in chiesa? Il chicchirichetto!",
@@ -81,11 +81,10 @@ export const Message = () => {
                           "Non ha scritto nulla, quindi ecco una barzelletta: Mi rifiuto. Disse il netturbino...",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Che cosa fanno otto cane in mare? Il can-otto!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Un uomo entra in un caffè. SPLASH!",
-                          "Non ha scritto nulla, quindi ecco una barzelletta: La funga dice al fungo: Sei un porcino!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Chiude una lavanderia. Faceva affari sporchi.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è la città preferita dai ragni? Mosca!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: La tuta di Batman? La Bat-tuta! :-)",
-                          "Non ha scritto nulla, quindi ecco una barzelletta: Se io mi metto la camicia di lino, poi Lino che si mette?",
+                          "Non ha scritto nulla, quindi ecco una barzelletta: Se io mi metto la camicia di lino, poi Lino cosa si mette?",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è il formaggio servito nei vagoni ristorante? La mozzarella in carrozza.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Ma se un passerotto entra dentro un computer diventa un MicroCIP?",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Mario ha smesso di fare il muratore perché aveva paura del cemento armato...",
@@ -113,7 +112,7 @@ export const Message = () => {
     setIsSubmitting(true);
 
     if (!isVerified) {
-      setSubmissionMessage("La verifica reCAPTCHA è fallita. Sei un robot?");
+      setSubmissionMessage("La verifica reCAPTCHA è fallita. Sei un robot? आप रोबोट हैं? An e robot a th' annad? あなたはロボットですか? ");
       setIsSubmitting(false);
       return;
     }
@@ -135,30 +134,32 @@ export const Message = () => {
 
   return (
     <section className="message-section">
-      <div className="message-title">
-        <h1 >
-          Facci un fischio
-        </h1>
-      </div>
+      <center>
+        <div className="message-title">
+          <h1 >
+            Facci un fischio
+          </h1>
+        </div>
 
-      <div
-        // className=" op-class"
-      >
-        <form ref={form} onSubmit={sendEmail}>
-        <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
-        <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
-        <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
-        <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
-        <input 
-        id="submit"
-        type="submit" 
-        value="INVIA" 
-        disabled={!isRecaptchaReady || isSubmitting} 
-        style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
-        />
-        {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
-        </form>
-      </div>
+        <div
+          // className=" op-class"
+        >
+          <form ref={form} onSubmit={sendEmail}>
+          <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
+          <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
+          <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
+          <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
+          <input 
+          id="submit"
+          type="submit" 
+          value="INVIA" 
+          disabled={!isRecaptchaReady || isSubmitting} 
+          style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
+          />
+          {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
+          </form>
+        </div>
+      </center>
     </section>
   );
 };

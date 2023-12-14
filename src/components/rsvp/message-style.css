@@ -13,11 +13,20 @@ button {
 }
 
 .success-message {
+    font-family: 'Averia Serif Libre', serif;
+    font-weight: bold;
+    font-size: 1.2rem;
     color: var(--a-color);
+    width: 30rem;
+
   }
   .error-message {
+    font-family: 'Averia Serif Libre', serif;
+    font-weight: bold;
+    font-size: 1rem;
     color: rgb(255, 78, 78);
     transition: color 200ms ease-in;
+    width: 30rem;
   }  
 
 .message-title {
