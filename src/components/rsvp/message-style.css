@@ -13,7 +13,7 @@ button {
 }
 
 .success-message {
-    color: var(--ref-color);
+    color: var(--a-color);
   }
   .error-message {
     color: rgb(255, 78, 78);

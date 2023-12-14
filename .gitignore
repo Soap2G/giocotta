@@ -24,3 +24,6 @@ yarn-error.log*
 
 *.old
 src/posts/posts.jsx
+
+# Local Netlify folder
+.netlify

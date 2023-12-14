@@ -7,6 +7,10 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+.grecaptcha-badge { 
+  visibility: hidden;
+}
+
 :root {
   /* Light theme colors */
   --color-background: #ffffff;

@@ -37,7 +37,15 @@ export const Message = () => {
         body: JSON.stringify({ token }),
       });
       const data = await response.json();
-      return data.success; // Assuming the response contains a 'success' field
+      
+      if (response.ok && data && 'success' in data) {
+        return data.success;
+      } else {
+        // Handle unexpected response format
+        console.error('Unexpected response format:', data);
+        return false;
+      }
+
     } catch (error) {
       console.error('Error verifying reCAPTCHA:', error);
       return false;
@@ -50,13 +58,14 @@ export const Message = () => {
 
     if (!isRecaptchaReady) {
       console.error('Execute recaptcha not yet available');
-      setSubmissionMessage("Mh, sei un robot? Riprova.");
+      setSubmissionMessage("Il servizio non è ancora disponibile. Attendere prego.");
       return;
     }
   
     // Get the reCAPTCHA token
     const token = await executeRecaptcha('submit_form');
     const isVerified = await verifyRecaptcha(token);
+    console.log(isVerified)
 
     const defaultMessage = [ "Non ha scritto nulla, quindi ecco una barzelletta: Perché le bambine piccole non possono comprare gli occhiali da sole? Perché devono essere accompagnate dai genitori.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Perché il pomodoro non riesce mai a dormire? Perché l’insalata… russa!",
@@ -104,18 +113,18 @@ export const Message = () => {
     }
 
     // Include the reCAPTCHA token in my form data
-    const formData = new FormData(form.current);
+    // const formData = new FormData(form.current);
     // formData.append('g-recaptcha-response', token);
 
     setIsSubmitting(true);
 
     if (!isVerified) {
-      setSubmissionMessage("Failed reCAPTCHA verification.");
+      setSubmissionMessage("La verifica reCAPTCHA è fallita. Sei un robot?");
       setIsSubmitting(false);
       return;
     }
 
-    emailjs.sendForm('service_t8sxek9', 'template_ta19zt5', formData, '9477ur8cVpY-mQuB7')
+    emailjs.sendForm('service_t8sxek9', 'template_ta19zt5', form.current, '9477ur8cVpY-mQuB7')
       .then((result) => {
           console.log(result.text);
           setSubmissionMessage("Grazie, abbiamo informato Elisa e Giovanni. Statistiche per nerd: 200 OK");

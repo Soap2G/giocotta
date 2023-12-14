@@ -2,7 +2,8 @@ const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
   const { token } = JSON.parse(event.body);
-  const secret = process.env.RECAPTCHA_SECRET_KEY; // reCAPTCHA secret key
+  // const secret = process.env.RECAPTCHA_SECRET_KEY; // reCAPTCHA secret key
+  const secret = "6LfmHDEpAAAAAA0Ftq9UCS-59P8airVO7tBFICvz"
 
   const fetch = (await import('node-fetch')).default;
 
@@ -11,19 +12,21 @@ exports.handler = async (event) => {
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
     },
-    body: `secret=${secret}&response=${token}`,
+    body: `secret=${encodeURIComponent(secret)}&response=${encodeURIComponent(token)}`,
   });
+
   const data = await response.json();
+  console.log(data.success)
 
   if (data.success) {
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "ReCAPTCHA verified successfully" }),
+      body: JSON.stringify({ success: true, message: "ReCAPTCHA verified successfully" }),
     };
   } else {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: "ReCAPTCHA verification failed", error: data }),
+      body: JSON.stringify({ success: false, message: "ReCAPTCHA verification failed", error: data }),
     };
   }
 };
