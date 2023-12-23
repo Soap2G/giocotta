@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 import { Link } from "react-router-dom";
+import { useTranslation, Trans } from 'react-i18next';
 
 
 function SampleNextArrow(props) {
@@ -67,6 +68,9 @@ class SimpleSlider extends Component {
 
 const Lista = () => {
 
+	const { t } = useTranslation();
+
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -85,30 +89,25 @@ const shuffleditems = shuffleArray(imageArray());
 	  
       <center>
 		    <h1>
-          Grazie.
+          {t('thankyou')}
         </h1>
 	   </center>
      <div className="case" style= {{ marginTop: "1em" }} >
-        <p>Siamo profondamente grati a tutti. <br/>
-        Per quello che ci insegnate, ma soprattutto perchè ci siete. <br/>
-        E non solo quando si festeggia :) <br/><br/>
+        <p><Trans i18nKey='thankyou1'/> <br/><br/>
         </p>
         <p style= {{ marginTop: "10em" }}>
-        Molto di quello che ci serve lo abbiamo già, ma se avete piacere di contribuire, <br/>
-        potete utilizzare queste coordinate:<br/>
+        <Trans i18nKey='IBAN'/><br/>
         </p>
       </div>
      <div className="case" style= {{ marginTop: "1em" }} >
         <p>{/* Oppure, attraverso <br/><br/> */}
         <code>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:IT20A0301503200000003632172</code><br/><br/>
-        Ci piacerebbe donare una parte di quello che ci verrà regalato alle comunità che visiteremo durante il nostro <a href="https://www.viaggisolidali.it" target="_blank"rel="noopener noreferrer" >viaggio</a>. <br/>
-        Cercheremo di condividere questa esperienza in un piccolo <Link aria-current="page" to="/blog">diario</Link>.<br/>
-        Il resto lo vorremmo investire in altre nostre passioni, come 
+        <Trans i18nKey="donate" components={{a: <a href="https://www.viaggisolidali.it" target="_blank" rel="noopener noreferrer">placeholder</a>, Link: <Link aria-current="page" to="/blog">placeholder</Link>}} />
         </p>
       </div>
      <center>
      <div className="lista-subtitle">
-      <h2 style={{ marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>La (buona?) cucina.   
+      <h2 style={{ marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>{t('cucina')} 
         </h2>
       </div>
 	   </center>
@@ -120,11 +119,11 @@ const shuffleditems = shuffleArray(imageArray());
       </ScrollAnimation>
       <center>
         <div className="lista-subtitle">
-      <h2 style={{ marginTop: "1.5em", marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>Quando non cuciniamo, ci piace viaggiare.		   
+      <h2 style={{ marginTop: "1.5em", marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>{t('travel')}  
         </h2>
       </div>
       <div className="case">
-      <p>Lo avevamo già menzionato?</p>
+      <p>{t('travel1')}</p>
       </div>
       </center>
       

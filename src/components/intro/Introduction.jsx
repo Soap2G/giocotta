@@ -1,7 +1,9 @@
 import './intro-style.css';
 import { Parallax } from "react-scroll-parallax";
+import { useTranslation } from 'react-i18next';
 
 const Introduction = () => {
+	const { t } = useTranslation();
 	
 	return (
 		
@@ -15,7 +17,7 @@ const Introduction = () => {
 					</h1>
 				</div>
 				<p style={{ fontSize: "1.7rem" }}>
-						Ciao, ci sposiamo!
+					{t('greeting')}
 				</p>
 			</Parallax>
 		</section>

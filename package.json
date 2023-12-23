@@ -32,7 +32,9 @@
     "slick-carousel": "",
     "styled-components": "",
     "web-vitals": "^2.1.0",
-    "yarn": "^1.22.19"
+    "yarn": "^1.22.19",
+    "react-i18next": "^11.14.3",
+    "i18next":""
   },
   "scripts": {
     "start": "node generate-posts.js && react-scripts start",

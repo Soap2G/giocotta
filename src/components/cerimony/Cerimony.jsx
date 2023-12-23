@@ -2,8 +2,11 @@ import "./cerimony-style.css";
 import MapSection from '../map/Map'
 import DarkIcon from '../../assets/dark.webp';
 import LightIcon from '../../assets/light.webp';
+import { useTranslation, Trans } from 'react-i18next';
+
 
 const Cerimony = () => {
+	const { t } = useTranslation();
 
   const location = {
 		info: 'Parrocchia dei Santi Faustino e Giovita, Via Pietro Giardini, 231, 41124 Modena',
@@ -24,19 +27,17 @@ const Cerimony = () => {
       <center>
         <div className="cerimony-title">
             <h1>
-            Dimmi dove e quando
+            {t('where-title')}
           </h1>
         </div>
       </center>
       <div className="case">
         <p >
-          Il 15 Giugno 2024 alle 15:30,<br/>
-          nella parrocchia dei <a href="https://www.parrocchiasanfaustino.it/" target="_blank" rel="noopener noreferrer">SS Faustino e Giovita</a> a Modena.
+        <Trans i18nKey="ceremony" components={{a: <a href="https://www.parrocchiasanfaustino.it/" target="_blank" rel="noopener noreferrer">placeholder</a>}} />
         </p>
       </div>
       <div className="address">
-          Via Giardini 231, 41124, Modena (MO) <br/>
-          No, non è un hangar, è una chiesa :D
+        <Trans i18nKey='battutina1'/>
       </div>
       <div className='op-class-cerimony'>
         <MapSection

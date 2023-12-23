@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './BlogList-style.css';
 import sadPablo from './Sad-Pablo-Escobar.webp';
+import { useTranslation } from 'react-i18next';
 
 const CountdownTimer = () => {
+
+    const { t } = useTranslation();
+
     const targetDate = '2024-06-24'
     const calculateTimeLeft = () => {
         const difference = +new Date(targetDate) - +new Date();
@@ -47,7 +51,7 @@ const CountdownTimer = () => {
 
   const renderTimeLeft = () => {
     const { days, hours, minutes, seconds } = timeLeft;
-    return `Ritorna fra ${days} giorni, ${hours} ore, ${minutes} minuti e ${seconds} secondi.`;
+    return t('countdown', { days, hours, minutes, seconds });
   };
 
   return (
@@ -57,10 +61,10 @@ const CountdownTimer = () => {
         
     </div>
         {Object.keys(timeLeft).length === 0 ? 
-        <h1>Pronti a partire! A breve arriveranno notizie (speriamo)</h1> : 
+        <h1>{t('ready')}</h1> : 
         <div>
-            <h1>Wow, non c'è niente!</h1>
-            <p>Perchè? Beh, il viaggio non è ancora cominciato.</p>
+            <h1>{t('empty')}</h1>
+            <p>{t('empty-why')}</p>
             {renderTimeLeft()}
             <div className='countdown-img'>
             <img src={sadPablo} alt=""/>

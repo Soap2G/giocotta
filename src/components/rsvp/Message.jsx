@@ -2,8 +2,12 @@ import "./message-style.css";
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { useTranslation } from 'react-i18next';
+
 
 export const Message = () => {
+	const { t } = useTranslation();
+
 
   const [hasSubmitted, setHasSubmitted] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -137,7 +141,7 @@ export const Message = () => {
       <center>
         <div className="message-title">
           <h1 >
-            Facci un fischio
+            {t('rsvp')}
           </h1>
         </div>
 
@@ -145,14 +149,14 @@ export const Message = () => {
           // className=" op-class"
         >
           <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="fullName" placeholder="Nome e cognome" id="rsvpname" required/>
-          <input type="text" name="email" placeholder="La tua email" id="rsvpemail" required/>
-          <input type="text" name="number" placeholder="Ci sono ospiti aggiuntivi?" id="rsvpnumber" />
-          <textarea name="message" placeholder="Intolleranze, necessità, consigli, saluti, o barzellette (freddure preferibili). Se non scrivi nulla te la raccontiamo noi una barzelletta." id="textrsvp" />
+          <input type="text" name="fullName" placeholder={t('fullName')} id="rsvpname" required/>
+          <input type="text" name="email" placeholder={t('email')} id="rsvpemail" required/>
+          <input type="text" name="number" placeholder={t('number')} id="rsvpnumber" />
+          <textarea name="message" placeholder={t('message')} id="textrsvp" />
           <input 
           id="submit"
           type="submit" 
-          value="INVIA" 
+          value={t('send')}
           disabled={!isRecaptchaReady || isSubmitting} 
           style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
           />

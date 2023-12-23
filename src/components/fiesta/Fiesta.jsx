@@ -4,8 +4,12 @@ import masserotti from '../../assets/masserotti.webp';
 // import { Parallax } from "react-scroll-parallax";
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
+import { useTranslation } from 'react-i18next';
+
 
 const Fiesta = () => {
+	const { t } = useTranslation();
+
 
 return (
 <section 
@@ -16,13 +20,13 @@ return (
       <center>
         <h1 
         id="fiesta-head">
-          Dopo vi va di farvi 1 ora di macchina?
+          {t('fiesta-title')}
         </h1>
       </center>
       </div>
       {/* </ScrollAnimation> */}
       <div className="case">
-        <p>Vi aspettiamo qui:
+        <p> {t('fiesta-where')}
         </p>
       </div>
       <div className="address">

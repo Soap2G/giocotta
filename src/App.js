@@ -15,6 +15,8 @@ import BlogPostPage from './components/blog/BlogPostPage';
 import { useLocation } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 
 
 import './App.css';
@@ -56,66 +58,68 @@ function App() {
 
     return (
         <ParallaxProvider>
-            <main ref={ref}>
-			    <Header />
-				<div className={`theme-${theme}`}>
-                    <ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
-                        <AnimatePresence 
-                        initial={false}
-                        mode='wait'
-                        >
-                            <Routes 
-                            location={location}
-                            key={location.pathname}
+            <I18nextProvider i18n={i18n}>
+                <main ref={ref}>
+                    <Header />
+                    <div className={`theme-${theme}`}>
+                        <ThemeButton onClick={toggleTheme} flipped={theme === 'dark'} />
+                            <AnimatePresence 
+                            initial={false}
+                            mode='wait'
                             >
-                                <Route 
-                                exact
-                                path="/" 
-                                element={
-                                    <>
-                                        <Transitions>
-                                            <Introduction />
-                                            <Cerimony />
-                                            <Fiesta />
-                                            <Lista />
-                                            <GoogleReCaptchaProvider 
-                                                reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V"
-                                                onLoad={() => console.log('reCAPTCHA Loaded')}
-                                                >
-                                                <Message />
-                                            </GoogleReCaptchaProvider>
+                                <Routes 
+                                location={location}
+                                key={location.pathname}
+                                >
+                                    <Route 
+                                    exact
+                                    path="/" 
+                                    element={
+                                        <>
+                                            <Transitions>
+                                                <Introduction />
+                                                <Cerimony />
+                                                <Fiesta />
+                                                <Lista />
+                                                <GoogleReCaptchaProvider 
+                                                    reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V"
+                                                    onLoad={() => console.log('reCAPTCHA Loaded')}
+                                                    >
+                                                    <Message />
+                                                </GoogleReCaptchaProvider>
+                                                <Footer />
+                                            </Transitions>
+                                            
+                                        </>
+                                    } />
+                                    <Route 
+                                    exact
+                                    path="/blog" 
+                                    element={
+                                        <>
+                                            <Transitions>
+                                                <BlogList />
+                                                <Footer />
+                                            </Transitions>
+                                        </>
+                                    } />
+                                    <Route
+                                    exact
+                                    path="/blog/:slug" 
+                                    element={
+                                        <>
+                                            <Transitions>
+                                            <BlogPostPage />
                                             <Footer />
-                                        </Transitions>
-                                        
-                                    </>
-                                } />
-                                <Route 
-                                exact
-                                path="/blog" 
-                                element={
-                                    <>
-                                        <Transitions>
-                                            <BlogList />
-                                            <Footer />
-                                        </Transitions>
-                                    </>
-                                } />
-                                <Route
-                                exact
-                                path="/blog/:slug" 
-                                element={
-                                    <>
-                                        <Transitions>
-                                        <BlogPostPage />
-                                        <Footer />
-                                        </Transitions>
-                                    </>
-                                } />
-                            </Routes>
-                        </AnimatePresence>
-				</div>
-				
-            </main>
+                                            </Transitions>
+                                        </>
+                                    } />
+                                </Routes>
+                            </AnimatePresence>
+                    </div>
+                    
+                </main>
+            </I18nextProvider>
         </ParallaxProvider>
     );
 }
