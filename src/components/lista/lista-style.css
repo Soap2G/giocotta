@@ -208,6 +208,10 @@ body[data-theme="dark"] .container-lista {
 
 @media screen and (max-width: 500px) {
 
+    .case {
+        max-width: 85%;
+    }
+
     .text-for-gallery{
         display: inherit;
     }

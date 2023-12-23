@@ -88,23 +88,23 @@ const shuffleditems = shuffleArray(imageArray());
       <div className="lista-title">
 	  
       <center>
-		    <h1>
-          {t('thankyou')}
-        </h1>
-	   </center>
-     <div className="case" style= {{ marginTop: "1em" }} >
-        <p><Trans i18nKey='thankyou1'/> <br/><br/>
-        </p>
-        <p style= {{ marginTop: "10em" }}>
-        <Trans i18nKey='IBAN'/><br/>
-        </p>
-      </div>
-     <div className="case" style= {{ marginTop: "1em" }} >
-        <p>{/* Oppure, attraverso <br/><br/> */}
-        <code>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:IT20A0301503200000003632172</code><br/><br/>
-        <Trans i18nKey="donate" components={{a: <a href="https://www.viaggisolidali.it" target="_blank" rel="noopener noreferrer">placeholder</a>, Link: <Link aria-current="page" to="/blog">placeholder</Link>}} />
-        </p>
-      </div>
+          <h1>
+            {t('thankyou')}
+          </h1>
+      <div className="case" style= {{ marginTop: "1em" }} >
+          <p><Trans i18nKey='thankyou1'/> <br/><br/>
+          </p>
+          <p style= {{ marginTop: "10em" }}>
+          <Trans i18nKey='IBAN'/><br/>
+          </p>
+        </div>
+      <div className="case" style= {{ marginTop: "1em" }} >
+          <p>{/* Oppure, attraverso <br/><br/> */}
+          <code style={{ wordWrap: "break-word" }}>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:IT20A0301503200000003632172</code><br/><br/>
+          <Trans i18nKey="donate" components={{a: <a href="https://www.viaggisolidali.it" target="_blank" rel="noopener noreferrer">placeholder</a>, Link: <Link aria-current="page" to="/blog">placeholder</Link>}} />
+          </p>
+        </div>
+      </center>
      <center>
      <div className="lista-subtitle">
       <h2 style={{ marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>{t('cucina')} 
@@ -146,7 +146,8 @@ const shuffleditems = shuffleArray(imageArray());
           lineHeight: '1.5', 
           marginTop: "5em", 
           marginBottom: "5em", 
-          fontSize: '1.5rem', 
+          fontSize: '1.5rem',
+          maxWidth: '100%'
 
           }}>
         To see the world, <br/>things dangerous to come to, <br/>to see behind walls, <br/>draw closer, to find each other, <br/>and to <span className='feel'>feel</span>. <br/>That is the purpose of life.
