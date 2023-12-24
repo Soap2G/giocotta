@@ -14,7 +14,7 @@ const resources = {
       "fiesta-where": "We'll wait you here:",
       "thankyou": "Thank you.",
       "thankyou1": "We are deeply grateful to you all. <br/> For what you teach us, but most importantly, 'cause you are present. <br/> And not only when we party :)",
-      "IBAN": "We already have most of what we need;<br/> in lieu of gifts, we would appreciate a contribution made to:",
+      "IBAN": "We're excited for your presence, not presents;<br/> in lieu of gifts, we would appreciate a contribution made to:",
       "donate": "We would like to donate a part of what we'll receive to the communities we'll meet during our <a>trip</a>. <br/> We'll try to blog this experience in a <Link>journal</Link>.<br/> The rest, we'd like to invest it in our passions, such as ",
       "cucina": "(good?) cooking.",
       "travel": "When we don't cook, we enjoy travelling.",
