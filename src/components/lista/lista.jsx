@@ -122,9 +122,9 @@ const shuffleditems = shuffleArray(imageArray());
       <h2 style={{ marginTop: "1.5em", marginLeft: "0.2em", marginRight: "0.2em", fontWeight: "400" }}>{t('travel')}  
         </h2>
       </div>
-      <div className="case">
+      {/* <div className="case">
       <p>{t('travel1')}</p>
-      </div>
+      </div> */}
       </center>
       
 	  {/* <div className="case">
