@@ -121,7 +121,7 @@ export const Message = () => {
       return;
     }
 
-    emailjs.sendForm('service_t8sxek9', 'template_ta19zt5', form.current, '9477ur8cVpY-mQuB7')
+    emailjs.sendForm('service_as130po', 'template_ta19zt5', form.current, '9477ur8cVpY-mQuB7')
       .then((result) => {
           console.log(result.text);
           setSubmissionMessage("Grazie, abbiamo informato Elisa e Giovanni. Statistiche per nerd: 200 OK");
