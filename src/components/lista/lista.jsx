@@ -100,7 +100,7 @@ const shuffleditems = shuffleArray(imageArray());
         </div>
       <div className="case" style= {{ marginTop: "1em" }} >
           <p>{/* Oppure, attraverso <br/><br/> */}
-          <code style={{ wordWrap: "break-word" }}>Elisa Cottafava e Giovanni Guerrieri<br/>IBAN:IT20A0301503200000003632172</code><br/><br/>
+          <code style={{ wordWrap: "break-word" }}>Elisa Cottafava<br/>IBAN:IT18B0538712900000003066747<br/>Giovanni Guerrieri<br/>IBAN:IT20A0301503200000003632172</code><br/><br/>
           <Trans i18nKey="donate" components={{a: <a href="https://www.viaggisolidali.it" target="_blank" rel="noopener noreferrer">placeholder</a>, Link: <Link aria-current="page" to="/blog">placeholder</Link>}} />
           </p>
         </div>
