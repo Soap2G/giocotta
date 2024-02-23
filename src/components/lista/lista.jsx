@@ -95,7 +95,8 @@ const shuffleditems = shuffleArray(imageArray());
           <p><Trans i18nKey='thankyou1'/> <br/><br/>
           </p>
           <p style= {{ marginTop: "10em" }}>
-          <Trans i18nKey='IBAN'/><br/>
+          <Trans i18nKey='IBAN' components={{a: <a href="https://maps.app.goo.gl/MWSsRGYSQvbhpeMs8" target="_blank" rel="noopener noreferrer">placeholder</a>}}/><br/>
+          <Trans i18nKey='IBAN2'/><br/>
           </p>
         </div>
       <div className="case" style= {{ marginTop: "1em" }} >
