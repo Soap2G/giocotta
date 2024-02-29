@@ -116,7 +116,7 @@ export const Message = () => {
     setIsSubmitting(true);
 
     if (!isVerified) {
-      setSubmissionMessage("La verifica reCAPTCHA è fallita. Sei un robot? आप रोबोट हैं? An e robot a th' annad? あなたはロボットですか? ");
+      setSubmissionMessage("La verifica reCAPTCHA è fallita. Sei un robot? Are you a robot? आप रोबोट हैं? An e robot a th' annad? あなたはロボットですか? ");
       setIsSubmitting(false);
       return;
     }
@@ -144,6 +144,7 @@ export const Message = () => {
             {t('rsvp')}
           </h1>
         </div>
+        <h3><i>{t('rsvp1')}</i></h3>
 
         <div
           // className=" op-class"
