@@ -83,7 +83,6 @@ export const Message = () => {
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è il cane più cattivo? La can-aglia.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Mi scusi, per andare al cimitero dove devo prendere l'autobus? In faccia...",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Mi rifiuto. Disse il netturbino...",
-                          "Non ha scritto nulla, quindi ecco una barzelletta: Che cosa fanno otto cane in mare? Il can-otto!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Un uomo entra in un caffè. SPLASH!",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Chiude una lavanderia. Faceva affari sporchi.",
                           "Non ha scritto nulla, quindi ecco una barzelletta: Qual è la città preferita dai ragni? Mosca!",
