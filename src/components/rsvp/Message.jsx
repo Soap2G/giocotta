@@ -158,7 +158,7 @@ export const Message = () => {
           type="submit" 
           value={t('send')}
           disabled={!isRecaptchaReady || isSubmitting} 
-          style={{ cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
+          style={isSubmitting ? { cursor: 'not-allowed', fontWeight: "bold", fontFamily: 'Averia Serif Libre', backgroundColor: 'grey' } : { cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
           />
           {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
           </form>
