@@ -3,7 +3,7 @@ from tkinter.ttk import Style
 from fpdf import FPDF
 
 class PDF(FPDF):
-    y_start = 20
+    y_start = 10
 
     def add_custom_font(self, font_name, font_path, font_style=''):
         # Add a TrueType or OpenType font
@@ -165,7 +165,7 @@ class PDF(FPDF):
 ############################################################################################################################
 
         text = "Primo"
-        y_position = self.get_y()+15  # Y position of the start of the text
+        y_position = self.get_y()+13  # Y position of the start of the text
         column_width = 80  # Width of each column
         line_height = 14  # Height of each line
         x_position = x_right-offset-0.4 #+ (self.w*1/3 - column_width)/2  # X position of the first column
@@ -188,7 +188,7 @@ class PDF(FPDF):
 ############################################################################################################################
 
         text = "Secondo"
-        y_position = self.get_y()+15  # Y position of the start of the text
+        y_position = self.get_y()+13  # Y position of the start of the text
         column_width = 80  # Width of each column
         line_height = 14  # Height of each line
         x_position = x_right-offset-0.7  # X position of the first column
@@ -199,7 +199,7 @@ class PDF(FPDF):
 ############################################################################################################################
 
 
-        text = "Filetto di manzo su riduzione al sangiovese"
+        text = "Filetto di manzo su riduzione al Sangiovese\nVerdure alla griglia\nPatate novelle sabbiate al rosmarino"
         y_position = self.get_y()  # Y position of the start of the text
         column_width = 68  # Width of each column
         line_height = 10  # Height of each line
@@ -212,7 +212,7 @@ class PDF(FPDF):
 
 
         text = "Dessert"
-        y_position = self.get_y()+15  # Y position of the start of the text
+        y_position = self.get_y()+13  # Y position of the start of the text
         column_width = 80  # Width of each column
         line_height = 14  # Height of each line
         x_position = x_right-1.4-offset  # X position of the first column
@@ -223,7 +223,30 @@ class PDF(FPDF):
 ############################################################################################################################
 
 
-        text = "Galleria di dolci monoporzione \nLa torta"
+        text = "Dolci e frutta fresca \nUna grossa torta"
+        y_position = self.get_y()  # Y position of the start of the text
+        column_width = 68  # Width of each column
+        line_height = 10  # Height of each line
+        x_position = x_right-2-offset  # X position of the first column
+     
+        self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3)
+
+############################################################################################################################
+############################################################################################################################
+
+        text = "I vini"
+        y_position = self.get_y()+13  # Y position of the start of the text
+        column_width = 80  # Width of each column
+        line_height = 14  # Height of each line
+        x_position = x_right-1.4-offset  # X position of the first column
+     
+        self.add_column_text(text, x_position, y_position, column_width, line_height, 'C', 0.3, font='Alegreya')
+
+############################################################################################################################
+############################################################################################################################
+
+
+        text = "Traminer aromatico Antonutti \nSangiovese superiore Principe di Ribano"
         y_position = self.get_y()  # Y position of the start of the text
         column_width = 68  # Width of each column
         line_height = 10  # Height of each line
@@ -312,7 +335,7 @@ curiosity = [
     "Più del 50% dell'acqua che beviamo ha la stessa età del sole.",
     "Se i GPS non includessero la relatività generale nei calcoli, la stima della posizione sarebbe sbagliata di una cinquantina di metri.",
     "Il rivelatore ATLAS al CERN pesa circa 60 milioni di banane.",
-    "Le leggi della fisica non sono le stesse se invertiamo la destra con la sinistra.",
+    "Le leggi della fisica non sono sempre le stesse se invertiamo la destra con la sinistra.",
     "Un fotone creato nel nucleo del sole, impiega 100 000 anni ad arrivare alla sua superficie, ma solo 8 minuti a raggiungere la terra.",
     "Nessuno saprà mai se quello che io intendo come rosso corrisponde a quello che tu intendi come rosso. Pensaci.",
     "Siamo attraversati da decine di miliardi di neutrini ogni secondo.",
@@ -327,11 +350,11 @@ curiosity = [
     "Se il sole fosse un buco nero, sarebbe una sfera di 3 km di raggio. Il suo raggio attuale è di circa 700 000 km.",
     "Al contrario di come molti credono, il significato dell'acronimo ATLAS (il rivelatore di particelle al CERN) non è \"ATomic LASagna\", bensì \"A Toroidal LHC ApparatuS\".",
     "Nel Modello Standard della fisica delle particelle, con 19 parametri (o 26, a seconda della religione), è possibile spiegare la maggior parte della fisica osservabile.",
-    "Più andiamo veloci, più siamo pesanti. Se viaggiassimo al 99% della velocità della luce, la nostra massa sarebbe 10 volte maggiore. Al 99.99% della velocità della luce, la massa aumenta di 100 volte.",
-    "La densità di massa media dell'universo è di circa 6 protoni al metro cubo. Nel corpo umano ci sono circa 20 000 000 000 000 000 000 000 000 000 protoni.",
+    "Più andiamo veloci, più siamo pesanti. Se viaggiassimo al 99% della velocità della luce, la nostra massa sarebbe 10 volte maggiore. Al 99.99% della velocità della luce, la massa aumenterebbe di 100 volte.",
+    "La densità di massa media dell'universo è di circa 6 protoni al metro cubo. Nel corpo umano ci sono circa 20 000 000 000 000 000 000 000 000 000 protoni. L'universo è grande e vuoto!",
     ]
 fact = [
-    "Giacomo Leopardi andava matto per i dolci. Si dice che il proprietario di una pasticceria di Napoli abbia comprato un titolo nobiliare con il denaro guadagnato dal poeta",
+    "Giacomo Leopardi andava matto per i dolci. Si dice che il proprietario di una pasticceria di Napoli abbia comprato un titolo nobiliare con il denaro guadagnato dal poeta.",
     "Napoleone non era affatto un nanerottolo, anzi, misurava ben 3cm in più dell'Elisa Cottafava.",
     "Secondo alcune leggende, Boccaccio sarebbe stato un ladro di manoscritti, sottratti all'abbazia di Montecassino.",
     "Durante il suo esilio londinese, Foscolo era seduto a leggere un libro nel suo studio, quando irruppe un suo rivale in amore e prese a sculacciarlo con un frustino.",
@@ -343,14 +366,14 @@ fact = [
     "Tasso era ossessionato dalla privacy, tanto che in un'occasione aggredì un servitore sospettato di averlo spiato.",
     "Quando a Vittorio Alfieri non aveva voglia di scrivere, si faceva legare alla sedia da un servitore con la minaccia di non essere liberato fino ad opera ultimata.",
     "Virginia Woolf preferiva scrivere utilizzando l'inchiostro viola. Si dice che questo colore la rilassasse e stimolasse la sua creatività.",
-    "Uno dei gatti di Ernest Hemingway aveva sei dita alle zampe.",
-    "Mark Twain è nato il giorno in cui è caduta una cometa e ha predetto che sarebbe morto alla sua prossima apparizione. E fu così.",
+    "Ernest Hemingway non diceva mai di no ad un daiquiri.",
+    "Mark Twain è nato il giorno in cui è caduta una cometa e ha predetto che sarebbe morto alla sua prossima apparizione. E così fu.",
     "\"Frankenstein\" nacque per caso durante una vacanza tra amici scrittori che si sfidarono a comporre storie dell'orrore; a scriverlo fu la giovanissima Mary Shelley di appena 18 anni.",
-    "",
-    "",
-    "",
-    "",
-    "",
+    "Il romanzo più lungo mai scritto è “Alla ricerca del tempo perduto” di Marcel Proust, che conta quasi 1 milione di caratteri. Che voglia.",
+    "Un minuto di silenzio per la moglie di Dante Alighieri, Gemma Donati, MAI citata in nessuna delle sue opere. Grande Beatrice.",
+    "Nel novembre 1907, Franz Kafka trovò lavoro presso le assicurazioni Generali di Trieste, ma vi rimase meno di un anno poiché non riusciva a trovare tempo per scrivere. Peccato, sarebbe stato un ottimo assicuratore.",
+    "Lo scrittore italiano più famoso al mondo è Carlo Collodi, padre di Pinocchio, il cui libro è stato tradotto in 59 lingue differenti.",
+    "Si dice che William Shakespeare abbia inventato più di 1000 parole usate correntemente nell'inglese moderno.",
     ]
 
 pdf = PDF()
