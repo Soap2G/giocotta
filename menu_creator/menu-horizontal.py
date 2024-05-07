@@ -320,7 +320,14 @@ class PDF(FPDF):
         # self.line(116.53304166666663, 10, 116.53304166666663, 210)
         # self.line(116.53304166666663+63.934, 10, 116.53304166666663+63.934, 210)
 
-
+    def add_page_content2(self):
+        # Add a new page
+        self.add_page(orientation = 'L')
+        self.set_draw_color(169, 169, 169)  # Grey color, RGB values
+        self.line(self.w*1/3, 0, self.w*1/3, 10)
+        self.line(self.w*1/3, 200, self.w*1/3, 210)
+        self.line(self.w*2/3, 0, self.w*2/3, 10)
+        self.line(self.w*2/3, 200, self.w*2/3, 210)
 
 ############################################################################################################################
 ############################################################################################################################
@@ -402,7 +409,7 @@ for i,text in enumerate(curiosity):
 
     # Add the front page content
     pdf.add_page_content(c_number, text, f_number, fact[i])
-    # pdf.add_page_content2()
+    pdf.add_page_content2()
     print("HELPER: \t" + str(i) + " done!")
 
 
