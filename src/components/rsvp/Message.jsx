@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useTranslation } from 'react-i18next';
+import shilabeuf from '../../assets/shialabeuf.png';
 
 
 export const Message = () => {
@@ -143,9 +144,13 @@ export const Message = () => {
             {t('rsvp')}
           </h1>
         </div>
-        <h3><i>{t('rsvp1')}</i></h3>
-
+        <h3 id="uellapeppa"><i>{t('rsvp1')}</i></h3>
+        <div className="container"
+        style= {{ marginBottom: "1em"}}>
+        <img style= {{maxWidth: "60%"}} src={shilabeuf} alt=""/>
+        </div>
         <div
+        
           // className=" op-class"
         >
           <form ref={form} onSubmit={sendEmail}>
