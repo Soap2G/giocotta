@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.bf930a1a.css",
-    "main.js": "./static/js/main.820d1bb0.js",
+    "main.js": "./static/js/main.55e1c2df.js",
     "static/js/787.ced5ec0d.chunk.js": "./static/js/787.ced5ec0d.chunk.js",
     "static/media/YDXJ0642.jpg": "./static/media/YDXJ0642.e3c9c663fc3bacd2ef7d.jpg",
     "static/media/IMG_20180828_121936.jpg": "./static/media/IMG_20180828_121936.4463dd33f00276b15a24.jpg",
@@ -59,6 +59,7 @@
     "static/media/Sad-Pablo-Escobar.webp": "./static/media/Sad-Pablo-Escobar.eaa4f4708b31ec9ad96d.webp",
     "static/media/light_arrow.png": "./static/media/light_arrow.4ac646271bd7a3f46bd1.png",
     "static/media/dark_arrow.png": "./static/media/dark_arrow.8ba87b412d13690445f8.png",
+    "static/media/shialabeuf.png": "./static/media/shialabeuf.dcfec433815585754645.png",
     "static/media/light.webp": "./static/media/light.129a792598f3da375180.webp",
     "static/media/dark.webp": "./static/media/dark.b903215f8c7f05fc521a.webp",
     "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
@@ -67,11 +68,11 @@
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "index.html": "./index.html",
     "main.bf930a1a.css.map": "./static/css/main.bf930a1a.css.map",
-    "main.820d1bb0.js.map": "./static/js/main.820d1bb0.js.map",
+    "main.55e1c2df.js.map": "./static/js/main.55e1c2df.js.map",
     "787.ced5ec0d.chunk.js.map": "./static/js/787.ced5ec0d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bf930a1a.css",
-    "static/js/main.820d1bb0.js"
+    "static/js/main.55e1c2df.js"
   ]
 }
