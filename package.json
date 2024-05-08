@@ -4,7 +4,6 @@
   "private": true,
   "homepage": ".",
   "dependencies": {
-    "node-fetch": "^2.6.1",
     "@emailjs/browser": "",
     "@googlemaps/js-api-loader": "",
     "@iconify/icons-mdi": "^1.0.105",
@@ -13,28 +12,30 @@
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "animate.css": "",
+    "dompurify": "",
+    "framer-motion": "",
+    "i18next": "",
     "locomotive-scroll": "^4.1.4",
+    "marked": "",
+    "node-fetch": "^2.6.1",
     "react": "^18.2.0",
     "react-animate-on-scroll": "",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "",
     "react-google-recaptcha-v3": "",
+    "react-i18next": "^11.14.3",
     "react-locomotive-scroll": "^0.2.2",
     "react-router-dom": "",
-    "marked": "",
-    "dompurify":"",
-    "react-svg-map":"",
-    "framer-motion": "",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "",
     "react-slick": "0.29.0",
+    "react-svg-map": "",
+    "rrc": "^0.10.1",
     "sass": "^1.52.2",
     "slick-carousel": "",
     "styled-components": "",
     "web-vitals": "^2.1.0",
-    "yarn": "^1.22.19",
-    "react-i18next": "^11.14.3",
-    "i18next":""
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "node generate-posts.js && react-scripts start",
@@ -63,7 +64,7 @@
     ]
   },
   "devDependencies": {
-    "netlify-cli":"",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "netlify-cli": ""
   }
 }

@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { useTranslation } from 'react-i18next';
 import shilabeuf from '../../assets/shialabeuf.png';
+import { ScrollIntoView } from 'rrc'
 
 
 export const Message = () => {
@@ -137,38 +138,40 @@ export const Message = () => {
   };
 
   return (
-    <section className="message-section">
-      <center>
-        <div className="message-title">
-          <h1 >
-            {t('rsvp')}
-          </h1>
-        </div>
-        <h3 id="uellapeppa"><i>{t('rsvp1')}</i></h3>
-        <div className="container"
-        style= {{ marginBottom: "1em"}}>
-        <img style= {{maxWidth: "60%"}} src={shilabeuf} alt=""/>
-        </div>
-        <div
-        
-          // className=" op-class"
-        >
-          <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="fullName" placeholder={t('fullName')} id="rsvpname" required/>
-          <input type="text" name="email" placeholder={t('email')} id="rsvpemail" required/>
-          <input type="text" name="number" placeholder={t('number')} id="rsvpnumber" />
-          <textarea name="message" placeholder={t('message')} id="textrsvp" />
-          <input 
-          id="submit"
-          type="submit" 
-          value={t('send')}
-          disabled={!isRecaptchaReady || isSubmitting} 
-          style={isSubmitting ? { cursor: 'not-allowed', fontWeight: "bold", fontFamily: 'Averia Serif Libre', backgroundColor: 'grey' } : { cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
-          />
-          {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
-          </form>
-        </div>
-      </center>
-    </section>
+    <ScrollIntoView>
+      <section className="message-section">
+        <center>
+          <div className="message-title">
+            <h1 id="uellapeppa">
+              {t('rsvp')}
+            </h1>
+          </div>
+          <h3><i>{t('rsvp1')}</i></h3>
+          <div className="container"
+          style= {{ marginBottom: "1em"}}>
+          <img style= {{maxWidth: "60%"}} src={shilabeuf} alt=""/>
+          </div>
+          <div
+          
+            // className=" op-class"
+          >
+            <form ref={form} onSubmit={sendEmail}>
+            <input type="text" name="fullName" placeholder={t('fullName')} id="rsvpname" required/>
+            <input type="text" name="email" placeholder={t('email')} id="rsvpemail" required/>
+            <input type="text" name="number" placeholder={t('number')} id="rsvpnumber" />
+            <textarea name="message" placeholder={t('message')} id="textrsvp" />
+            <input 
+            id="submit"
+            type="submit" 
+            value={t('send')}
+            disabled={!isRecaptchaReady || isSubmitting} 
+            style={isSubmitting ? { cursor: 'not-allowed', fontWeight: "bold", fontFamily: 'Averia Serif Libre', backgroundColor: 'grey' } : { cursor: 'pointer', fontFamily: 'Averia Serif Libre', fontWeight: "bold" }}
+            />
+            {submissionMessage && <div className={hasSubmitted ? 'success-message' : 'error-message'}>{submissionMessage}</div>}
+            </form>
+          </div>
+        </center>
+      </section>
+    </ScrollIntoView>
   );
 };
