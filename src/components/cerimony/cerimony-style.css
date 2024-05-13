@@ -1,3 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+
+.libretto-section{
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 5em;
+    /* height: 100vh; */
+    padding: 2em;
+    flex-direction: column;
+    /* overflow: hidden; */ 
+}   
+
+.libretto-chapter h1 {
+    font-family: "Alegreya", serif;
+    font-weight: 800;
+    font-size: 2rem;
+    align-items: center;
+    margin: 0px;
+}
+
+.libretto-chapter h2 {
+    font-family: "Alegreya", serif;
+    font-weight: 500;
+    font-size: 2rem;
+    align-items: center;
+    margin: 0px;
+}
+
+.libretto-body {
+    font-family: "Alegreya", serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    /* padding-left: 1rem; */
+    /* text-align: center; */
+    line-height: 1.5rem;
+}
+
+.libretto-rit {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: 500;
+}
+
+.libretto-risposta {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    font-weight: 600;
+    font-style: italic;
+}
 
 .cerimony-section{
     position: relative;
