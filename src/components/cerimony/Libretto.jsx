@@ -641,6 +641,10 @@ const Libretto = () => {
             THE END
           </h1>
         </div>
+        <div className="libretto-body">
+        Visualizzare questa schermata <a href="https://www.websitecarbon.com/website/giocotta-it/" target="_blank" rel="noopener noreferrer">ha prodotto</a> ~0.8g di CO2. <br/>
+        Stampare il libretto in copisteria <a href="https://www.ezeep.com/co2-neutral-printing/" target="_blank" rel="noopener noreferrer">ne avrebbe prodotti</a> ~30g. Grazie 🌱
+        </div>
     </section>
   );
 };
