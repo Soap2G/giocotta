@@ -43,6 +43,11 @@
     margin-bottom: 1em;
     font-weight: 500;
 }
+.libretto-rit2 {
+    padding-left: 2em;
+    white-space: pre-wrap;
+    font-weight: 500;
+}
 
 .libretto-risposta {
     margin-top: 0.3em;

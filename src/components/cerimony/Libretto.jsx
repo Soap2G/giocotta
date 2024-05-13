@@ -25,10 +25,10 @@ const Libretto = () => {
         La mia parola non è ancora sulla lingua <br/> 
         E tu, Signore, già la conosci tutta<br/> 
         <div className="libretto-rit">RIT: Sei tu che mi hai creato<br/> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E mi hai tessuto nel seno di mia madre <br/> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tu mi hai fatto come un prodigio<br/> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Le tue opere sono stupende<br/> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E per questo ti lodo</div><br/> 
+        <div className="libretto-rit2">E mi hai tessuto nel seno di mia madre <br/> 
+        Tu mi hai fatto come un prodigio<br/> 
+        Le tue opere sono stupende<br/> 
+        E per questo ti lodo</div></div><br/> 
         Di fronte e alle spalle tu mi circondi <br/> 
         Poni su me la tua mano<br/> 
         La tua saggezza, stupenda per me <br/> 
@@ -86,10 +86,10 @@ const Libretto = () => {
         <div className="libretto-body">
         <div className="libretto-rit">
         RIT: Gloria a Dio nell' alto dei cieli<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pace in terra agli uomini amati dal Signor. <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gloria a Dio nell' alto dei cieli<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pace in terra agli uomini amati dal Signor. (x2)<br/>
-        </div> <br/>
+        <div className="libretto-rit2">Pace in terra agli uomini amati dal Signor. <br/>
+        Gloria a Dio nell' alto dei cieli<br/>
+        Pace in terra agli uomini amati dal Signor. (x2)<br/>
+        </div></div>  <br/>
         Noi ti lodiamo <span style={{ fontStyle: 'italic' }}>&nbsp;&nbsp;Ti benediciamo,</span> <br/>
         Ti adoriamo, <span style={{ fontStyle: 'italic' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ti glorifichiamo,</span> <br/>
         Ti rendiamo grazie<br/>
@@ -164,10 +164,10 @@ const Libretto = () => {
         <div className="libretto-rit">Del Tuo Spirito - dal Salmo 120</div>
         <div className="libretto-rit">
         RIT: Del tuo Spirito, Signore, <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;è piena la terra, è piena la terra. <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Del tuo Spirito, Signore, <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;è piena la terra, è piena la terra. <br/>
-        </div>
+        <div className="libretto-rit2">è piena la terra, è piena la terra. <br/>
+        Del tuo Spirito, Signore, <br/>
+        è piena la terra, è piena la terra. <br/>
+        </div></div>
         Benedici il Signore, anima mia,  <br/>
         Signore, Dio, tu sei grande! <br/>
         Sono immense, splendenti <br/>
@@ -230,7 +230,7 @@ const Libretto = () => {
         <div className="libretto-rit">Dal Vangelo secondo Luca (Lc 14,1.12-23)</div>
         
         Un sabato Gesu si reco'  a casa di uno dei capi dei farisei per pranzare ed essi stavano a osservarlo. Disse poi a colui che lo aveva invitato: «Quando offri un pranzo o una cena, non invitare i tuoi amici, né i tuoi fratelli, né i tuoi parenti, né i ricchi vicini, perché anch' essi non ti invitino a loro volta e tu abbia il contraccambio. Al contrario, quando dai un banchetto, invita poveri, storpi, zoppi, ciechi; e sarai beato perché non hanno da ricambiarti. Riceverai infatti la tua ricompensa alla risurrezione dei giusti».<br/><br/>
-        Uno dei commensali, avendo udito ciò, gli disse: «Beato chi mangerà il pane nel regno di Dio!». Gesù rispose: «Un uomo diede una grande cena e fece molti inviti. All' ora della cena, mandò il suo servo a dire agli invitati: Venite, è pronto. Ma tutti, all' unanimità, cominciarono a scusarsi. Il primo disse: Ho comprato un campo e devo andare a vederlo; ti prego, considerami giustificato. Un altro disse: Ho comprato cinque paia di buoi e vado a provarli; ti prego, considerami giustificato. Un altro disse: Ho preso moglie e perciò non posso venire. Al suo ritorno il servo riferì tutto questo al padrone. Allora il padrone di casa, irritato, disse al servo: Esci subito per le piazze e per le vie della città e conduci qui poveri, storpi, ciechi e zoppi. Il servo disse: Signore, è stato fatto come hai ordinato, ma c' è ancora posto. Il padrone allora disse al servo: Esci per le strade e lungo le siepi, spingili a entrare, perché la mia casa si riempia!».
+        Uno dei commensali, avendo udito ciò, gli disse: «Beato chi mangerà il pane nel regno di Dio!». Gesù rispose: «Un uomo diede una grande cena e fece molti inviti. All' ora della cena, mandò il suo servo a dire agli invitati: Venite, è pronto. Ma tutti, all' unanimità, cominciarono a scusarsi. Il primo disse: Ho comprato un campo e devo andare a vederlo; ti prego, considerami giustificato. Un altro disse: Ho comprato cinque paia di buoi e vado a provarli; ti prego, considerami giustificato. Un altro disse: Ho preso moglie e perciò non posso venire. Al suo ritorno il servo riferì tutto questo al padrone. Allora il padrone di casa, irritato, disse al servo: Esci subito per le piazze e per le vie della città e conduci qui poveri, storpi, ciechi e zoppi. Il servo disse: Signore, è stato fatto come hai ordinato, ma c' è ancora posto. Il padrone allora disse al servo: Esci per le strade e lungo le siepi, spingili a entrare, perché la mia casa si riempia!».<br/><br/>
         Parola del Signore <div className="libretto-risposta">- Lode a te, o Cristo</div><br/>
         </div>
 
@@ -338,7 +338,7 @@ const Libretto = () => {
         Fratelli e sorelle,<br/>
         raccolti in preghiera, invochiamo su questi sposi, Elisa e Giovanni,<br/>
         la benedizione di Dio: egli, che oggi li ricolma di grazia con il sacramento del Matrimonio, li accompagni sempre con la sua protezione.<br/><br/>
-        <span style={{ fontStyle: 'italic' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Tutti pregano per breve tempo in silenzio)<br/></span><br/>
+        <span style={{ fontStyle: 'italic' }}>(Tutti pregano per breve tempo in silenzio)<br/></span><br/>
         Padre santo, creatore dell' universo,<br/>
         che hai formato l' uomo e la donna a tua immagine e hai voluto benedire la loro unione, ti preghiamo umilmente per questi tuoi figli, che oggi si uniscono con il sacramento nuziale.<br/>
         Scenda, o Signore, su questi sposi Elisa e Giovanni la ricchezza delle tue benedizioni, e la forza del tuo Santo Spirito infiammi dall' alto i loro cuori, perché nel dono reciproco dell' amore allietino di figli la loro famiglia e la comunità ecclesiale.<br/><br/>
@@ -348,7 +348,7 @@ const Libretto = () => {
         e del tuo conforto nella necessità;<br/>
         ti preghino nella santa assemblea,<br/>
         siano tuoi testimoni nel mondo.<br/>
-        Vivano a lungo nella prosperità e nella pace e, con tutti gli amici che ora li circondano, giungano alla felicità del tuo regno.<br/>
+        Vivano a lungo nella prosperità e nella pace e, con tutti gli amici che ora li circondano, giungano alla felicità del tuo regno.<br/><br/>
         Per Cristo nostro Signore.
         <div className="libretto-risposta">- Amen</div><br/>
         </div>
@@ -467,10 +467,10 @@ const Libretto = () => {
         le tue reti getterai.<br/>
         <div className="libretto-rit">
         RIT: Offri la vita tua come Maria <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ai piedi della croce<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e sarai servo di ogni uomo, <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;servo per amore, <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sacerdote dell' umanità.</div>
+        <div className="libretto-rit2">ai piedi della croce<br/>
+        e sarai servo di ogni uomo, <br/>
+        servo per amore, <br/>
+        sacerdote dell' umanità.</div></div>
         Avanzavi nel silenzio<br/>
         fra le lacrime e speravi<br/>
         che il seme sparso davanti a Te cadesse sulla buona terra.<br/>
@@ -525,11 +525,11 @@ const Libretto = () => {
         Dove tutto sembra sterile, lode al nome tuo<br/>
         <div className="libretto-rit">
         RIT: Tornerò a lodarti sempre per ogni dono tuo<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E quando scenderà la notte, sempre io dirò <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Benedetto il nome del Signor<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lode al nome tuo<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Benedetto il nome del Signor<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Il glorioso nome di Gesù”</div>
+        <div className="libretto-rit2">E quando scenderà la notte, sempre io dirò <br/>
+        “Benedetto il nome del Signor<br/>
+        Lode al nome tuo<br/>
+        Benedetto il nome del Signor<br/>
+        Il glorioso nome di Gesù”</div></div>
         Lode al nome tuo quando il sole splende su di me <br/>
         Quando tutto è incantevole, lode al nome tuo <br/>
         Lode al nome tuo quando io sto davanti a te<br/>
@@ -593,9 +593,9 @@ const Libretto = () => {
         perché sappiamo che una nuova vita <br/>
         da qui è partita e mai più si fermerà.<br/>
         <div className="libretto-rit">RIT: Resta qui con noi il sole scende già,<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resta qui con noi Signore è sera ormai.<br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resta qui con noi il sole scende già, <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;se tu sei fra noi la notte non verrà.<br/></div>
+        <div className="libretto-rit2">resta qui con noi Signore è sera ormai.<br/>
+        Resta qui con noi il sole scende già, <br/>
+        se tu sei fra noi la notte non verrà.<br/></div></div>
         S' allarga verso il mare il tuo cerchio d' onda <br/>
         che il vento spingerà fino a quando <br/>
         giungerà ai confini di ogni cuore,<br/>
@@ -621,9 +621,9 @@ const Libretto = () => {
         <div className="libretto-body">
         <div className="libretto-rit">
         RIT: Salga a te, Signore, il canto del tuo popolo <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Con la forza del tuo Spirito che grida in noi <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innalziam le nostre mani verso te, Gesù <br/>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Per offrirti il sacrificio della lode</div>
+        <div className="libretto-rit2">Con la forza del tuo Spirito che grida in noi <br/>
+        Innalziam le nostre mani verso te, Gesù <br/>
+        Per offrirti il sacrificio della lode</div></div>
         Tu sei la nostra vita, luce che non svanirà <br/>
         Verbo eterno, salvatore dell' umanità<br/>
         Il cuore di ogni uomo accolga la tua verità<br/>
