@@ -388,7 +388,7 @@ const Libretto = () => {
         </div>
         <div className="libretto-body">
         Ora in comunione con la Chiesa del cielo, invochiamo l' intercessione dei santi.
-        <div className="libretto-rit">Rit. E voi tutti uomini che donate la vostra vita con amore, pregate per noi<br/></div>
+        <div className="libretto-rit">RIT. E voi tutti uomini e donne che donate la vostra vita con amore, pregate per noi<br/></div>
         
         Maria, docile ancella dello Spirito<br/>
         Giuseppe, sposo giusto e fedele<br/>
@@ -397,7 +397,7 @@ const Libretto = () => {
         Giovanni Battista, voce di uno che grida nel deserto <br/>
         Gioacchino e Anna, modello di amore familiare <br/>
         Zaccaria ed Elisabetta, tenaci nella fedeltà<br/>
-        <div className="libretto-rit">Rit. E voi tutti uomini che donate la vostra vita con amore, pregate per noi<br/></div>
+        <div className="libretto-rit">RIT. E voi tutti uomini e donne che donate la vostra vita con amore, pregate per noi<br/></div>
         Pietro, roccia della Chiesa<br/>
         Paolo, coraggioso testimone della fede<br/>
         Santi apostoli che avete udito, visto e creduto<br/>
@@ -405,7 +405,7 @@ const Libretto = () => {
         Maria Maddalena, prima testimone del Risorto<br/>
         Marta, alacre ascoltatrice di Cristo<br/>
         Voi tutte donne che avete seguito Gesù<br/>
-        <div className="libretto-rit">Rit. E voi tutti uomini che donate la vostra vita con amore, pregate per noi<br/></div>
+        <div className="libretto-rit">RIT. E voi tutti uomini e donne che donate la vostra vita con amore, pregate per noi<br/></div>
 
         Francesco, povero di Dio in perfetta letizia<br/>
         Faustino e Giovita, difensori della giustizia <br/>
@@ -414,7 +414,7 @@ const Libretto = () => {
         Elisa, soccorritrice dei poveri e degli ammalati<br/>
         Voi ultimi che avete sperato nel Signore<br/>
         Voi tutti santi e sante della Chiesa<br/>
-        <div className="libretto-rit">Rit. E voi tutti uomini che donate la vostra vita con amore, pregate per noi<br/></div>
+        <div className="libretto-rit">RIT. E voi tutti uomini e donne che donate la vostra vita con amore, pregate per noi<br/></div>
         Effondi, Signore, su Elisa e Giovanni lo Spirito del tuo amore, perché diventino un cuor solo e un' anima sola: nulla separi questi sposi che tu hai unito e, ricolmati della tua benedizione, nulla li affligga. <br/><br/>
         Per Cristo, nostro Signore.
         <div className="libretto-risposta">- Amen</div><br/>
