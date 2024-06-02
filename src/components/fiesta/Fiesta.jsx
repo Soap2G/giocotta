@@ -39,7 +39,7 @@ return (
       <ScrollAnimation animateIn='fadeIn'>
       <div className="container"
       style= {{ marginBottom: "10em" }}>
-      <img src={masserotti} alt=""/>
+      <img style= {{maxWidth: "95%"}} src={masserotti} alt=""/>
       </div>
     </ScrollAnimation>
     </section>
