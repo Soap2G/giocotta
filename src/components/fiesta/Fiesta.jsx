@@ -34,6 +34,7 @@ return (
         Via Gaiato n. 142 <br/>
         41026 - Gaiato Chiesa - Pavullo nel Frignano (MO)
       </div>
+      <a href="https://maps.app.goo.gl/tGwwRw7PozeTfznY6" target="_blank"rel="noopener noreferrer" >Google Maps 📍</a> <br/>
       <ScrollAnimation animateIn='fadeIn'>
       <div className="container"
       style= {{ marginBottom: "10em" }}>
