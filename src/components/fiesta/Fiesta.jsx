@@ -32,9 +32,10 @@ return (
       <div className="address">
       <a href="https://villaborgomasserotti.com" target="_blank"rel="noopener noreferrer" >BORGO MASSEROTTI</a> <br/>
         Via Gaiato n. 142 <br/>
-        41026 - Gaiato Chiesa - Pavullo nel Frignano (MO)
+        41026 - Gaiato Chiesa - Pavullo nel Frignano (MO) <br/><br/>
+        <a href="https://maps.app.goo.gl/tGwwRw7PozeTfznY6" target="_blank"rel="noopener noreferrer" >Google Maps 📍</a>
       </div>
-      <a href="https://maps.app.goo.gl/tGwwRw7PozeTfznY6" target="_blank"rel="noopener noreferrer" >Google Maps 📍</a> <br/>
+      
       <ScrollAnimation animateIn='fadeIn'>
       <div className="container"
       style= {{ marginBottom: "10em" }}>
