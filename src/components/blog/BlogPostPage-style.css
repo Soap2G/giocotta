@@ -4,10 +4,31 @@
     margin: 5em;
 }
 
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content p,
+.markdown-content li {
+    text-align: left;
+} 
+
+
 .markdown-content h1 {
     font-size: 4rem;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.markdown-content h2 {
+    font-size: 2.5rem;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.markdown-content p {
+    font-size: 1.2rem;
+    margin: 0.6rem;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .markdown-content li {
@@ -16,7 +37,35 @@
 }
 
 .markdown-content a {
-    color: red;
+    color: rgb(98, 182, 45);
+    font-size: 1rem;
 }
 
-/* Add more specific styles for other elements like lists, blockquotes, code, etc. */
+.markdown-content img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    border-radius: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 500px) {
+    .markdown-content{
+        margin: 1em;
+    }
+
+    .markdown-content h1 {
+        font-size: 3rem;
+    }
+
+    .markdown-content h2 {
+        font-size: 2rem;
+    }
+
+    .markdown-content img {
+        max-width: 100%;
+    }
+
+}
