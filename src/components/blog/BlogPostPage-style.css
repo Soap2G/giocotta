@@ -13,13 +13,27 @@
 
 
 .markdown-content h1 {
+    font-family: "Alegreya", serif;
     font-size: 4rem;
+    margin-top: 2rem;
     /* display: flex;
     justify-content: center; */
 }
 
 .markdown-content h2 {
+    font-family: "Alegreya", serif;
     font-size: 2.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.markdown-content h4 {
+    font-family: "Alegreya", serif;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
     /* display: flex;
     justify-content: center; */
 }
