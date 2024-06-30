@@ -1,8 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-public/photos/blog/*png
-public/photos/blog/*JPG
-
+public/photos/blog/*/*png
+public/photos/blog/*/*JPG
+public/photos/blog/*/*sh
+public/photos/blog/*/*txt
+src/posts/posts.jsx
 
 # dependencies
 /node_modules
