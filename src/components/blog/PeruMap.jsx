@@ -56,11 +56,11 @@ const CustomMap = ({ highlightedPathId }) => {
             <circle id="7" style={{ opacity: highlightedPathId.includes('7') ? '1' : '0' }} cx="672.914" cy="707.6969" r="5.5"/>
             <circle id="8" style={{ opacity: highlightedPathId.includes('8') ? '1' : '0' }} cx="696.5241" cy="706.2717" r="5.5"/>
             <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="696.5241" cy="706.2717" r="5.5"/>
-            {/* <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="635" cy="644.8871" r="5.5"/>
-            <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="621.9444" cy="634.9982" r="5.5"/>
-            <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="612.1111" cy="619.776" r="5.5"/>
-            <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="598.6667" cy="614.276" r="5.5"/> */}
-            <circle id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="598.6667" cy="614.276" r="5.5"/>
+            {/* <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="635" cy="644.8871" r="5.5"/>*/}
+            <circle id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="621.9444" cy="634.9982" r="5.5"/>
+            <circle id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="612.1111" cy="619.776" r="5.5"/>
+            <circle id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="598.6667" cy="614.276" r="5.5"/> 
+            <circle id="11" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="598.6667" cy="614.276" r="5.5"/>
             <circle id="11" style={{ opacity: highlightedPathId.includes('11') ? '1' : '0' }} cx="590.9167" cy="602.6115" r="5.5"/>
             <circle id="11" style={{ opacity: highlightedPathId.includes('11') ? '1' : '0' }} cx="577.125" cy="592.5677" r="5.5"/>
             <circle id="12" style={{ opacity: highlightedPathId.includes('12') ? '1' : '0' }} cx="577.125" cy="592.5677" r="5.5"/>
