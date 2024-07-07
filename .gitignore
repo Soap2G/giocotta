@@ -33,3 +33,4 @@ src/posts/posts.jsx
 
 # Local Netlify folder
 .netlify
+.env

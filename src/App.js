@@ -19,6 +19,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import { ScrollIntoView } from 'rrc'
+import ReactGA from 'react-ga4';
 
 
 import './App.css';
@@ -57,6 +58,16 @@ function App() {
             window.removeEventListener('resize', setBodyHeight);
         };
     }, []);
+
+    // Initialize Google Analytics
+    useEffect(() => {
+        ReactGA.initialize(process.env.REACT_APP_GA_MEASUREMENT_ID);
+    }, []);
+
+    // Track page views
+    useEffect(() => {
+        ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
+    }, [location]);
 
     return (
         <ParallaxProvider>
