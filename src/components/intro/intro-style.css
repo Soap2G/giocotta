@@ -16,6 +16,22 @@ h1, body, html, ::placeholder, input, textarea {
     --vh: 100vh;
 }
 
+.blog-button {
+  background-color: var(--a-color);
+  color: var(--color-background);
+  border-radius: 10px;
+  border: 0.5px solid var(--ref-color);
+  border-top-color: var(--a-color);
+  border-left-color: var(--a-color);
+}
+.blog-button:hover {
+  color: var(--color-text);
+  background-color: var(--submit-color);
+  border-top-color: var(--submit-color);
+  border-left-color: var(--submit-color);
+  transition: 200ms ease-in;
+}
+
 .intro-section {
   position:static;
   display: flex;

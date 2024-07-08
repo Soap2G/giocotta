@@ -6,7 +6,7 @@ const resources = {
   en: {
     translation: {
       "journal": "journal",
-      "greeting": "Howdy, we are getting married!",
+      "greeting": "Howdy!",
       "where-title": "Show me the way",
       "ceremony": "June 15th, 2024 at 15:30,<br/> <a>SS Faustino e Giovita</a>'s parish, Modena.",
       "battutina1": "Via Giardini 231, 41124, Modena (MO) <br/> Yep, it's a church, not a hangar :D",
@@ -40,7 +40,7 @@ const resources = {
   it: {
     translation: {
         "journal": "diario",
-        "greeting": "Ciao, ci sposiamo!",
+        "greeting": "Ciao!",
         "where-title": "Dimmi dove e quando",
         "ceremony": "Il 15 Giugno 2024 alle 15:30,<br/> nella parrocchia dei <a>SS Faustino e Giovita</a> a Modena.",
         "battutina1": "Via Giardini 231, 41124, Modena (MO) <br/> No, non è un hangar, è una chiesa :D",

@@ -2,11 +2,12 @@ import React, { useRef, useState, useEffect } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { Routes, Route } from 'react-router-dom';
 import Introduction from './components/intro/Introduction';
-import Cerimony from './components/cerimony/Cerimony';
+import BlogRedirect from './components/intro/blog-redirect.jsx';
+// import Cerimony from './components/cerimony/Cerimony';
 import Libretto from './components/cerimony/Libretto';
-import Fiesta from './components/fiesta/Fiesta';
-import Lista from './components/lista/lista';
-import { Message } from './components/rsvp/Message';
+// import Fiesta from './components/fiesta/Fiesta';
+// import Lista from './components/lista/lista';
+// import { Message } from './components/rsvp/Message';
 import ThemeButton from './contexts/ThemeButton';
 import Footer from "./components/Footer.js";
 import Header from "./components/Header.js";
@@ -15,7 +16,7 @@ import BlogList from './components/blog/BlogList';
 import BlogPostPage from './components/blog/BlogPostPage';
 import { useLocation } from 'react-router-dom';
 import { AnimatePresence } from "framer-motion";
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+// import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import { ScrollIntoView } from 'rrc'
@@ -92,15 +93,16 @@ function App() {
                                             <>
                                                 <Transitions>
                                                     <Introduction />
-                                                    <Cerimony />
-                                                    <Fiesta />
-                                                    <Lista />
-                                                    <GoogleReCaptchaProvider 
+                                                    <BlogRedirect />
+                                                    {/* <Cerimony /> */}
+                                                    {/* <Fiesta /> */}
+                                                    {/* <Lista /> */}
+                                                    {/* <GoogleReCaptchaProvider 
                                                         reCaptchaKey="6LfmHDEpAAAAALxj7qIMB5DwWa2HOdi7ABKfIs9V"
                                                         onLoad={() => console.log('reCAPTCHA Loaded')}
                                                         >
                                                         <Message />
-                                                    </GoogleReCaptchaProvider>
+                                                    </GoogleReCaptchaProvider> */}
                                                     <Footer />
                                                 </Transitions>
                                                 
