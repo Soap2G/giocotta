@@ -78,6 +78,11 @@ const posts = [
     "slug": "15",
     "title": "15",
     "path": "/posts/15.md"
+  },
+  {
+    "slug": "16",
+    "title": "16",
+    "path": "/posts/16.md"
   }
 ];
 

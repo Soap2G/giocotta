@@ -71,7 +71,9 @@ const CustomMap = ({ highlightedPathId }) => {
             <circle id="14" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0' }} cx="256.9439" cy="128.9683" r="5.5"/>
             <circle id="15" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0' }} cx="56.9968" cy="54.0541" r="5.5"/>
             <circle id="15" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0' }} cx="30.9968" cy="63.0541" r="5.5"/>
-            <circle id="16" style={{ opacity: highlightedPathId.includes('16') ? '1' : '0' }} cx="81.0649" cy="48.8303" r="5.5"/>
+            <circle id="16" style={{ opacity: highlightedPathId.includes('16') ? '1' : '0' }} cx="30.9968" cy="63.0541" r="5.5"/>
+            {/* <circle id="16" style={{ opacity: highlightedPathId.includes('16') ? '1' : '0' }} cx="81.0649" cy="48.8303" r="5.5"/> */}
+            <circle id="16" style={{ opacity: highlightedPathId.includes('16') ? '1' : '0' }} cx="20.0649" cy="70.8303" r="5.5"/>
             <circle id="17" style={{ opacity: highlightedPathId.includes('17') ? '1' : '0' }} cx="29.1248" cy="63.3758" r="5.5"/>
             <circle id="18" style={{ opacity: highlightedPathId.includes('18') ? '1' : '0' }} cx="56.951" cy="54.0541" r="5.5"/>
             <circle id="19" style={{ opacity: highlightedPathId.includes('19') ? '1' : '0' }} cx="317.4167" cy="32.8593" r="5.5"/>
@@ -92,6 +94,7 @@ const CustomMap = ({ highlightedPathId }) => {
             <polyline points="385.5625,542.899 256.9439,128.9683" style={{ opacity: highlightedPathId.includes('14') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
             <polyline points="256.9439,128.9683 56.9968,54.0541" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
             <polyline points="56.9968,54.0541 30.9968,63.054" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
+            <polyline points="30.9968,63.054 20.0649,70.8303" style={{ opacity: highlightedPathId.includes('16') ? '1' : '0', fill: "none", stroke:"var(--circle-color)", strokeWidth: "3" }} />
             {/* <polyline points="" style={{ opacity: highlightedPathId.includes('2') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
             <polyline points="" style={{ opacity: highlightedPathId.includes('2') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
              */}
