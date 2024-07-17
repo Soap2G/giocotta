@@ -7,6 +7,15 @@ import Countdown from './Countdown'
 
 const BlogList = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [hoveredPost, setHoveredPost] = useState(null);
+
+  const handleMouseEnter = (post) => {
+    setHoveredPost(post.slug);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredPost(null);
+  };
 
   useEffect(() => {
     setIsLoaded(true); // Trigger the transition
@@ -39,8 +48,11 @@ const BlogList = () => {
                 <React.Fragment key={post.slug}>
                   <Link 
                     className='post-link'
-                    to={`/blog/${post.slug}`}>
-                    {post.slug}
+                    title={post.title}
+                    to={`/blog/${post.slug}`}
+                    onMouseEnter={() => handleMouseEnter(post)}
+                    onMouseLeave={handleMouseLeave}>
+                    {hoveredPost === post.slug ? post.title : post.slug}
                   </Link>
                   {index < posts.length - 1 && ' '}
                 </React.Fragment>

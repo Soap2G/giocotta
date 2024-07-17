@@ -1,3 +1,7 @@
+.path:hover {
+    stroke-width: 5;
+}
+
 .countdown-img img{
     width: 80%;
     margin-top: 3em;
@@ -18,7 +22,9 @@
 }
 
 ul {
+    display: flex;
     padding-left: 0px !important;
+    justify-content: center;
 }
 
 .post-link {
@@ -28,21 +34,28 @@ ul {
     display: inline-block;
     font-weight: 400;
     width: 4vh;
-    height: 4vh;
+    /* height: 4vh; */
     line-height: 4vh;
     color: var(--selection-color);
     border-style: solid;
     border-color: var(--selection-b-color);
     background-color: var(--selection-b-color);
     border-radius: 50%;
-    transition: background-size 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, height 0.4s ease-in-out, z-index 0.4s ease-in-out;
+    position: relative; /* default position */
+    z-index: 1; /* default z-index */
 }
 
 .post-link:hover,
 .post-link:focus {
     /* font-family: 'Bellefair', serif; */
+    text-wrap: wrap;
     color: var(--selection-color);
-    transform: scale(1.2);
+    /* transform: scale(5); */
+    border-radius: 10px;
+    width: 20vh;
+    height: auto; /* allow height to adjust based on content */
+    z-index: 10; /* ensure the element is on top */
 }
 
 
@@ -73,6 +86,27 @@ ul {
 .svg-map path:hover {
     fill: var(--a-color);
     transition: fill 1s ease, color 1s ease;
+}
+
+.hover-area {
+    z-index: 10;
+    display: inline-block; /* Ensures the element respects padding/margin */
+    padding: 100px; /* Adjust the value as needed */
+}
+
+.svg-map polyline {
+    pointer-events: all;
+    stroke-width: 3;
+    background-clip:content-box;
+}
+
+.svg-map polyline:hover {
+    stroke-width: 5;
+    cursor: pointer;
+}
+
+.svg-map circle:hover {
+    cursor: pointer;
 }
 
 .tooltip {

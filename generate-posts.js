@@ -15,10 +15,17 @@ let posts = [];
 
 if (filenames.length > 0) {
   posts = filenames.filter(file => file.endsWith('.md')).map(file => {
+    const filePath = path.join(postsDirectory, file);
+    const content = fs.readFileSync(filePath, 'utf-8');
     const slug = file.replace(/\.md$/, '');
+    
+    // Extract the first line that starts with '#'
+    const titleLine = content.split('\n').find(line => line.startsWith('#'));
+    const title = titleLine ? titleLine.replace(/^#\s*/, '') : slug.replace(/-/g, ' ');
+
     return {
       slug: slug,
-      title: slug.replace(/-/g, ' '), // Replace dashes with spaces, capitalize, etc.
+      title: title,
       path: `/posts/${file}`
     };
   });

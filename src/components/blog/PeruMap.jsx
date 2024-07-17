@@ -1,5 +1,9 @@
 import React from 'react';
 import './BlogList-style.css'
+import posts from '../../posts/posts';
+import { Link } from 'react-router-dom';
+
+
 
 const CustomMap = ({ highlightedPathId }) => {
 
@@ -58,7 +62,7 @@ const CustomMap = ({ highlightedPathId }) => {
             <circle id="8" style={{ opacity: highlightedPathId.includes('8') ? '1' : '0' }} cx="696.5241" cy="706.2717" r="5.5"/>
             <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="696.5241" cy="706.2717" r="5.5"/>
             {/* <circle id="9" style={{ opacity: highlightedPathId.includes('9') ? '1' : '0' }} cx="635" cy="644.8871" r="5.5"/>*/}
-            <circle id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="621.9444" cy="634.9982" r="5.5"/>
+            <circle key="10" id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="621.9444" cy="634.9982" r="5.5"/>
             <circle id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="612.1111" cy="619.776" r="5.5"/>
             <circle id="10" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="598.6667" cy="614.276" r="5.5"/> 
             <circle id="11" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0' }} cx="598.6667" cy="614.276" r="5.5"/>
@@ -79,30 +83,151 @@ const CustomMap = ({ highlightedPathId }) => {
             <circle id="17" style={{ opacity: highlightedPathId.includes('18') ? '1' : '0' }} cx="29.1248" cy="63.3758" r="5.5"/>
             <circle id="18" style={{ opacity: highlightedPathId.includes('18') || highlightedPathId.includes('19') ? '1' : '0' }} cx="56.951" cy="54.0541" r="5.5"/>
             <circle id="19" style={{ opacity: highlightedPathId.includes('19') || highlightedPathId.includes('20') ? '1' : '0' }} cx="317.4167" cy="32.8593" r="5.5"/>
-            <polyline points="2000,0 385.5625,542.899" style={{ opacity: highlightedPathId.includes('0') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="385.5625,542.899 400.5625,550.899 410.5625,560.899 420.5625,600.899 415.3333,624.5538" style={{ opacity: highlightedPathId.includes('2') && highlightedPathId.includes('3') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="415.3333,624.5538 440.2083,644.8871" style={{ opacity: highlightedPathId.includes('3') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="440.2083,644.8871 462.3049,668.4288" style={{ opacity: highlightedPathId.includes('3') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="462.3049,668.4288 470.3049,685.4288 520.3049,720.4288 590.3049,750.4288 609.3333,732.6012" style={{ opacity: highlightedPathId.includes('3') && highlightedPathId.includes('4') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="609.3333,732.6012 591.9331,693.4829" style={{ opacity: highlightedPathId.includes('5') && highlightedPathId.includes('6')? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="591.9331,693.4829 672.914,707.6969" style={{ opacity: highlightedPathId.includes('7') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="672.914,707.6969 696.5241,706.2717" style={{ opacity: highlightedPathId.includes('7') && highlightedPathId.includes('8') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="696.5241,706.2717 670.9444,690.9982 621.9444,634.9982" style={{ opacity: highlightedPathId.includes('9') && highlightedPathId.includes('10') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="621.9444,634.9982 612.1111,619.776" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0', fill: "none", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="612.1111,619.776 598.6667,614.276" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0', fill: "none", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="598.6667,614.276 590.9167,602.6115" style={{ opacity: highlightedPathId.includes('10') && highlightedPathId.includes('11') ? '1' : '0', fill: "none", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="590.9167,602.6115 577.125,592.5677" style={{ opacity: highlightedPathId.includes('11') ? '1' : '0', fill: "none", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="577.125,592.5677 590.6667,585.276 600.6667,590.276 600.6667,595.276 598.6667,614.276" style={{ opacity: highlightedPathId.includes('12') && highlightedPathId.includes('13') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="598.6667,614.276 385.5625,542.899" style={{ opacity: highlightedPathId.includes('13') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="385.5625,542.899 256.9439,128.9683" style={{ opacity: highlightedPathId.includes('14') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="256.9439,128.9683 56.9968,54.0541" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="56.9968,54.0541 30.9968,63.054" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="30.9968,63.054 20.0649,70.8303" style={{ opacity: highlightedPathId.includes('16') ? '1' : '0', fill: "none", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="30.9968,63.054 40.951,72.0541 50.951,68.0541 56.951,54.0541" style={{ opacity: highlightedPathId.includes('18') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="56.951,54.0541 150.951,30.0541 170.951,30.0541 200.951,54.0541 250.9439,120.9683 255.9439,120.9683 317.4167,32.8593" style={{ opacity: highlightedPathId.includes('19') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="317.4167,32.8593 2000,0" style={{ opacity: highlightedPathId.includes('20') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            {/* <polyline points="" style={{ opacity: highlightedPathId.includes('2') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
-            <polyline points="" style={{ opacity: highlightedPathId.includes('2') ? '1' : '0', fill: "none", strokeDasharray:"5, 5", stroke:"var(--circle-color)", strokeWidth: "3" }} />
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '1').title}
+                to={`/blog/${posts.find(post => post.slug === '1').slug}`}>
+                <polyline points="2000,0 385.5625,542.899" style={{ opacity: highlightedPathId.includes('0') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '2').title}
+                to={`/blog/${posts.find(post => post.slug === '2').slug}`}>
+                <polyline points="385.5625,542.899 400.5625,550.899 410.5625,560.899 420.5625,600.899 415.3333,624.5538" style={{ opacity: highlightedPathId.includes('2') && highlightedPathId.includes('3') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '3').title}
+                to={`/blog/${posts.find(post => post.slug === '3').slug}`}>
+                <polyline points="415.3333,624.5538 440.2083,644.8871" style={{ opacity: highlightedPathId.includes('3') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '3').title}
+                to={`/blog/${posts.find(post => post.slug === '3').slug}`}>
+                <polyline points="440.2083,644.8871 462.3049,668.4288" style={{ opacity: highlightedPathId.includes('3') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '3').title}
+                to={`/blog/${posts.find(post => post.slug === '3').slug}`}>
+                <polyline points="462.3049,668.4288 470.3049,685.4288 520.3049,720.4288 590.3049,750.4288 609.3333,732.6012" style={{ opacity: highlightedPathId.includes('3') && highlightedPathId.includes('4') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '5').title}
+                to={`/blog/${posts.find(post => post.slug === '5').slug}`}>
+                <polyline points="609.3333,732.6012 591.9331,693.4829" style={{ opacity: highlightedPathId.includes('5') && highlightedPathId.includes('6')? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '7').title}
+                to={`/blog/${posts.find(post => post.slug === '7').slug}`}>
+                <polyline points="591.9331,693.4829 672.914,707.6969" style={{ opacity: highlightedPathId.includes('7') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '8').title}
+                to={`/blog/${posts.find(post => post.slug === '8').slug}`}>
+                <polyline points="672.914,707.6969 696.5241,706.2717" style={{ opacity: highlightedPathId.includes('7') && highlightedPathId.includes('8') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '9').title}
+                to={`/blog/${posts.find(post => post.slug === '9').slug}`}>
+                <polyline points="696.5241,706.2717 670.9444,690.9982 621.9444,634.9982" style={{ opacity: highlightedPathId.includes('9') && highlightedPathId.includes('10') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '10').title}
+                to={`/blog/${posts.find(post => post.slug === '10').slug}`}>
+                <polyline points="621.9444,634.9982 612.1111,619.776" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0', fill: "none", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '10').title}
+                to={`/blog/${posts.find(post => post.slug === '10').slug}`}>
+                <polyline points="612.1111,619.776 598.6667,614.276" style={{ opacity: highlightedPathId.includes('10') ? '1' : '0', fill: "none", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '10').title}
+                to={`/blog/${posts.find(post => post.slug === '10').slug}`}>
+                <polyline points="598.6667,614.276 590.9167,602.6115" style={{ opacity: highlightedPathId.includes('10') && highlightedPathId.includes('11') ? '1' : '0', fill: "none", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '11').title}
+                to={`/blog/${posts.find(post => post.slug === '11').slug}`}>
+                <polyline points="590.9167,602.6115 577.125,592.5677" style={{ opacity: highlightedPathId.includes('11') ? '1' : '0', fill: "none", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '12').title}
+                to={`/blog/${posts.find(post => post.slug === '12').slug}`}>
+                <polyline points="577.125,592.5677 590.6667,585.276 600.6667,590.276 600.6667,595.276 598.6667,614.276" style={{ opacity: highlightedPathId.includes('12') && highlightedPathId.includes('13') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '13').title}
+                to={`/blog/${posts.find(post => post.slug === '13').slug}`}>
+                <polyline points="598.6667,614.276 385.5625,542.899" style={{ opacity: highlightedPathId.includes('13') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '14').title}
+                to={`/blog/${posts.find(post => post.slug === '14').slug}`}>
+                <polyline points="385.5625,542.899 256.9439,128.9683" style={{ opacity: highlightedPathId.includes('14') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '15').title}
+                to={`/blog/${posts.find(post => post.slug === '15').slug}`}>
+                <polyline points="256.9439,128.9683 56.9968,54.0541" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '15').title}
+                to={`/blog/${posts.find(post => post.slug === '15').slug}`}>
+                <polyline points="56.9968,54.0541 30.9968,63.054" style={{ opacity: highlightedPathId.includes('15') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '16').title}
+                to={`/blog/${posts.find(post => post.slug === '16').slug}`}>
+                <polyline points="30.9968,63.054 20.0649,70.8303" style={{ opacity: highlightedPathId.includes('16') ? '1' : '0', fill: "none", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '18').title}
+                to={`/blog/${posts.find(post => post.slug === '18').slug}`}>
+                <polyline points="30.9968,63.054 40.951,72.0541 50.951,68.0541 56.951,54.0541" style={{ opacity: highlightedPathId.includes('18') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link
+                className="hover-area"
+                title={posts.find(post => post.slug === '19').title}
+                to={`/blog/${posts.find(post => post.slug === '19').slug}`}>
+                <polyline points="56.951,54.0541 150.951,30.0541 170.951,30.0541 200.951,54.0541 250.9439,120.9683 255.9439,120.9683 317.4167,32.8593" style={{ opacity: highlightedPathId.includes('19') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+            <Link 
+                className="hover-area"
+                title={posts.find(post => post.slug === '20').title}
+                to={`/blog/${posts.find(post => post.slug === '20').slug}`}>
+                <polyline className='dashed-line' points="317.4167,32.8593 2000,0" style={{ opacity: highlightedPathId.includes('20') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} /> 
+            </Link>
+            
+            {/*             <Link 
+                className="hover-area"
+                title={posts.find(post => post.slug === '10').title}
+                to={`/blog/${posts.find(post => post.slug === '10').slug}`}>
+                <polyline points="" style={{ opacity: highlightedPathId.includes('2') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
+                        <Link 
+                className="hover-area"
+                title={posts.find(post => post.slug === '10').title}
+                to={`/blog/${posts.find(post => post.slug === '10').slug}`}>
+                <polyline points="" style={{ opacity: highlightedPathId.includes('2') ? '1' : '0', fill: "none", strokeDasharray:"5", stroke:"var(--circle-color)"}} />
+            </Link>
              */}
             
             </svg>
