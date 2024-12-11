@@ -27,36 +27,53 @@ ul {
     justify-content: center;
 }
 
+.post-container {
+    position: relative; /* Needed for positioning hover text */
+    display: inline-block; /* Keep each post inline */
+    text-align: center; /* Center hover text above */
+  }
+  
 .post-link {
-    /* font-family: 'Bellefair', serif; */
-    font-size: 2.5vh;
+    font-size: 2.5vh; /* Set font size based on viewport height */
     margin: 0.5em;
-    display: inline-block;
-    font-weight: 400;
-    width: 4vh;
-    /* height: 4vh; */
-    line-height: 4vh;
-    color: var(--selection-color);
-    border-style: solid;
-    border-color: var(--selection-b-color);
-    background-color: var(--selection-b-color);
-    border-radius: 50%;
-    transition: width 0.3s ease-in-out, height 0.4s ease-in-out, z-index 0.4s ease-in-out;
-    position: relative; /* default position */
-    z-index: 1; /* default z-index */
+    display: inline-block; /* Make it behave like an inline block */
+    font-weight: 400; /* Set font weight */
+    width: 4vh; /* Set the width of the circular element */
+    height: 4vh; /* Set height to match width for perfect circle */
+    line-height: 4vh; /* Align text vertically within the circle */
+    text-align: center; /* Center text horizontally */
+    color: var(--selection-color); /* Set text color */
+    border-style: solid; /* Add a solid border */
+    border-width: 2px; /* Customize border thickness */
+    border-color: var(--selection-b-color); /* Use your border color variable */
+    background-color: var(--selection-b-color); /* Use your background color variable */
+    border-radius: 50%; /* Make it circular */
 }
 
-.post-link:hover,
-.post-link:focus {
-    /* font-family: 'Bellefair', serif; */
-    text-wrap: wrap;
-    color: var(--selection-color);
-    /* transform: scale(5); */
-    border-radius: 10px;
-    width: 20vh;
-    height: auto; /* allow height to adjust based on content */
-    z-index: 10; /* ensure the element is on top */
+.post-link:hover {
+    transform: scale(1.2); /* Enlarge the element slightly on hover */
+    background-color: var(--hover-b-color); /* Change background color on hover */
+    color: var(--hover-color); /* Change text color on hover */
 }
+
+.post-hover-text {
+    position: absolute;
+    top: -3rem; /* Position text above the circle */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    font-size: 3vh; /* Increase the font size */
+    color: var(--selection-b-color);
+    text-align: center;
+    white-space: nowrap; /* Ensure the text stays in one line */
+}
+
+.post-container:hover .post-hover-text {
+    opacity: 1; /* Show the hover text when hovering over the container */
+}
+  
+  
 
 
 .svg-map {

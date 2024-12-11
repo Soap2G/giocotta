@@ -23,48 +23,44 @@ const BlogList = () => {
 
   const highlightedPath = posts.map(post => post.slug);
 
-  return (
-    <center>
+return (
+  <center>
     <div className={`blog-list ${isLoaded ? 'loaded' : ''}`}>
-      <CustomMap highlightedPathId={highlightedPath}/>
-      <ul>
-        {/* {posts.map(post => (
-          <li key={post.slug}>
-            <Link to={`/blog/${post.slug}`}>{post.title}</Link>
-          </li>
-        ))} */}
-        
-          <div
-          style={{
-            display: 'inline-block',
-            marginTop: '5vh'
-          }}
-          >        
-            {posts.length === 0 ? (
-              // Render your placeholder component here
-              <Countdown />
-            ) : (
-              posts.map((post, index) => (
-                <React.Fragment key={post.slug}>
-                  <Link 
-                    className='post-link'
-                    title={post.title}
-                    to={`/blog/${post.slug}`}
-                    onMouseEnter={() => handleMouseEnter(post)}
-                    onMouseLeave={handleMouseLeave}>
-                    {hoveredPost === post.slug ? post.title : post.slug}
-                  </Link>
-                  {index < posts.length - 1 && ' '}
-                </React.Fragment>
-              ))
-            )}
-
-          </div>
-        
-      </ul>
+      <CustomMap highlightedPathId={highlightedPath} />
+      <div
+        style={{
+          display: 'inline-block', // Make items appear in a single row
+          gap: '1rem',     // Add spacing between posts
+          marginTop: '5vh',
+          justifyContent: 'center',
+        }}
+      >
+        {posts.length === 0 ? (
+          <Countdown /> // Render placeholder when no posts exist
+        ) : (
+          posts.map((post) => (
+            <div
+              key={post.slug}
+              className="post-container"
+              onMouseEnter={() => handleMouseEnter(post)}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className="post-hover-text">
+                {hoveredPost === post.slug && <span>{post.title}</span>}
+              </div>
+              <Link 
+                className="post-link" 
+                title={post.title} 
+                to={`/blog/${post.slug}`}>
+                {post.slug}
+              </Link>
+            </div>
+          ))
+        )}
+      </div>
     </div>
-    </center>
-  );
+  </center>
+);
 };
 
 export default BlogList;
